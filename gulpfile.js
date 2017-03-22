@@ -4,33 +4,34 @@ var rename = require('gulp-rename');
 var uglifyjs = require('gulp-uglify');
 var uglifycss = require('gulp-minify-css');
 var prefix = require('gulp-autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
+var replace = require('gulp-string-replace');
 var pump = require('pump');
 
-gulp.task('cssmin', function() {
- return gulp.src('css/nyancss.css')
-	.pipe(prefix({
-	    browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']
-	}))
-	.pipe(rename("nyan.min.css"))
-	.pipe(uglifycss())
-	.pipe(gulp.dest("release/css/"));
-});
+var path = {
+	css: ['css/nyancss.css'],
+	js: ['js/nyancss.js']
+};
 
 gulp.task('css', function() {
- return gulp.src('css/nyancss.css')
+ return gulp.src(path.css)
+ 	.pipe(sourcemaps.init())
 	.pipe(prefix({
-	    browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']
+	    browsers: ["> 0%"]
 	}))
+	.pipe(sourcemaps.write('.'))
+	.pipe(rename("nyan.css"))
+	.pipe(gulp.dest("release/css/"))
+	.pipe(uglifycss())
 	.pipe(rename("nyan.css"))
 	.pipe(gulp.dest("release/css/"));
 });
 
 gulp.task('js', function(cb) {
  pump([
- 	gulp.src([
- 		'js/nyancss.js'
- 	]),
-	concat("nyan.js"),
+ 	gulp.src(path.js),
+ 	sourcemaps.init(),
+ 	sourcemaps.write('.'),
 	gulp.dest('release/js/'),
 	rename("nyan.min.js"),
 	uglifyjs(),
