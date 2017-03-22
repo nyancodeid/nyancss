@@ -1,0 +1,32 @@
+/* nyancss - badge */
+.ny-badge {
+  position : relative;
+  white-space: nowrap;
+  margin-right: (22px + 2px);
+  &[data-badge]:after {
+    content: attr(data-badge);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: -(22px / 2);
+    right: -(22px + 2px);
+    
+    border-radius : 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    font-weight: 300;
+    background-color: $accent-color;
+    color: #ffffff;
+  }
+  &.ny-button[data-badge]:after {
+    top: -(22px / 2);
+    right: -(22px / 2);
+  }
+}

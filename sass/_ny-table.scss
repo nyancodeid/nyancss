@@ -1,0 +1,59 @@
+/* nyancss - table */
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+td,
+th {
+  border-bottom: 0.1rem solid #e1e1e1;
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+}
+
+td:first-child,
+th:first-child {
+  padding-left: 0;
+}
+
+td:last-child,
+th:last-child {
+  padding-right: 0;
+}
+
+table.ny-table--striped tbody tr:nth-child(2n) {
+  background: rgba(0,0,0,0.04);
+}
+
+.ny-table--responsive {
+  overflow: auto;
+}
+
+.ny-table--card {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+  .ny-table-header {
+    padding: 16px;
+    h1,h2,h3,h4,h5,h6 {
+      margin: 0;
+    }
+  }
+  .ny-table-content {
+    overflow-x: auto;
+    table {
+      margin-bottom: 0;
+      width: calc(100% + 0.75px);
+    }
+    td:first-child, th:first-child {
+      padding-left : 1.5rem;
+    }
+  }
+}
+
+.ny-table-header.ny-accent + .ny-table-content table thead {
+  background-color: $accent-color;
+  color: #ffffff;
+}
+.ny-table-header.ny-primary + .ny-table-content table thead {
+  background-color: $primary-color;
+  color: #ffffff;
+}

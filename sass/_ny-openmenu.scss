@@ -1,0 +1,49 @@
+.ny-openmenu {
+	[data-trigger="openmenu"].active + .ny-openmenu--container {
+		transform-origin: left top;
+    	transform: scale(1);
+    	&[data-animation="left"] {
+        	transform-origin: left top;		
+        }
+        &[data-animation="right"] {
+        	transform-origin: right top 0px;		
+        }
+	}
+	.ny-openmenu--container {
+		position: absolute;
+	    z-index: 99;
+	    display: block;
+	    width: $openmenu-width-size;
+	    background: #fff;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    	transform: scale(0);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+        &[data-animation="left"] {
+        	transform-origin: left top;		
+        	left: 0;
+        }
+        &[data-animation="right"] {
+        	transform-origin: right top 0px;
+        	right: 0;		
+        }
+        &[data-position="above"] {
+            top: 0;
+        }
+        &[data-position="under"] {
+            top: inherit;
+        }
+
+        .ny-lists {
+            box-shadow: none;
+        	.ny-subheader {margin: 0 0 0 16px;}
+        	.ny-list-item, .ny-list-item--bordered {
+    			padding: 4px 16px;
+    			h5 {font-size: 1.6rem;}
+    			p {font-size: 12px;}
+    			.ny-badge--inline {
+    				margin-bottom: 8px;
+    			}
+    		}
+        }
+	}
+}

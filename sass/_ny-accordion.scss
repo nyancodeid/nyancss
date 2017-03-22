@@ -1,0 +1,69 @@
+/* nyancss - accordion */
+.ny-accordion, .ny-accordion--multiple {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  .ny-accordion-item {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+    label {
+      position: relative;
+      display: block;
+      padding: 0 0 0 1em;
+      background-color: $primary-color;
+      font-weight: bold;
+      line-height: 3;
+      cursor: pointer;
+      margin-bottom: 0;
+    }
+    .ny-accordion-content--small,
+    .ny-accordion-content--medium,
+    .ny-accordion-content--large {
+      background-color: #ffffff;
+      color: $black-text;
+      height: 0;
+      overflow: auto;
+      > p, > h1, > h2, > h3, > h4, > h5, > h6 {
+        margin: 8px;
+      }
+      transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    input:checked ~ .ny-accordion-content--small {
+      height: $small-size--content;
+    }
+    input:checked ~ .ny-accordion-content--medium {
+      height: $medium-size--content;
+    }
+    input:checked ~ .ny-accordion-content--large {
+      height: $large-size--content;
+    }
+    label::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      width: 3em;
+      height: 3em;
+      text-align: center;
+      transition: all .25s;
+    }
+    input[type=checkbox] + label::after {
+      content: '+';
+    }
+    input[type=checkbox]:checked + label::after {
+      transform: rotate(315deg);
+    }
+    input[type=radio] + label::after {
+      content: '\25BC';
+    }
+    input[type=radio]:checked + label::after {
+      transform: rotate(180deg);
+    }
+  }
+}

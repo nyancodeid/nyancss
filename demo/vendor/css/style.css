@@ -1,0 +1,94 @@
+/* copyright (c) 2017 - Nyan.CSS */
+.header {
+	padding: 0 20px;
+}
+.header img {
+	display: inline-block;
+	height: 64px;
+}
+.header h4 {
+	display: inline-table;
+    vertical-align: top;
+    line-height: 55px;
+    margin-bottom: 0;
+}
+.ny-jumbotron span {
+    padding: 4px 8px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.version {
+    background-color: #3f51c5;
+}
+.lastCommit {
+	background-color: #E91E63;
+}
+.code-example {
+	margin: 3rem 0 !important;
+	max-height: 400px;
+	overflow-y: auto;
+	position: relative;
+}
+.code-example:before {
+	content: 'language-markup';
+	position: absolute;
+	top: 0;
+	right: 20px;
+	padding: 0 8px 8px 8px;
+	background-color: #e8e8e8;
+	border-radius: 0 0 5px 5px;
+}
+.code-example code {
+	font-size: 1.6rem;
+}
+#whiteframe .example {
+	padding: 8px 0;
+}
+#whiteframe .example .row .col-md-4 {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.col-demo {
+	display: block;
+	background: #dcdada;
+	margin: 3px 0;
+	padding-left: 8px;
+}
+.sidebar > div {
+	padding-left: 2rem;
+}
+.main-container {
+	width: 100% !important;
+}
+#card .example .col-md-6 .ny-card {
+	margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+	#card .example .col.col-50 {
+		max-width: 100% !important;
+	}
+	.main-content {
+		max-width: 100% !important;
+	}
+
+}
+@media (min-width: 768px) {
+	.header .img {
+	    display: block;
+    	margin: 0 auto;
+    	height: 48px;
+	}
+}
+.demo-truncate {
+	max-width: 80%;
+}
+.demo-labels span {
+	margin-right: 8px;
+	margin-top: 8px;
+}
+.demo-card--event .ny-card-content {
+	height: 150px;
+}
+.demo-whiteframe .ny-card {
+	padding: 32px 16px;
+}

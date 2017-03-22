@@ -1,0 +1,38 @@
+/* nyancss - jumbotron - bootstrap */
+.ny-jumbotron {
+  padding: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eee;
+}
+.ny-jumbotron h1,
+.ny-jumbotron .h1 {
+  color: inherit;
+}
+.ny-jumbotron p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+}
+.ny-jumbotron > hr {
+  border-top-color: #d5d5d5;
+}
+.container .ny-jumbotron {
+  border-radius: 6px;
+}
+.ny-jumbotron .container {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .ny-jumbotron {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .ny-jumbotron {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .ny-jumbotron h1 {
+    font-size: 63px;
+  }
+}

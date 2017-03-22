@@ -1,0 +1,6 @@
+node_modules/
+.sass-cache/
+.backup/
+.DS_Store
+gulpfile.js
+gitguide.md

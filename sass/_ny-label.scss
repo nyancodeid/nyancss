@@ -1,0 +1,23 @@
+/* nyancss - label */
+.ny-label, .ny-label--success, .ny-label--warning, .ny-label--important, .ny-label--info, .ny-label--inverse {
+  padding: 3px 5px;
+  background-color: #767676;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #ffffff; 
+  &.ny-label--success {
+    background-color: #4CAF50;
+  }
+  &.ny-label--warning {
+    background-color: #FF5722;
+  }
+  &.ny-label--inverse {
+    background-color: $black-text;
+  }
+  &.ny-label--info {
+    background-color: #2196F3;
+  }
+  &.ny-label--important {
+    background-color: #F44336;
+  }
+}
