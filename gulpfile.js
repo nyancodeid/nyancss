@@ -28,23 +28,14 @@ gulp.task('css', function() {
 gulp.task('js', function(cb) {
  pump([
  	gulp.src([
- 		'js/jquery.min.js',
- 		'js/jquery-scrollspy.js',
- 		'js/posts.js',
- 		'js/app.js'
+ 		'js/nyancss.js'
  	]),
-	concat("app.js"),
-	gulp.dest('dist/js'),
-	rename("app.min.js"),
+	concat("nyan.js"),
+	gulp.dest('release/js/'),
+	rename("nyan.min.js"),
 	uglifyjs(),
-	gulp.dest("dist/js")
+	gulp.dest("release/js/")
  ], cb)
-});
-
-gulp.task('js-min', function() {
- return gulp.src('dist/*.js')
-	.pipe(uglify())
-	.pipe(gulp.dest("dist/"));
 });
 
 
