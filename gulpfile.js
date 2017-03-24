@@ -35,11 +35,13 @@ gulp.task('css', function() {
 		.pipe(prefix({
 		    browsers: ["> 0%"]
 		}))
+		.pipe(rename("nyan.css"))
 	.pipe(sourcemaps.write('.', {addComment: false}))
-	.pipe(rename("nyan.css"))
 	.pipe(gulp.dest('release/nyancss-v'+pkg.version+"/css"))
 	.pipe(uglifycss())
+	.pipe(sourcemaps.init())
 	.pipe(rename("nyan.min.css"))
+	.pipe(sourcemaps.write('.', {addComment: false}))
 	.pipe(gulp.dest('release/nyancss-v'+pkg.version+"/css"));
 });
 
