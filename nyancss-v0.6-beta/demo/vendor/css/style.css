@@ -1,0 +1,155 @@
+/* copyright (c) 2017 - Nyan.CSS */
+.ny-jumbotron span {
+    padding: 4px 8px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.version {
+    background-color: #3f51c5;
+}
+.lastCommit {
+	background-color: #E91E63;
+}
+.code-example {
+	margin: 3rem 0 !important;
+	max-height: 400px;
+	overflow-y: auto;
+	position: relative;
+}
+.code-example:before {
+	content: 'language-markup';
+	position: absolute;
+	top: 0;
+	right: 20px;
+	padding: 0 8px 8px 8px;
+	background-color: #e8e8e8;
+	border-radius: 0 0 5px 5px;
+}
+.code-example code {
+	font-size: 1.6rem;
+}
+#whiteframe .example {
+	padding: 8px 0;
+}
+#whiteframe .example .row .col-md-4 {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.col-demo {
+	display: block;
+	background: #dcdada;
+	margin: 3px 0;
+	padding-left: 8px;
+}
+.sidebar > div {
+	width: calc(25% - 1.5rem);
+}
+.main-container {
+	width: 100% !important;
+}
+#card .example .col-md-6 .ny-card {
+	margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+	#card .example .col.col-50 {
+		max-width: 100% !important;
+	}
+	.main-content {
+		max-width: 100% !important;
+	}
+
+}
+@media (min-width: 768px) {
+	.header .img {
+	    display: block;
+    	margin: 0 auto;
+    	height: 48px;
+	}
+}
+.demo-truncate {
+	max-width: 80%;
+}
+.demo-labels span {
+	margin-right: 8px;
+	margin-top: 8px;
+}
+.demo-card--event .ny-card-content {
+	height: 150px;
+}
+.demo-whiteframe .ny-card {
+	padding: 32px 16px;
+}
+
+#buttons .example .demoBtnLink a {
+	margin-right: 5px;
+}
+
+.main-container {
+	height: 100vh;
+}
+.main-container main {
+	margin-top: 16px;
+}
+
+.big-header {
+	height: 150px;
+    margin: 0 -15px;
+    position: relative;
+    padding: 0 15px;
+}
+.big-header h3 {
+	position: absolute;
+    bottom: 0;
+}
+
+#layouting .example > div[class*="layout-"] {
+	margin-bottom: 30px;
+}
+#layouting .layout-1 .header {
+	height: 64px;
+    background-color: #dfdfdf;
+    line-height: 64px;
+    padding-left: 16px;
+}
+#layouting .layout-1 .sidebar {
+    background-color: #f0f8ff;
+}
+#layouting .layout-1 .main {
+	background-color: #faebd7;
+}
+
+#layouting .layout-2 > .ny-flex--row {
+    height: 100px;
+}
+#layouting .layout-2 .ny-flex--row.col-xs-6,
+#layouting .layout-2 .ny-flex--col.col-xs-6 {
+	padding: 0;
+}
+#layouting .layout-2 .ny-flex--row.col-xs-6 > div {
+	height: 100px;
+	line-height: 100px;
+	overflow: hidden;
+}
+#layouting .layout-2 .ny-flex--row.col-xs-6 > div:first-child {
+	background-color: #faebd7;
+}
+#layouting .layout-2 .ny-flex--row.col-xs-6 > div:last-child {
+	background-color: #fff8dc;
+}
+#layouting .layout-2 .ny-flex--col.col-xs-6 > div:first-child {
+	background-color: #ffe084;
+}
+#layouting .layout-2 .ny-flex--col.col-xs-6 > div:last-child {
+	background-color: #ffd0e0;
+}
+#layouting .layout-2 .ny-flex--col.col-xs-6 > div {
+	height: 50px;
+	line-height: 50px;
+	padding-left: 16px;
+	overflow: hidden;
+}
+
+#tooltip .example .col-xs-12 button {
+	left: 50%;
+    transform: translateX(-50%);
+}
