@@ -1,17 +1,4 @@
 /* copyright (c) 2017 - Nyan.CSS */
-.header {
-	padding: 0 20px;
-}
-.header img {
-	display: inline-block;
-	height: 64px;
-}
-.header h4 {
-	display: inline-table;
-    vertical-align: top;
-    line-height: 55px;
-    margin-bottom: 0;
-}
 .ny-jumbotron span {
     padding: 4px 8px;
     color: #ffffff;
@@ -55,7 +42,7 @@
 	padding-left: 8px;
 }
 .sidebar > div {
-	padding-left: 2rem;
+	width: calc(25% - 1.5rem);
 }
 .main-container {
 	width: 100% !important;
@@ -91,4 +78,78 @@
 }
 .demo-whiteframe .ny-card {
 	padding: 32px 16px;
+}
+
+#buttons .example .demoBtnLink a {
+	margin-right: 5px;
+}
+
+.main-container {
+	height: 100vh;
+}
+.main-container main {
+	margin-top: 16px;
+}
+
+.big-header {
+	height: 150px;
+    margin: 0 -15px;
+    position: relative;
+    padding: 0 15px;
+}
+.big-header h3 {
+	position: absolute;
+    bottom: 0;
+}
+
+#layouting .example > div[class*="layout-"] {
+	margin-bottom: 30px;
+}
+#layouting .layout-1 .header {
+	height: 64px;
+    background-color: #dfdfdf;
+    line-height: 64px;
+    padding-left: 16px;
+}
+#layouting .layout-1 .sidebar {
+    background-color: #f0f8ff;
+}
+#layouting .layout-1 .main {
+	background-color: #faebd7;
+}
+
+#layouting .layout-2 > .ny-flex--row {
+    height: 100px;
+}
+#layouting .layout-2 .ny-flex--row.col-xs-6,
+#layouting .layout-2 .ny-flex--col.col-xs-6 {
+	padding: 0;
+}
+#layouting .layout-2 .ny-flex--row.col-xs-6 > div {
+	height: 100px;
+	line-height: 100px;
+	overflow: hidden;
+}
+#layouting .layout-2 .ny-flex--row.col-xs-6 > div:first-child {
+	background-color: #faebd7;
+}
+#layouting .layout-2 .ny-flex--row.col-xs-6 > div:last-child {
+	background-color: #fff8dc;
+}
+#layouting .layout-2 .ny-flex--col.col-xs-6 > div:first-child {
+	background-color: #ffe084;
+}
+#layouting .layout-2 .ny-flex--col.col-xs-6 > div:last-child {
+	background-color: #ffd0e0;
+}
+#layouting .layout-2 .ny-flex--col.col-xs-6 > div {
+	height: 50px;
+	line-height: 50px;
+	padding-left: 16px;
+	overflow: hidden;
+}
+
+#tooltip .example .col-xs-12 button {
+	left: 50%;
+    transform: translateX(-50%);
 }

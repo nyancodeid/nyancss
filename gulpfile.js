@@ -11,8 +11,10 @@ var banner = require('gulp-banner');
 var pkg = require('./package.json');
 
 var path = {
-	css: ['css/nyancss.css'],
-	js: ['js/nyancss.js']
+	css: ['./css/nyancss.css'],
+	js: ['js/nyancss.js'],
+	fonts: ['fonts/*'],
+	files: ['LICENSE', 'package.json', 'README.md']
 };
 
 var comment = '/*\n' +
@@ -27,33 +29,44 @@ var comment = '/*\n' +
 gulp.task('css', function() {
  return gulp.src(path.css)
  	.pipe(sourcemaps.init())
- 	.pipe(banner(comment, {
-        pkg: pkg
-    }))
-	.pipe(prefix({
-	    browsers: ["> 0%"]
-	}))
-	.pipe(sourcemaps.write('.'))
+	 	.pipe(banner(comment, {
+	        pkg: pkg
+	    }))
+		.pipe(prefix({
+		    browsers: ["> 0%"]
+		}))
+	.pipe(sourcemaps.write('.', {addComment: false}))
 	.pipe(rename("nyan.css"))
-	.pipe(gulp.dest("release/css/"))
+	.pipe(gulp.dest('release/nyancss-v'+pkg.version+"/css"))
 	.pipe(uglifycss())
-	.pipe(rename("nyan.css"))
-	.pipe(gulp.dest("release/css/"));
+	.pipe(rename("nyan.min.css"))
+	.pipe(gulp.dest('release/nyancss-v'+pkg.version+"/css"));
 });
 
 gulp.task('js', function(cb) {
  pump([
  	gulp.src(path.js),
- 	sourcemaps.init(),
  	banner(comment, {
         pkg: pkg
     }),
- 	sourcemaps.write('.'),
-	gulp.dest('release/js/'),
+	rename("nyan.js"),
+	gulp.dest('release/nyancss-v'+pkg.version+'/js'),
 	rename("nyan.min.js"),
 	uglifyjs(),
-	gulp.dest("release/js/")
+	gulp.dest('release/nyancss-v'+pkg.version+"/js")
  ], cb)
+});
+
+gulp.task('fonts', function() {
+	return gulp.src(path.fonts).pipe(gulp.dest('release/nyancss-v'+pkg.version+'/fonts'));
+});
+
+gulp.task('move', function() {
+	return gulp.src(path.files).pipe(gulp.dest('release/nyancss-v'+pkg.version));
+});
+
+gulp.task('release', function() {
+	gulp.start('css', 'js', 'fonts', 'move');
 });
 
 

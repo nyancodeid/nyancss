@@ -1,4 +1,11 @@
 /* nyancss - helpers */
+.ny-content {
+  display: block;
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .ny-flex {
   display: flex;
   flex: 1;
@@ -98,6 +105,13 @@ img.ny-img-responsive, video.ny-video-responsive {
 }
 .show--inline-block {
   display: inline-block;
+}
+
+.ny-no-margin {
+  margin: 0;
+}
+.ny-no-padding {
+  padding: 0;
 }
 
 .ny-avatar {

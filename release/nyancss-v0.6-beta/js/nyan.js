@@ -1,3 +1,12 @@
+/*
+ * nyancss 0.6-beta
+ * Modern Light and Smooth CSS Framework
+ * 
+ *
+ * Copyright 2017, Ryan Aunur Rassyid
+ * Released under the MIT license.
+*/
+
 if (typeof(ny) == 'undefined' || ny == null || typeof(ny) != 'object') {throw new Error('nyancode config is undefined');}
 var root;
 $(function() {

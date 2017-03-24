@@ -1,26 +1,19 @@
-/*!
- * Nyan.CSS v0.5-alpha
- *
- * Copyright (c) 2017 Nyan ID
- * Licensed under the MIT license
- */
-
 @import 'variable';
 @import 'global';
 
-/* Commponents */
-
-@import 'ny-typography';
-@import 'ny-button';
-@import 'ny-card';
-@import 'ny-lists';
-@import 'ny-label';
-@import 'ny-badge';
-@import 'ny-accordion';
-@import 'ny-jumbotron';
-@import 'ny-table';
-@import 'ny-whiteframe';
-@import 'ny-grid';
-@import 'ny-form';
-@import 'ny-openmenu';
-@import 'ny-helpers';
+// components
+@import 'components/ny-typography';
+@import 'components/ny-button';
+@import 'components/ny-card';
+@import 'components/ny-lists';
+@import 'components/ny-label';
+@import 'components/ny-badge';
+@import 'components/ny-accordion';
+@import 'components/ny-jumbotron';
+@import 'components/ny-table';
+@import 'components/ny-whiteframe';
+@import 'components/ny-grid';
+@import 'components/ny-form';
+@import 'components/ny-openmenu';
+@import 'components/ny-tooltip';
+@import 'components/ny-helpers';

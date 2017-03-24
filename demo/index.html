@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="nyancss">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,54 +10,75 @@
 		<link rel="stylesheet" href="vendor/css/style.css">
 		<link rel="stylesheet" href="vendor/css/prismjs.min.css">
 	</head>
-	<body ny-app ng-controller="nyancssCtrl">
-		<section class="header" id="image">
-			<img src="../img/nyancss.png" alt="">
-			<h4> a modern CSS framework</h4>
-			
-		</section>
-		<div class="clearfix main-container">
-			<div class="col-md-3 hide-xs hide-sm sidebar">
-				<div class="ny-fixed">
-					<h3>Navigation</h3>
-					<p>
-						<ul class="list-style-none">
-							<li><a href="#getting-started" title="Getting Started">Getting Started and Setup</a></li>
-							<li><a href="#typography" title="Typography">Typography</a></li>
-							<li><a href="#blockquotes" title="Blockquotes">Blockquotes</a></li>
-							<li><a href="#card" title="Card">Card</a></li>
-							<li><a href="#whiteframe" title="Whiteframe">Whiteframe</a></li>
-							<li><a href="#buttons" title="Buttons">Buttons</a></li>
-							<li><a href="#lists" title="Lists and List Items">Lists and List Items</a></li>
-							<li><a href="#label" title="Label and Badges">Label and Badges</a></li>
-							<li><a href="#accordion" title="Accordion">Accordion</a></li>
-							<li><a href="#forms" title="Forms">Forms</a></li>
-							<li><a href="#tables" title="Tables">Tables</a></li>
-							<li><a href="#grids" title="Grids">Grids</a></li>
-							<li><a href="#mediaqueries" title="Media Queries">Media Queries</a></li>
-							<li><a href="#helpers" title="Helpers">Helpers</a></li>
-						</ul>
-					</p>
+	<body ny-app>
+		<div class="clearfix main-container ny-flex--row">
+			<div class="col-md-3 hide-xs hide-sm ny-content">
+				<div>
+					<div class="big-header ny-primary">
+						<h3>Nyan.CSS <small>v0.6-beta</small></h3>
+					</div>
+					<ul class="list-style-none ny-padding ny-table--responsive">
+						<li><h5 class="ny-primary-text ny-no-margin">Getting Started</h5></li>
+						<li>
+							<ul class="list-style-none">
+								<li><a href="#getting-started" title="Getting Started">Getting Started</a></li>
+								<li><a href="#download" title="Getting Started">Download</a></li>
+								<li><a href="#cdn-link" title="Getting Started">CDN</a></li>
+								<li><a href="#setup" title="Getting Started">Setup</a></li>
+							</ul>
+						</li>
+						<li><h5 class="ny-primary-text ny-no-margin">Components</h5></li>
+						<li>
+							<ul class="list-style-none">
+								<li><a href="#typography" title="Typography">Typography</a></li>
+								<li><a href="#blockquotes" title="Blockquotes">Blockquotes</a></li>
+								<li><a href="#card" title="Card">Card</a></li>
+								<li><a href="#whiteframe" title="Whiteframe">Whiteframe</a></li>
+								<li><a href="#buttons" title="Buttons">Buttons</a></li>
+								<li><a href="#lists" title="Lists">Lists</a></li>
+								<li><a href="#listitem" title="List Items">List Items</a></li>
+								<li><a href="#label" title="Label and Badges">Label and Badges</a></li>
+								<li><a href="#openmenu" title="Open Menu">Open Menu</a></li>
+								<li><a href="#accordion" title="Accordion">Accordion</a></li>
+								<li><a href="#forms" title="Forms">Forms</a></li>
+								<li><a href="#tables" title="Tables">Tables</a></li>
+								<li><a href="#grids" title="Grids">Grids</a></li>
+								<li><a href="#code" title="Code">Code</a></li>
+								<li><a href="#layouting" title="Layouting">Layouting</a></li>
+								<li><a href="#mediaqueries" title="Media Queries">Media Queries</a></li>
+							</ul>
+						</li>
+						<li><h5 class="ny-primary-text ny-no-margin">Helpers</h5></li>
+						<li>
+							<ul class="list-style-none">
+								<li><a href="#truncate" title="Getting Started">Truncate</a></li>
+								<li><a href="#flex" title="Getting Started">Flex</a></li>
+								<li><a href="#reponsiveUtil" title="Getting Started">Responsive Utilities</a></li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<div class="col-md-9 col-sm-12 col-xs-12 main-content">
+			<div class="col-md-9 col-sm-12 col-xs-12 main-content ny-content">
 				<main>
+					<div class="ny-jumbotron">
+						<h1>Nyan.CSS</h1>
+						<p>a modern framework with smooth and light design.</p>
+						<span class="version">{{nyanapp.version}}</span>
+						<span class="lastCommit">{{nyanapp.lastCommit}}</span>
+					</div>
 					<section class="" id="getting-started">
 						<h3 class="title">Getting Started</h3>
 						<hr>
 						<div class="example">
-							<div class="ny-jumbotron">
-								<h1>Nyan.CSS</h1>
-								<p>a modern framework with smooth and light design.</p>
-								<span class="version">{{nyanapp.version}}</span>
-								<span class="lastCommit">{{nyanapp.lastCommit}}</span>
-							</div>
 							<p>Nyan.css comes in two different forms. You can select which version you want depending on out preference and expertise. To start using Nyan.css, all you have to do is Download one of the options below.</p>
 							<br>
+							<div id="download"></div>
 							<h4>Download</h4>
 							<p>This is standart version that comes with both the minified and unminified CSS. This options requires little to not setup.</p>
 							<a href="" id="downloadLink" class="ny-button ny-button--raised">Nyan.css -version-</a>
 							<br><br>
+							<div id="cdn-link"></div>
 							<h4>CDN</h4>
 							<p>You can find all the version of the CDN at github.com/ryanaunur/nyan.css</p>
 							<pre class="code-example"><code class="language-markup" id="cdnLink">&lt;!-- Compiled and Minified CSS --&gt;
@@ -199,7 +220,7 @@
 								</div>
 								<div class="ny-card">
 									<div class="ny-card-header ny-flex--row">
-										<img src="../img/avatar.png" class="ny-avatar" alt="">
+										<img src="vendor/img/avatar.png" class="ny-avatar" alt="">
 										<div class="ny-flex--col">
 											<span class="ny-card-header-title">Title</span>
 											<span class="ny-card-header-subtitle">subtitle</span>
@@ -209,7 +230,7 @@
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ducimus..</p>
 									</div>
 									<div class="ny-card-image">
-										<img src="../img/world.png" alt="">
+										<img src="vendor/img/world.png" alt="">
 									</div>
 									<div class="ny-card-action">
 										<a href="#" class="ny-button">Share</a>
@@ -217,10 +238,10 @@
 								</div>
 								<div class="ny-card">
 									<div class="ny-card-image">
-										<img src="../img/world.png" alt="">
+										<img src="vendor/img/world.png" alt="">
 									</div>
 									<div class="ny-card-header ny-flex--row">
-										<img src="../img/avatar.png" class="ny-avatar" alt="">
+										<img src="vendor/img/avatar.png" class="ny-avatar" alt="">
 										<div class="ny-flex--col">
 											<span class="ny-card-header-title">Title</span>
 											<span class="ny-card-header-subtitle">subtitle</span>
@@ -234,7 +255,7 @@
 							<div class="col-md-6 col-sm-12">
 								<div class="ny-card">
 									<div class="ny-card-header ny-flex--row">
-										<img src="../img/avatar.png" class="ny-avatar" alt="">
+										<img src="vendor/img/avatar.png" class="ny-avatar" alt="">
 										<div class="ny-flex--col">
 											<span class="ny-card-header-title">Title</span>
 											<span class="ny-card-header-subtitle">subtitle</span>
@@ -249,14 +270,14 @@
 								</div>
 								<div class="ny-card">
 									<div class="ny-card-header ny-flex--row">
-										<img src="../img/avatar.png" class="ny-avatar" alt="">
+										<img src="vendor/img/avatar.png" class="ny-avatar" alt="">
 										<div class="ny-flex--col">
 											<span class="ny-card-header-title">Title</span>
 											<span class="ny-card-header-subtitle">subtitle</span>
 										</div>
 									</div>
 									<div class="ny-card-image">
-										<img src="../img/world.png" alt="">
+										<img src="vendor/img/world.png" alt="">
 									</div>
 									<div class="ny-card-content">
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ducimus..</p>
@@ -267,7 +288,7 @@
 								</div>
 								<div class="ny-card ny-card-h">
 									<div class="ny-card-image">
-										<img src="../img/world.png" alt="">
+										<img src="vendor/img/world.png" alt="">
 									</div>
 									<div class="ny-card-h-content">
 										<div class="ny-card-title">Card Header</div>
@@ -438,9 +459,9 @@ Card with Horizontal Layout
 						<hr>
 						<div class="example">
 							<h6>Link</h6>
-							<div class="col-md-12">
+							<div class="col-md-12 ny-flex--row ny-flex--wrap demoBtnLink">
 								<a class="ny-button" href="javascript: void(0)">Default Button</a>
-								<a class="ny-button ny-button--raised" href="javascript: void(0)" data-ripple>Raised Button</a>
+								<a class="ny-button ny-button--raised" href="javascript: void(0)">Raised Button</a>
 								<a class="ny-button ny-button--raised ny-accent" href="javascript: void(0)">Raised + ny-accent</a>
 								<a class="ny-button ny-button--outline" href="javascript: void(0)">Outlined Button</a>
 								<a class="ny-button ny-button--clear" href="javascript: void(0)">Clear Button</a>
@@ -451,24 +472,13 @@ Card with Horizontal Layout
 							<h6>Button</h6>
 							<div class="col-md-12">
 								<button class="ny-button">Default Button</button>
-								<button data-ripple class="ny-button ny-button--raised">Raised Button</button>
+								<button class="ny-button ny-button--raised">Raised Button</button>
 								<button class="ny-button ny-button--raised ny-accent">Raised + ny-accent</button>
 								<button class="ny-button ny-button--outline">Outlined Button</button>
 								<button class="ny-button ny-button--clear">Clear Button</button>
 								<button class="ny-button" disabled>Default Button</button>
 								<button class="ny-button ny-button--outline" disabled>Outlined Button</button>
 								<button class="ny-button ny-button--clear" disabled>Clear Button</button>
-							</div>
-							<h6>Input Type Submit</h6>
-							<div class="col-md-12">
-								<input class="ny-button" type="submit" value="Default Button">
-								<input class="ny-button ny-button--raised" type="submit" value="Raised Button">
-								<input class="ny-button ny-button--raised ny-accent" type="submit" value="Raised + ny-accent">
-								<input class="ny-button ny-button--outline" type="submit" value="Outlined Button">
-								<input class="ny-button ny-button--clear" type="submit" value="Clear Button">
-								<input class="ny-button" disabled type="submit" value="Default Button">
-								<input class="ny-button ny-button--outline" disabled type="submit" value="Outlined Button">
-								<input class="ny-button ny-button--clear" disabled type="submit" value="Clear Button">
 							</div>
 							<!-- Code Example -->
 							<pre class="code-example"><code class="language-markup">&lt;button class="ny-button"&gt;Default Button&lt;/button&gt;
@@ -557,14 +567,14 @@ Card with Horizontal Layout
 									<div class="ny-card-title">Example List Item</div>
 									<span class="ny-subheader">Normal List Item</span>
 									<div class="ny-list-item">
-										<img src="../img/avatar.png" alt="" class="ny-circle">
+										<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 										<div class="ny-list-item-text">
 											<h5>Title</h5>
 											<p>Secondary Text</p>
 										</div>
 									</div>
 									<div class="ny-list-item">
-										<img src="../img/avatar.png" alt="" class="ny-circle">
+										<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 										<div class="ny-list-item-text">
 											<h5>Title</h5>
 											<p>Secondary Text</p>
@@ -572,21 +582,21 @@ Card with Horizontal Layout
 									</div>
 									<span class="ny-subheader">Bordered List Item</span>
 									<div class="ny-list-item--bordered">
-										<img src="../img/avatar.png" alt="" class="ny-circle">
+										<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 										<div class="ny-list-item-text">
 											<h5>Title</h5>
 											<p>Secondary Text</p>
 										</div>
 									</div>
 									<div class="ny-list-item--bordered">
-										<img src="../img/avatar.png" alt="" class="ny-circle">
+										<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 										<div class="ny-list-item-text">
 											<h5>Title</h5>
 											<p>Secondary Text</p>
 										</div>
 									</div>
 									<div class="ny-list-item--bordered">
-										<img src="../img/avatar.png" alt="" class="ny-circle">
+										<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 										<div class="ny-list-item-text">
 											<h5>Title</h5>
 											<p>Secondary Text</p>
@@ -607,7 +617,7 @@ Card with Horizontal Layout
 										<button class="ny-button">More info</button>
 									</div>
 									<div class="ny-list-item">
-										<img src="../img/avatar.png" alt="" class="ny-circle">
+										<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 										<div class="ny-list-item-text">
 											<h5>Title</h5>
 											<p>Secondary Text</p>
@@ -617,7 +627,7 @@ Card with Horizontal Layout
 									</div>
 									<span class="ny-subheader">3 Line List Item</span>
 									<div class="ny-list-item">
-										<img src="../img/avatar.png" alt="" class="ny-circle">
+										<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 										<div class="ny-list-item-text">
 											<h5>Title</h5>
 											<p>Secondary Line Text</p>
@@ -625,7 +635,7 @@ Card with Horizontal Layout
 										</div>
 									</div>
 									<div class="ny-list-item">
-										<img src="../img/avatar.png" alt="" class="ny-circle">
+										<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 										<div class="ny-list-item-text">
 											<h5>Title</h5>
 											<p>Secondary Line Text</p>
@@ -633,7 +643,7 @@ Card with Horizontal Layout
 										</div>
 									</div>
 									<div class="ny-list-item">
-										<img src="../img/avatar.png" alt="" class="ny-circle">
+										<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 										<div class="ny-list-item-text">
 											<h5>Title</h5>
 											<p>Secondary Line Text</p>
@@ -742,7 +752,7 @@ Card with Horizontal Layout
 										<div class="ny-openmenu--container" data-animation="right" data-position="above">
 											<div class="ny-lists">
 												<div class="ny-list-item" style="margin-bottom:8px;">
-													<img src="../img/avatar.png" alt="" class="ny-circle">
+													<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 													<div class="ny-list-item-text">
 														<h5>Ryan Aunur Rassyid</h5>
 														<p>Developer of nyancss</p>
@@ -786,7 +796,7 @@ Card with Horizontal Layout
 						<div class="example">
 							<h4>Labels</h4>
 							<p>Add <span class="ny-code">class="ny-label"</span> to the span / paragraf tag for a labeled text.</p>
-							<div class="ny-flex--row flex-wrap demo-labels">
+							<div class="ny-flex--row ny-flex--wrap demo-labels">
 								<span class="ny-label">Default</span>
 								<span class="ny-label--success">Success</span>
 								<span class="ny-label--warning">Warning</span>
@@ -870,21 +880,20 @@ Card with Horizontal Layout
 									</tr>
 								</tbody>
 							</table>
+
 							<div class="row clearfix">
 								<div class="col-xs-12 col-md-6">
 									<h5>Accordion Multiple Open</h5>
 									<div class="ny-accordion--multiple">
 										<div class="ny-accordion-item">
-											<input type="checkbox" id="tabs-one" name="tabs">
-											<label for="tabs-one">Accordion Multiple 1</label>
+											<label>Accordion Multiple 1</label>
 											<div class="ny-accordion-content--small">
 												<h3>Demo Accordion</h3>
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione maxime eum voluptatum ea at repellendus, accusantium rerum, voluptates aut officia architecto quas omnis consequatur, provident porro. Pariatur fugit nulla reprehenderit.</p>
 											</div>
 										</div>
-										<div class="ny-accordion-item">
-											<input type="checkbox" id="tabs-two" name="tabs" checked="">
-											<label for="tabs-two">Accordion Multiple 2</label>
+										<div class="ny-accordion-item" data-default>
+											<label>Accordion Multiple 2</label>
 											<div class="ny-accordion-content--medium">
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda doloribus nisi ipsum quod iusto iure similique, delectus quaerat architecto excepturi tenetur, cum alias iste eaque fugit pariatur debitis accusamus eum!</p>
@@ -895,21 +904,20 @@ Card with Horizontal Layout
 								<div class="col-xs-12 col-md-6">
 									<h5>Accordion Single Open</h5>
 									<div class="ny-accordion">
-										<div class="ny-accordion-item">
-											<input type="radio" id="tabs-three" name="tabs">
-											<label for="tabs-three">Accordion Single 1</label>
+										<div class="ny-accordion-item" data-default>
+											<label>Accordion Single 1</label>
 											<div class="ny-accordion-content--large">
 												<div class="ny-lists">
 													<span class="ny-subheader">Normal List Item</span>
 													<div class="ny-list-item">
-														<img src="../img/avatar.png" alt="" class="ny-circle">
+														<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 														<div class="ny-list-item-text">
 															<h5>Title</h5>
 															<p>Secondary Text</p>
 														</div>
 													</div>
 													<div class="ny-list-item">
-														<img src="../img/avatar.png" alt="" class="ny-circle">
+														<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 														<div class="ny-list-item-text">
 															<h5>Title</h5>
 															<p>Secondary Text</p>
@@ -917,21 +925,21 @@ Card with Horizontal Layout
 													</div>
 													<span class="ny-subheader">Bordered List Item</span>
 													<div class="ny-list-item--bordered">
-														<img src="../img/avatar.png" alt="" class="ny-circle">
+														<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 														<div class="ny-list-item-text">
 															<h5>Title</h5>
 															<p>Secondary Text</p>
 														</div>
 													</div>
 													<div class="ny-list-item--bordered">
-														<img src="../img/avatar.png" alt="" class="ny-circle">
+														<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 														<div class="ny-list-item-text">
 															<h5>Title</h5>
 															<p>Secondary Text</p>
 														</div>
 													</div>
 													<div class="ny-list-item--bordered">
-														<img src="../img/avatar.png" alt="" class="ny-circle">
+														<img src="vendor/img/avatar.png" alt="" class="ny-circle">
 														<div class="ny-list-item-text">
 															<h5>Title</h5>
 															<p>Secondary Text</p>
@@ -943,15 +951,13 @@ Card with Horizontal Layout
 											</div>
 										</div>
 										<div class="ny-accordion-item">
-											<input type="radio" id="tabs-four" name="tabs" checked="">
-											<label for="tabs-four">Accordion Single 2</label>
+											<label>Accordion Single 2</label>
 											<div class="ny-accordion-content--small">
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 											</div>
 										</div>
 										<div class="ny-accordion-item">
-											<input type="radio" id="tabs-five" name="tabs">
-											<label for="tabs-five">Accordion Single 3</label>
+											<label>Accordion Single 3</label>
 											<div class="ny-accordion-content--medium">
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil possimus est delectus commodi praesentium, enim voluptatem voluptate aut, iste provident a veniam ducimus, in voluptatum perspiciatis sunt. Eum, libero, quod.</p>
@@ -1128,7 +1134,7 @@ Card with Horizontal Layout
 						<h4><b>Bordered Table</b></h4>
 						<p>Tables are bordered by default.</p>
 						<div class="example">
-							<table>
+							<table class="ny-table">
 								<thead>
 									<tr>
 										<th>Name</th>
@@ -1193,7 +1199,7 @@ Card with Horizontal Layout
 						<h4><b>Striped Table</b></h4>
 						<p>Add <span class="ny-code">class="ny-table--striped"</span> to the table tag for a striped table.</p>
 						<div class="example">
-							<table class="ny-table--striped">
+							<table class="ny-table--striped" data-responsive>
 								<thead>
 									<tr>
 										<th>Name</th>
@@ -1436,6 +1442,35 @@ Card with Horizontal Layout
 						</div>
 					</section>
 
+					<section id="layouting">
+						<h3 class="title">Layouting</h3>
+						<hr>
+						<p></p>
+						<div class="example">
+							<div class="col-xs-12 layout-1">
+								<div class="ny-flex--col">
+									<div class="header">header</div>
+									<div class="ny-flex--row" style="height:150px;">
+										<div class="sidebar col-xs-3">sidebar</div>
+										<div class="main col-xs-9">main</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 layout-2">
+								<div class="ny-flex--row">
+									<div class="ny-flex--row col-xs-6">
+										<div class="col-xs-6">First item in row</div>
+										<div class="col-xs-6">Second item in row</div>
+									</div>
+									<div class="ny-flex--col col-xs-6">
+										<div>First item in column</div>
+										<div>Second item in column</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
 					<section class="" id="mediaqueries">
 						<h3 class="title">Media Queries</h3>
 						<hr>
@@ -1473,6 +1508,7 @@ Card with Horizontal Layout
 						<h3 class="title">Helpers</h3>
 						<hr>
 						<div class="example">
+							<div id="truncate"></div>
 							<h4>Truncate</h4>
 							<p>To truncate long lines of text in an ellipsis, Add the class <span class="ny-code">.ny-truncate</span> to the tag which contains the text. See an examaple below of header being truncated inside a card.</p>
 							<div class="ny-card">
@@ -1486,6 +1522,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita
 &lt;/p&gt;</code></pre>
 							<br>
 
+							<div id="flex"></div>
 							<h4>Flex</h4>
 							<p>NyanCSS use flex for great layouting.</p>
 							<table class="ny-table--striped">
@@ -1516,6 +1553,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita
 								</tbody>
 							</table>
 
+							<div id="reponsiveUtil"></div>
 							<h4>Responsive Utilities</h4>
 							<p>These clasess are used to show and/or hide content by device via media queries.</p>
 							<p>Use one or combination of the available classes for toggling conent across viewport breakpoints.</p>
@@ -1608,7 +1646,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita
 				appDebug: true
 			},
 			config: {
-
+				tableResponsive: true
 			}
 		}
 	</script>

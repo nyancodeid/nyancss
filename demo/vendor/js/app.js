@@ -1,6 +1,6 @@
 var nyancss = {
-	version: 'v0.5-alpha',
-	lastCommit: 'Marc 6, 2017',
+	version: 'v0.6-beta',
+	lastCommit: 'Marc 24, 2017',
 	cdnLink: {
 		css: 'https://cdnjs.com/nyancss/nyan.min.css',
 		js: 'https://cdnjs.com/nyancss/nyan.min.js'

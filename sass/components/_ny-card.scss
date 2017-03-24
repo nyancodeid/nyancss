@@ -1,7 +1,14 @@
 /* nyancss - card */
 .ny-card {
-  padding: 8px 16px;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+  border-radius: $card-border-radius;
+  padding: $card-padding;
+  box-shadow: $card-box-shadow;
+  > div:first-child.ny-card-image img {
+    border-radius: 3px 3px 0 0;
+  }
+  > div:last-child.ny-card-image img {
+    border-radius: 0 0 3px 3px;
+  }
   &.ny-accent .ny-card-title {
     color: #ffffff !important;
   }
@@ -23,7 +30,7 @@
   }
   .ny-card-action,.ny-card-action--right {
     -webkit-box-flex: 1;
-    -webkit-flex: 1;
+        -webkit-flex: 1;
     flex: 1;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -59,6 +66,12 @@
   &.ny-card-h {
     display: flex;
     flex-direction: row;
+    > div:first-child.ny-card-image img {
+      border-radius: 3px 0 0 3px;
+    }
+    > div:last-child.ny-card-image img {
+      border-radius: 0 3px 3px 0;
+    }
     .ny-card-image {
       width: 40%;
       margin: -8px -16px;
@@ -74,7 +87,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .ny-card, .ny-lists {
     margin-bottom: 8px;
   }

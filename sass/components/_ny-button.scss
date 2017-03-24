@@ -18,6 +18,7 @@ input[type='submit'] {
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+  user-select: none;
   border: none;
   transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1), background-color .4s cubic-bezier(.25, .8, .25, 1)
 }

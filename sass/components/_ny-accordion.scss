@@ -11,7 +11,7 @@
       z-index: -1;
       opacity: 0;
     }
-    label {
+    .ny-accordion--head {
       position: relative;
       display: block;
       padding: 0 0 0 1em;
@@ -20,10 +20,21 @@
       line-height: 3;
       cursor: pointer;
       margin-bottom: 0;
+      label {
+        position: relative;
+        display: block;
+        font-weight: bold;
+        line-height: 3;
+        cursor: pointer;
+        width: 80%;
+        margin-bottom: 0;
+        @extend .ny-truncate;
+      }
     }
     .ny-accordion-content--small,
     .ny-accordion-content--medium,
-    .ny-accordion-content--large {
+    .ny-accordion-content--large,
+    .ny-accordion-content--auto {
       background-color: #ffffff;
       color: $black-text;
       height: 0;
@@ -43,7 +54,7 @@
     input:checked ~ .ny-accordion-content--large {
       height: $large-size--content;
     }
-    label::after {
+    .ny-accordion--head::after {
       position: absolute;
       right: 0;
       top: 0;
@@ -53,16 +64,16 @@
       text-align: center;
       transition: all .25s;
     }
-    input[type=checkbox] + label::after {
+    input[type=checkbox] + .ny-accordion--head::after {
       content: '+';
     }
-    input[type=checkbox]:checked + label::after {
+    input[type=checkbox]:checked + .ny-accordion--head::after {
       transform: rotate(315deg);
     }
-    input[type=radio] + label::after {
+    input[type=radio] + .ny-accordion--head::after {
       content: '\25BC';
     }
-    input[type=radio]:checked + label::after {
+    input[type=radio]:checked + .ny-accordion--head::after {
       transform: rotate(180deg);
     }
   }
