@@ -1,0 +1,88 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'rebuild',
+1 verbose cli   'node-sass' ]
+2 info using npm@4.0.5
+3 info using node@v7.4.0
+4 info readInstalled object
+5 verbose rebuild path, id [ '/mnt/g/Project/NyanCSS/repo/node_modules/node-sass',
+5 verbose rebuild   'node-sass@4.5.1' ]
+6 silly rebuild set [ '/mnt/g/Project/NyanCSS/repo/node_modules/node-sass' ]
+7 info build /mnt/g/Project/NyanCSS/repo/node_modules/node-sass
+8 info lifecycle node-sass@4.5.1~preinstall: node-sass@4.5.1
+9 silly lifecycle node-sass@4.5.1~preinstall: no script for preinstall, continuing
+10 info linkStuff node-sass@4.5.1
+11 silly linkStuff node-sass@4.5.1 has /mnt/g/Project/NyanCSS/repo/node_modules as its parent node_modules
+12 verbose linkBins node-sass@4.5.1
+13 verbose linkBins [ { 'node-sass': 'bin/node-sass' },
+13 verbose linkBins   '/mnt/g/Project/NyanCSS/repo/node_modules/.bin',
+13 verbose linkBins   false ]
+14 verbose linkMans node-sass@4.5.1
+15 verbose rebuildBundles node-sass@4.5.1
+16 verbose rebuildBundles [ 'gaze', 'glob', 'globule', 'lodash', 'minimatch' ]
+17 verbose rebuild bundle /mnt/g/Project/NyanCSS/repo/node_modules/node-sass/node_modules/globule
+18 info build /mnt/g/Project/NyanCSS/repo/node_modules/node-sass/node_modules/globule
+19 info lifecycle globule@1.1.0~preinstall: globule@1.1.0
+20 silly lifecycle globule@1.1.0~preinstall: no script for preinstall, continuing
+21 info linkStuff globule@1.1.0
+22 silly linkStuff globule@1.1.0 has /mnt/g/Project/NyanCSS/repo/node_modules/node-sass/node_modules as its parent node_modules
+23 verbose linkBins globule@1.1.0
+24 verbose linkMans globule@1.1.0
+25 verbose rebuildBundles globule@1.1.0
+26 info lifecycle globule@1.1.0~install: globule@1.1.0
+27 silly lifecycle globule@1.1.0~install: no script for install, continuing
+28 info lifecycle globule@1.1.0~postinstall: globule@1.1.0
+29 silly lifecycle globule@1.1.0~postinstall: no script for postinstall, continuing
+30 verbose rebuild bundle /mnt/g/Project/NyanCSS/repo/node_modules/node-sass/node_modules/lodash
+31 info build /mnt/g/Project/NyanCSS/repo/node_modules/node-sass/node_modules/lodash
+32 info lifecycle lodash@4.16.6~preinstall: lodash@4.16.6
+33 silly lifecycle lodash@4.16.6~preinstall: no script for preinstall, continuing
+34 info linkStuff lodash@4.16.6
+35 silly linkStuff lodash@4.16.6 has /mnt/g/Project/NyanCSS/repo/node_modules/node-sass/node_modules as its parent node_modules
+36 verbose linkBins lodash@4.16.6
+37 verbose linkMans lodash@4.16.6
+38 verbose rebuildBundles lodash@4.16.6
+39 info lifecycle lodash@4.16.6~install: lodash@4.16.6
+40 silly lifecycle lodash@4.16.6~install: no script for install, continuing
+41 info lifecycle lodash@4.16.6~postinstall: lodash@4.16.6
+42 silly lifecycle lodash@4.16.6~postinstall: no script for postinstall, continuing
+43 verbose rebuild bundle /mnt/g/Project/NyanCSS/repo/node_modules/node-sass/node_modules/minimatch
+44 info build /mnt/g/Project/NyanCSS/repo/node_modules/node-sass/node_modules/minimatch
+45 info lifecycle minimatch@3.0.3~preinstall: minimatch@3.0.3
+46 silly lifecycle minimatch@3.0.3~preinstall: no script for preinstall, continuing
+47 info linkStuff minimatch@3.0.3
+48 silly linkStuff minimatch@3.0.3 has /mnt/g/Project/NyanCSS/repo/node_modules/node-sass/node_modules as its parent node_modules
+49 verbose linkBins minimatch@3.0.3
+50 verbose linkMans minimatch@3.0.3
+51 verbose rebuildBundles minimatch@3.0.3
+52 info lifecycle minimatch@3.0.3~install: minimatch@3.0.3
+53 silly lifecycle minimatch@3.0.3~install: no script for install, continuing
+54 info lifecycle minimatch@3.0.3~postinstall: minimatch@3.0.3
+55 silly lifecycle minimatch@3.0.3~postinstall: no script for postinstall, continuing
+56 info lifecycle node-sass@4.5.1~install: node-sass@4.5.1
+57 verbose lifecycle node-sass@4.5.1~install: unsafe-perm in lifecycle false
+58 verbose lifecycle node-sass@4.5.1~install: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/mnt/g/Project/NyanCSS/repo/node_modules/node-sass/node_modules/.bin:/mnt/g/Project/NyanCSS/repo/node_modules/.bin:/root/.rbenv/plugins/ruby-build/bin:/root/.rbenv/shims:/root/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+59 verbose lifecycle node-sass@4.5.1~install: CWD: /mnt/g/Project/NyanCSS/repo/node_modules/node-sass
+60 silly lifecycle node-sass@4.5.1~install: Args: [ '-c', 'node scripts/install.js' ]
+61 verbose stack Error: spawn ENOMEM
+61 verbose stack     at exports._errnoException (util.js:1022:11)
+61 verbose stack     at ChildProcess.spawn (internal/child_process.js:313:11)
+61 verbose stack     at exports.spawn (child_process.js:387:9)
+61 verbose stack     at spawn (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:21:13)
+61 verbose stack     at runCmd_ (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:271:14)
+61 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:235:7
+61 verbose stack     at _combinedTickCallback (internal/process/next_tick.js:67:7)
+61 verbose stack     at process._tickCallback (internal/process/next_tick.js:98:9)
+62 verbose cwd /mnt/g/Project/NyanCSS/repo
+63 error Linux 3.4.0+
+64 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "rebuild" "node-sass"
+65 error node v7.4.0
+66 error npm  v4.0.5
+67 error code ENOMEM
+68 error errno ENOMEM
+69 error syscall spawn
+70 error spawn ENOMEM
+71 error If you need help, you may report this error at:
+71 error     <https://github.com/npm/npm/issues>
+72 verbose exit [ 1, true ]
