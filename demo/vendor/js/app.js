@@ -2,10 +2,10 @@ var nyancss = {
 	version: 'v0.6-beta',
 	lastCommit: 'Marc 24, 2017',
 	cdnLink: {
-		css: 'https://cdnjs.com/nyancss/nyan.min.css',
-		js: 'https://cdnjs.com/nyancss/nyan.min.js'
+		css: 'https://cdn.rawgit.com/nyancodeid/nyancss/34a7ebc7/css/nyan.min.css',
+		js: 'https://cdn.rawgit.com/nyancodeid/nyancss/34a7ebc7/js/nyan.min.js'
 	},
-	downloadLink: ''
+	downloadLink: 'https://github.com/nyancodeid/nyancss/releases'
 }
 var cdnE = document.getElementById('cdnLink');
 cdnE.innerText = cdnE.innerText.replace('-linkcss-', nyancss.cdnLink.css);
