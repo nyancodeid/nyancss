@@ -14,7 +14,7 @@ var path = {
 	css: ['./css/nyancss.css'],
 	js: ['js/nyancss.js'],
 	fonts: ['fonts/*'],
-	files: ['LICENSE', 'package.json', 'README.md']
+	files: ['LICENSE', 'package.json', 'README.md', './demo/*.html', './demo/**/**/*.*']
 };
 
 var comment = '/*\n' +
@@ -62,7 +62,7 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('move', function() {
-	return gulp.src(path.files).pipe(gulp.dest('release/nyancss-v'+pkg.version));
+	return gulp.src(path.files, { base:'./'}).pipe(gulp.dest('release/nyancss-v'+pkg.version));
 });
 
 gulp.task('release', function() {
