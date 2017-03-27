@@ -1,0 +1,118 @@
+.ny-tabs {
+	box-shadow: $card-box-shadow;
+	.ny-tabs-header {
+		position: relative;
+		border-width: 0 0 1px;
+	    border-style: solid;
+	    border-color: rgba(0,0,0,0.12);
+	    background: #FFFFFF;
+	    &.ny-primary li > span,
+	    &.ny-accent li > span {
+			color: #FFFFFF;
+	    }
+	    &.ny-accent .tab-slider {
+	    	background: #FF86AF !important;
+	    }
+	    &.ny-tabs--fullwidth {
+	    	.ny-tabs-pagination {
+	    		width: 100%;
+	    		li:not(.tab-slider) {
+	    			width: 100%;
+	    		}
+	    	}
+	    }
+		.ny-tabs-canvas {
+			margin: 0;
+			position: relative;
+		    display: block;
+		    height: 48px;
+		    overflow: hidden;
+		}
+		.ny-tabs-pagination {
+			height: 48px;
+		    display: flex;
+		    position: absolute;
+		    left: 0px;
+		    transform: translate3d(0px, 0px, 0px);
+		    transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+		    margin-bottom: 0;
+		    list-style: none;
+			li:not(.tab-slider) {
+				width: 100px;
+				margin-bottom: 0;
+				font-size: 14px;
+			    text-align: center;
+			    line-height: 24px;
+			    cursor: pointer;
+			    white-space: nowrap;
+			    position: relative;
+			    float: left;
+			    font-weight: 500;
+			    box-sizing: border-box;
+			    text-overflow: ellipsis;
+			    padding: 12px 24px;
+			    transition: background-color 0.35s cubic-bezier(0.35, 0, 0.25, 1);
+			    overflow: hidden;
+			    color: rgba(0,0,0,0.54);
+			    span {
+			    	user-select: none;
+			    }
+			    &.ny-tabs--disabled {
+			        background: rgba(0, 0, 0, 0.06);
+				    color: rgba(0, 0, 0, 0.27);
+				    touch-action: none;
+				    user-select: none;
+				    pointer-events: none;
+			    }
+			}
+			.tab-slider {
+			 	display: block;
+			 	position: absolute;
+			 	bottom: 0;
+			 	left: 0;
+			 	height: 2px;
+			 	margin-bottom: 0;
+			 	background: $accent-color;
+			 	transition: left .125s cubic-bezier(.35,0,.25,1);
+			 	.slide--left {
+			 		transition: left .125s cubic-bezier(.35,0,.25,1),right .25s cubic-bezier(.35,0,.25,1);
+			 	}
+			 	.slide--right {
+			 		transition: left .25s cubic-bezier(.35,0,.25,1),right .125s cubic-bezier(.35,0,.25,1);
+			 	}
+			}
+		}
+	}
+	ul.ny-tabs-container {
+		display: inline-flex;
+	    overflow: hidden;
+	    margin-bottom: 0;
+	    li {
+	    	width: 100%;
+		    min-width: 100%;
+		    position: relative;
+    		margin-bottom: 0;
+    		list-style: none;
+    		display: none;
+	    	&:first-child {
+	    		left: 0;
+	    		display: block;
+	    	}
+	    }
+	}
+}
+
+@media (max-width: 767px) {
+	.ny-tabs ul.ny-tabs-header {
+	    overflow: hidden;
+	    li {
+	        width: 100px;
+    		min-width: 100px;
+	    }
+	}
+	.ny-tabs {
+		.ny-tabs-canvas {
+			overflow-x: auto !important;
+		}
+	}
+}

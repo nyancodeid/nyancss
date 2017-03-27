@@ -1,3 +1,12 @@
+/*
+ * nyancss 0.6.8-beta
+ * Modern Light and Smooth CSS Framework
+ * 
+ *
+ * Copyright 2017, Ryan Aunur Rassyid
+ * Released under the MIT license.
+*/
+
 var root;
 (function ($) {
     "use strict";

@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Nyan.CSS: Documentation</title>
 
-		<link rel="stylesheet" href="../css/nyancss.css" media="screen,projection">
+		<link rel="stylesheet" href="../css/nyan.css?v=0.6.7-beta" media="screen,projection">
 		<!-- vendor -->
 		<link rel="stylesheet" href="vendor/css/style.css">
 		<link rel="stylesheet" href="vendor/css/prismjs.min.css">
@@ -81,7 +81,7 @@
 							<br><br>
 							<div id="cdn-link"></div>
 							<h4>CDN</h4>
-							<p>You can find all the version of the CDN at github.com/nyancodeid/nyancss</p>
+							<p>You can find all the version of the CDN at github.com/ryanaunur/nyan.css</p>
 							<pre class="code-example"><code class="language-markup" id="cdnLink">&lt;!-- Compiled and Minified CSS --&gt;
 &lt;link rel="stylesheet" href="-linkcss-" &gt;
 
@@ -106,8 +106,8 @@
 	|	|--avenir/
 	|
 	|--js/
-	|	|--nyan.js
-	|	|--nyan.min.js
+	|	|--nyancss.js
+	|	|--nyancss.min.js
 	|
 	|--index.html</code></pre>
 							<br><br>
@@ -117,17 +117,15 @@
 &lt;html lang="en"&gt;
 &lt;head&gt;
 	&lt;meta charset="UTF-8"&gt;
-	&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-	&lt;!-- Lets browser know website is optimized for mobile --&gt;
-	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-
 	&lt;!-- Import Nyan.css --&gt;
 	&lt;link rel="stylesheet" type="text/css" href="css/nyan.min.css" media="screen,projection"&gt;
+
+	&lt;!-- Lets browser know website is optimized for mobile --&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
 &lt;/head&gt;
 &lt;body ny-app&gt;
 	
 	&lt;!-- Import javascript file here --&gt;
-	&lt;script src="vendor/js/jquery.min.js"&gt;&lt;/script&gt;
 	&lt;script src="js/nyancss.min.js" defer &gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
@@ -799,29 +797,6 @@ Card with Horizontal Layout
 									</div>
 								</div>
 							</div>
-							<!-- Code Example -->
-								<pre class="code-example"><code class="language-markup">&lt;div class="ny-openmenu"&gt;
-	&lt;button class="ny-button ny-button--raised" data-trigger="openmenu"&gt;Button Trigger&lt;/button&gt;
-	&lt;div class="ny-openmenu--container" data-animation="left" data-position="under"&gt;
-		&lt;!-- container openmenu here --&gt;
-		&lt;div class="ny-lists"&gt;
-			&lt;div class="ny-list-item--bordered"&gt;
-				&lt;div class="ny-list-item-text"&gt;
-					&lt;h5&gt;Title&lt;/h5&gt;
-					&lt;p&gt;Secondary Text&lt;/p&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-			&lt;div class="ny-list-item"&gt;
-				&lt;div class="ny-list-item-text"&gt;
-					&lt;h5&gt;Title&lt;/h5&gt;
-					&lt;p&gt;Secondary Text&lt;/p&gt;
-				&lt;/div&gt;
-				&lt;span class="ny-flex"&gt;&lt;/span&gt;
-				&lt;span class="ny-badge--inline"&gt;12&lt;/span&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</code></pre>
 						</div>
 					</section>
 
@@ -870,27 +845,30 @@ Card with Horizontal Layout
 						<div class="example">
 							<p>Make div parent element with <span class="ny-code">class="ny-accordion"</span>, and for Child Item Element add div with <span class="ny-code">class="ny-accordion-item"</span> and don't forget to add input and label element. For content add div element with <span class="ny-code">class="ny.accordion--content"</span> inside <span class="ny-code">ny-accordion-item</span> under input+label element.</p>
 							<p>There are 2 version of accordion, single open and multiple open. Use this parent class for they are :</p>
-							<table class="ny-table ny-table--striped">
+							<table class="ny-table--striped">
 								<thead>
 									<tr>
 										<th>Accordion</th>
 										<th>Class</th>
+										<th>Input Type</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>Single Open (* default)</td>
 										<td><span class="ny-code">.ny-accordion</span></td>
+										<td><span class="ny-code">radio</span></td>
 									</tr>
 									<tr>
 										<td>Multiple Open</td>
 										<td><span class="ny-code">.ny-accordion--multiple</span></td>
+										<td><span class="ny-code">checkbox</span></td>
 									</tr>
 								</tbody>
 							</table>
 							<p>Add <span class="ny-code">checked="checked"</span> attribut at input checkbox / radio element for default opened accordion.</p>
 							<p>Accordion Content Size</p>
-							<table class="ny-table ny-table--striped">
+							<table class="ny-table--striped">
 								<thead>
 									<tr>
 										<th>Class</th>
@@ -1003,13 +981,15 @@ Card with Horizontal Layout
 						<pre class="code-example"><code class="language-markup">&lt;!-- Accordion Multiple Open --&gt;
 &lt;div class="ny-accordion--multiple"&gt;
 	&lt;div class="ny-accordion-item"&gt;
-		&lt;label&gt;Accordion Multiple 1&lt;/label&gt;
+		&lt;input type="checkbox" id="tabs-one" name="tabs"&gt; &lt;!-- don't forget for change id in unix --&gt;
+		&lt;label for="tabs-one"&gt;Accordion Multiple 1&lt;/label&gt;
 		&lt;div class="ny-accordion-content--small"&gt;
 			&lt;!-- content here --&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;div class="ny-accordion-item"&gt;
-		&lt;label&gt;Accordion Multiple 2&lt;/label&gt;
+		&lt;input type="checkbox" id="tabs-two" name="tabs" checked&gt; &lt;!-- don't forget for change id in unix --&gt;
+		&lt;label for="tabs-two"&gt;Accordion Multiple 2&lt;/label&gt;
 		&lt;div class="ny-accordion-content--medium"&gt;
 			&lt;!-- content here --&gt;
 		&lt;/div&gt;
@@ -1018,13 +998,15 @@ Card with Horizontal Layout
 &lt;!-- Accordion Single Open --&gt;
 &lt;div class="ny-accordion"&gt;
 	&lt;div class="ny-accordion-item"&gt;
-		&lt;label&gt;Accordion Single 1&lt;/label&gt;
+		&lt;input type="radio" id="tabs-three" name="tabs"&gt; &lt;!-- don't forget for change id in unix --&gt;
+		&lt;label for="tabs-three"&gt;Accordion Single 1&lt;/label&gt;
 		&lt;div class="ny-accordion-content--large"&gt;
 			&lt;!-- content here --&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;div class="ny-accordion-item"&gt;
-		&lt;label&gt;Accordion Single 2&lt;/label&gt;
+		&lt;input type="radio" id="tabs-four" name="tabs" checked&gt; &lt;!-- don't forget for change id in unix --&gt;
+		&lt;label for="tabs-four"&gt;Accordion Single 2&lt;/label&gt;
 		&lt;div class="ny-accordion-content--small"&gt;
 			&lt;!-- content here --&gt;
 		&lt;/div&gt;
@@ -1160,31 +1142,9 @@ Card with Horizontal Layout
 						<h3 class="title">Tables</h3>
 						<hr>
 						<h4><b>Bordered Table</b></h4>
-						<p>Tables are bordered bottom by default.</p>
-						<table class="ny-table ny-table--striped">
-							<thead>
-								<tr>
-									<th>Class</th>
-									<th>Description</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code class="ny-code">.ny-table--hovered</code></td>
-									<td>Hovered effect for every table row inside tbody tag</td>
-								</tr>
-								<tr>
-									<td><code class="ny-code">.ny-table-cell--hovered</code></td>
-									<td>Hovered effect for every table cell inside tbody tag</td>
-								</tr>
-								<tr>
-									<td><code class="ny-code">.ny-table--bordered</code></td>
-									<td>Bordered effect for every table row and cell</td>
-								</tr>
-							</tbody>
-						</table>
+						<p>Tables are bordered by default.</p>
 						<div class="example">
-							<table class="ny-table ny-table--hovered ny-table--bordered">
+							<table class="ny-table">
 								<thead>
 									<tr>
 										<th>Name</th>
@@ -1216,7 +1176,7 @@ Card with Horizontal Layout
 							</table>
 						</div>
 						<!-- Code Example -->
-						<pre class="code-example"><code class="language-markup">&lt;table class="ny-table ny-table--hovered ny-table--bordered"&gt;
+						<pre class="code-example"><code class="language-markup">&lt;table&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
 			&lt;th&gt;Name&lt;/th&gt;
@@ -1247,9 +1207,9 @@ Card with Horizontal Layout
 	&lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
 						<h4><b>Striped Table</b></h4>
-						<p>Add <span class="ny-code">class="ny-table ny-table--striped"</span> to the table tag for a striped table.</p>
+						<p>Add <span class="ny-code">class="ny-table--striped"</span> to the table tag for a striped table.</p>
 						<div class="example">
-							<table class="ny-table ny-table--striped" data-responsive>
+							<table class="ny-table--striped" data-responsive>
 								<thead>
 									<tr>
 										<th>Name</th>
@@ -1287,7 +1247,7 @@ Card with Horizontal Layout
 							</table>
 						</div>
 						<!-- Code Example -->
-						<pre class="code-example"><code class="language-markup">&lt;table class="ny-table ny-table--striped"&gt;
+						<pre class="code-example"><code class="language-markup">&lt;table class="ny-table--striped"&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
 			&lt;th&gt;Name&lt;/th&gt;
@@ -1325,7 +1285,7 @@ Card with Horizontal Layout
 								<h4>Table Person</h4>
 							</div>
 							<div class="ny-table-content">
-								<table class="ny-table ny-table--striped">
+								<table class="ny-table--striped">
 									<thead>
 										<tr>
 											<th>Name</th>
@@ -1369,7 +1329,7 @@ Card with Horizontal Layout
 		&lt;h4&gt;Table Person&lt;/h4&gt;
 	&lt;/div&gt;
 	&lt;div class="ny-table-content"&gt;
-		&lt;table class="ny-table ny-table--striped"&gt;
+		&lt;table class="ny-table--striped"&gt;
 			&lt;thead&gt;
 				&lt;tr&gt;
 					&lt;th&gt;Name&lt;/th&gt;
@@ -1413,7 +1373,7 @@ Card with Horizontal Layout
 					<section class="" id="grids">
 						<h3 class="title">Grids</h3>
 						<hr>
-						<p>We are using a standart 12 column fluid responsive grid system. The grid helps you layout your page in an ordered, easy fashion. Grid system by Bootstrap</p>
+						<p>We are using a standart 12 column fluid responsive grid system. The grid helps you layout your page in an ordred, easy fashion. Grid system by Bootstrap</p>
 						<span class="ny-subheader">Source from getbootstrap.com</span>
 						<div class="example">
 							<div class="row clearfix">
@@ -1495,8 +1455,8 @@ Card with Horizontal Layout
 					<section id="layouting">
 						<h3 class="title">Layouting</h3>
 						<hr>
-						<p>Nyancss Layout features provide sugar to enable developers to more easily create moder, responsive layout on top of CSS3 <b>flexbox</b>. Using <b>Class</b> an easy way to set a layout (eg. <code class="ny-code">class="ny-flex--row"</code>).</p>
-						<div class="example ny-flex--col">
+						<p></p>
+						<div class="example">
 							<div class="col-xs-12 layout-1">
 								<div class="ny-flex--col">
 									<div class="header">header</div>
@@ -1524,91 +1484,17 @@ Card with Horizontal Layout
 					<section id="tabs">
 						<h3 class="title">Tabs</h3>
 						<hr>
-						<p>If tab has attribut <code class="ny-code">data-disabled</code> / class <code class="ny-code">.ny-tabs--disabled</code>, then tab not be clicked.</p>
-						<p><b>Attribut of Tabs</b></p>
-						<table class="ny-table ny-table--striped">
-							<thead>
-								<tr>
-									<th>Attribut</th>
-									<th>Value</th>
-									<th>Places</th>
-									<th>Description</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code class="ny-code">data-tabs-content</code></td>
-									<td><code class="ny-code">byIndex</code></code></td>
-									<td>parent <code class="ny-code">.ny-tabs</code></td>
-									<td style="max-width: 400px;">use for trigger tab head with tab container, <code class="ny-code">byIndex</code> is calling the content in which the content index and tab headers are both the same.</td>
-								</tr>
-								<tr>
-									<td><code class="ny-code">data-tabs-content</code></td>
-									<td><code class="ny-code">byTarget</code></td>
-									<td>parent <code class="ny-code">.ny-tabs</code></td>
-									<td style="max-width: 400px;">use for trigger tab head with tab container. <code class="ny-code">byTrigger</code>, call content which is where <code class="ny-code">data-trigger</code> in tab head and <code class="ny-code">data-tabs</code> in <code class="ny-code">ny-tabs-container</code> items.</td>
-								</tr>
-								<tr>
-									<td><code class="ny-code">data-default</code></td>
-									<td>-</td>
-									<td>child of <code class="ny-code">.ny-tabs-header</code> (li element)</td>
-									<td>Default active tabs on webpage load</td>
-								</tr>
-								<tr>
-									<td><code class="ny-code">data-disabled</code></td>
-									<td>-</td>
-									<td>child of <code class="ny-code">.ny-tabs-header</code> (li element)</td>
-									<td>Default disabled tabs on webpage load</td>
-								</tr>
-							</tbody>
-						</table>
-						<p><b>Classes of Tabs</b></p>
-						<table class="ny-table ny-table--striped">
-							<thead>
-								<tr>
-									<th>Class</th>
-									<th>Places</th>
-									<th>Description</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code class="ny-code">ny-tabs--fullwidth</code></td>
-									<td>.ny-tabs-header</td>
-									<td>Full width tab head non scrolled</td>
-								</tr>
-								<tr>
-									<td><code class="ny-code">ny-primary</code></td>
-									<td>.ny-tabs-header</td>
-									<td>Display Primary Color Theme</td>
-								</tr>
-								<tr>
-									<td><code class="ny-code">ny-accent</code></td>
-									<td>.ny-tabs-header</td>
-									<td>Display Accent Color Theme</td>
-								</tr>
-								<tr>
-									<td><code class="ny-code">ny-tabs--disabled</code></td>
-									<td>.ny-tabs-header list-item (li element)</td>
-									<td>Class to disabled tabs</td>
-								</tr>
-
-							</tbody>
-						</table>
-
-
+						<p></p>
 						<div class="example">
 							<div class="ny-flex--col">
-								<h3>Example 1</h3>
-								<p>using data-tabs-content="byIndex"</p>
-								<div class="col-xs-12" style="margin-bottom:16px;">
-									<div class="ny-tabs" data-tabs-content="byIndex">
+								<div class="col-xs-12">
+									<div class="ny-tabs">
 										<div class="ny-tabs-header">
 											<ul>
 												<li>Popular</li>
-												<li data-default>News</li>
+												<li>News</li>
 												<li>Favorit</li>
-												<li data-disabled>Favorit2</li>
+												<li>Favorit2</li>
 											</ul>
 										</div>
 										<ul class="ny-tabs-container">
@@ -1622,7 +1508,12 @@ Card with Horizontal Layout
 												<div class="ny-content">
 													<h3>News</h3>
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente impedit et aperiam assumenda, animi inventore officiis hic reprehenderit. Tempora reiciendis asperiores quasi ratione nam illo minima quidem, delectus, mollitia nisi!</p>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+													quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+													consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+													cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+													proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 												</div>
 											</li>
 											<li></li>
@@ -1630,135 +1521,7 @@ Card with Horizontal Layout
 										</ul>
 									</div>
 								</div>
-								<!-- Code Example -->
-								<pre class="code-example"><code class="language-markup">&lt;div class="ny-tabs" data-tabs-content="byIndex"&gt;
-	&lt;div class="ny-tabs-header"&gt;
-		&lt;ul&gt;
-			&lt;li&gt;Tab 1&lt;/li&gt;
-			&lt;li data-default&gt;Tab 2&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-	&lt;ul class="ny-tabs-container"&gt;
-		&lt;li&gt;
-			&lt;div class="ny-content"&gt;
-				..
-			&lt;/div&gt;
-		&lt;/li&gt;
-		&lt;li&gt;
-			&lt;div class="ny-content"&gt;
-				..
-			&lt;/div&gt;
-		&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-								<h3>Example 2</h3>
-								<p>using data-tabs-content="byTarget" and class="ny-accent" color theme</p>
-								<div class="col-xs-12" style="margin-bottom:16px;">
-									<div class="ny-tabs" data-tabs-content="byTarget">
-										<div class="ny-tabs-header ny-accent">
-											<ul>
-												<li data-target="populer">Popular</li>
-												<li data-target="news" data-default>News</li>
-												<li data-target="favorite">Favorite</li>
-											</ul>
-										</div>
-										<ul class="ny-tabs-container">
-											<li data-tabs="populer">
-												<div class="ny-content">
-													<h3>Popular</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente impedit et aperiam assumenda, animi inventore officiis hic reprehenderit. Tempora reiciendis asperiores quasi ratione nam illo minima quidem, delectus, mollitia nisi!</p>
-												</div>
-											</li>
-											<li data-tabs="news">
-												<div class="ny-content">
-													<h3>News</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente impedit et aperiam assumenda, animi inventore officiis hic reprehenderit. Tempora reiciendis asperiores quasi ratione nam illo minima quidem, delectus, mollitia nisi!</p>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-												</div>
-											</li>
-											<li data-tabs="favorite">
-												<h3>Favorite</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente impedit et aperiam assumenda, animi inventore officiis hic reprehenderit. Tempora reiciendis asperiores quasi ratione nam illo minima quidem, delectus, mollitia nisi!</p>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<!-- Code Example -->
-								<pre class="code-example"><code class="language-markup">&lt;div class="ny-tabs" data-tabs-content="byTarget"&gt;
-	&lt;div class="ny-tabs-header ny-accent"&gt;
-		&lt;ul&gt;
-			&lt;li data-target="tabs-1"&gt;Tabs 1&lt;/li&gt;
-			&lt;li data-target="tabs-2" data-default&gt;Tabs 2&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-	&lt;ul class="ny-tabs-container"&gt;
-		&lt;li data-tabs="tabs-1"&gt;
-			&lt;div class="ny-content"&gt;
-				...
-			&lt;/div&gt;
-		&lt;/li&gt;
-		&lt;li data-tabs="tabs-2"&gt;
-			&lt;div class="ny-content"&gt;
-				...
-			&lt;/div&gt;
-		&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-								<h3>Example 3</h3>
-								<p>using data-tabs-content="byTarget" and class="ny-tabs--fullwidth ny-primary"</p>
-								<div class="col-xs-12" style="margin-bottom:16px;">
-									<div class="ny-tabs" data-tabs-content="byTarget">
-										<div class="ny-tabs-header ny-tabs--fullwidth ny-primary">
-											<ul>
-												<li data-target="tab1">Tabs 1</li>
-												<li data-target="tab2" data-default>Tabs 2</li>
-												<li data-target="tab3">Tabs 3</li>
-											</ul>
-										</div>
-										<ul class="ny-tabs-container">
-											<li data-tabs="tab1">
-												<div class="ny-content">
-													<h3>Tab 1</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-												</div>
-											</li>
-											<li data-tabs="tab2">
-												<div class="ny-content">
-													<h3>Tab 2</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente impedit et aperiam assumenda, animi inventore officiis hic reprehenderit.</p>
-												</div>
-											</li>
-											<li data-tabs="tab3">
-												<div class="ny-content">
-													<h3>Tab 3</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente impedit et aperiam assumenda, animi inventore officiis hic reprehenderit.</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<!-- Code Example -->
-									<pre class="code-example"><code class="language-markup">&lt;div class="ny-tabs" data-tabs-content="byTarget"&gt;
-	&lt;div class="ny-tabs-header ny-tabs--fullwidth ny-primary"&gt;
-		&lt;ul&gt;
-			&lt;li data-target="tabs-1"&gt;Tabs 1&lt;/li&gt;
-			&lt;li data-target="tabs-2" data-default&gt;Tabs 2&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-	&lt;ul class="ny-tabs-container"&gt;
-		&lt;li data-tabs="tabs-1"&gt;
-			&lt;div class="ny-content"&gt;
-				...
-			&lt;/div&gt;
-		&lt;/li&gt;
-		&lt;li data-tabs="tabs-2"&gt;
-			&lt;div class="ny-content"&gt;
-				...
-			&lt;/div&gt;
-		&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-								</div>
+								<div class="col-xs-12"></div>
 							</div>
 						</div>
 					</section>
@@ -1809,84 +1572,15 @@ Card with Horizontal Layout
 								</div>
 							</div>
 							<!-- Code Example -->
-						<pre class="code-example"><code class="language-markup">&lt;p class="ny-truncate"&gt;
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita neque
+						<pre class="code-example"><code class="language-markup">&lt;p class="ny-truncate demo-truncate"&gt;
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita neque, vero numquam dicta quam excepturi, harum quidem pariatur. Modi odit quisquam facilis rem molestiae nobis excepturi illum totam!
 &lt;/p&gt;</code></pre>
 							<br>
 
 							<div id="flex"></div>
 							<h4>Flex</h4>
 							<p>NyanCSS use flex for great layouting.</p>
-							<div id="demo-flex-nav" class="ny-layout-align--start-center">
-								<code class="ny-code">class="ny-flex--row ny-layout-align--start-start"</code>
-							</div>
-							<div id="demo-monitor" class="ny-flex--row ny-layout-align--start-start" style="background: #e1e1e1;height: 128px;overflow: hidden;min-height: auto !important;">
-								<button class="ny-button ny-button--raised">AB</button>
-								<button class="ny-button ny-button--raised">AB</button>
-								<button class="ny-button ny-button--raised">AB</button>
-							</div>
-							<div id="demo-panel">
-								<div class="col-xs-12 col-md-4">
-									<span class="ny-subheader">Layout</span>
-									<div class="ny-flex--col">
-										<div>
-											<input type="radio" name="layout" id="row" checked="" value="row">
-											<label class="label-inline" for="row">row</label>
-										</div>
-										<div>
-											<input type="radio" name="layout" id="col" value="col">
-											<label class="label-inline" for="col">column</label>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-12 col-md-4">
-									<span class="ny-subheader">Alignment in Layout Direction (<span id="alignmentCol2">horizontal</span>)</span>
-									<div class="ny-flex--col">
-										<div>
-											<input type="radio" name="layoutDir" id="startL" checked="">
-											<label class="label-inline" for="startL">start</label>
-										</div>
-										<div>
-											<input type="radio" name="layoutDir" id="centerL">
-											<label class="label-inline" for="centerL">center</label>
-										</div>
-										<div>
-											<input type="radio" name="layoutDir" id="endL">
-											<label class="label-inline" for="endL">end</label>
-										</div>
-										<div>
-											<input type="radio" name="layoutDir" id="aroundL">
-											<label class="label-inline" for="aroundL">space-around</label>
-										</div>
-										<div>
-											<input type="radio" name="layoutDir" id="betweenL">
-											<label class="label-inline" for="betweenL">space-between</label>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-12 col-md-4">
-									<span class="ny-subheader">Alignment in Perpendicular Direction (<span id="alignmentCol3">vertical</span>)</span>
-									<div class="ny-flex--col">
-										<div>
-											<input type="radio" name="layoutPer" id="startP" checked="">
-											<label class="label-inline" for="startP">start</label>
-										</div>
-										<div>
-											<input type="radio" name="layoutPer" id="centerP">
-											<label class="label-inline" for="centerP">center</label>
-										</div>
-										<div>
-											<input type="radio" name="layoutPer" id="endP">
-											<label class="label-inline" for="endP">end</label>
-										</div>
-										<div>
-											<input type="radio" name="layoutPer" id="strethP">
-											<label class="label-inline" for="strethP">stretch</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<table class="ny-table ny-table--striped">
+							<table class="ny-table--striped">
 								<thead>
 									<tr>
 										<td>Class</td>
@@ -1916,10 +1610,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita
 
 							<div id="reponsiveUtil"></div>
 							<h4>Responsive Utilities</h4>
-							<h5>Show Hide</h5>
 							<p>These clasess are used to show and/or hide content by device via media queries.</p>
-							<p>Use one or combination of the available classes for toggling content across viewport breakpoints.</p>
-							<table class="ny-table ny-table--striped">
+							<p>Use one or combination of the available classes for toggling conent across viewport breakpoints.</p>
+							<table class="ny-table--striped">
 								<thead>
 									<tr>
 										<th>Classes</th>
@@ -1962,7 +1655,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita
 								</tbody>
 							</table>
 							<p><span class="ny-code">.show-*--*</span> clasess come in three variations, one for each CSS <span class="ny-code">display</span> property value: </p>
-							<table class="ny-table ny-table--striped">
+							<table class="ny-table--striped">
 								<thead>
 									<tr>
 										<th>Group of Classes</th>
@@ -1984,42 +1677,12 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita
 									</tr>
 								</tbody>
 							</table>
-
-							<h5>Layouting</h5>
-							<p>These clasess are used to change layout content by device via media queries.</p>
-							<p>Use one or combination of the available classes for toggling layout across viewport breakpoints.</p>
-							<table class="ny-table ny-table--striped">
-								<thead>
-									<tr>
-										<th>Classes</th>
-										<th>Extra small devices (Phones)</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>ny-flex--col ny-flex-xs--row</td>
-										<td>Row</td>
-									</tr>
-									<tr>
-										<td>ny-flex--col ny-flex-sm--row</td>
-										<td>Column</td>
-									</tr>
-									<tr>
-										<td>ny-flex--col ny-flex-md--row</td>
-										<td>Column</td>
-									</tr>
-									<tr>
-										<td>ny-flex--col ny-flex-lg--row</td>
-										<td>Column</td>
-									</tr>
-								</tbody>
-							</table>
 						</div>
 					</section>
 
 					<footer class="footer">
 						<section class="">
-							<p>Designed with ♥ by <a target="blank" href="http://github.com/nyancodeid" title="NyanCodeID">NyanCodeID</a>. Special Thanks to  <a target="blank" href="https://github.com/milligram/milligram">Miligram</a>. Licensed under the <a target="blank" href="https://github.com/nyancodeid/nyancss#license" title="MIT License">MIT License</a>.</p>
+							<p>Designed with ♥ by <a target="blank" href="http://cjpatoilo.com" title="NyanCodeID">NyanCodeID</a>. Licensed under the <a target="blank" href="https://github.com/milligram/milligram#license" title="MIT License">MIT License</a>.</p>
 						</section>
 					</footer>
 
@@ -2028,8 +1691,21 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita
 		</div>
 	</body>
 	
-	<script src="vendor/js/jquery.min.js"></script>
-	<script src="../js/nyancss.js" defer></script>
+	<script src="../js/jquery.min.js" defer></script>
+	<script type="text/javascript">
+		var ny = {
+			global: {
+				appName: 'Web Kampret',
+				appVersion: 'v1.2',
+				appAuthor: 'Ryan Aunur Rassyid',
+				appDebug: true
+			},
+			config: {
+				tableResponsive: true
+			}
+		}
+	</script>
+	<script src="../js/nyan.js?v=0.6.7-beta" defer></script>
 	<!-- vendor -->
 	<script src="vendor/js/app.js" async></script>
 	<script src="vendor/js/prismjs.js" async></script>

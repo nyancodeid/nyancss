@@ -14,7 +14,8 @@ var path = {
 	css: ['./css/nyancss.css'],
 	js: ['js/nyancss.js'],
 	fonts: ['fonts/*'],
-	files: ['LICENSE', 'package.json', 'README.md', './demo/*.html', './demo/**/**/*.*']
+	files: ['LICENSE', 'package.json', 'README.md', './demo/**/**/*.*', '!./demo/index.html'],
+	demo: ['./demo/index.html']
 };
 
 var comment = '/*\n' +
@@ -63,8 +64,15 @@ gulp.task('fonts', function() {
 	return gulp.src(path.fonts).pipe(gulp.dest('release/nyancss-v'+pkg.version+'/fonts'));
 });
 
-gulp.task('move', function() {
+gulp.task('move', ['demoIndex'], function() {
 	return gulp.src(path.files, { base:'./'}).pipe(gulp.dest('release/nyancss-v'+pkg.version));
+});
+
+gulp.task('demoIndex', function() {
+	return gulp.src(path.demo, { base: './'})
+		.pipe(replace('../css/nyancss.css', '../css/nyan.css?v='+pkg.version))
+		.pipe(replace('../js/nyancss.js', '../js/nyan.js?v='+pkg.version))
+		.pipe(gulp.dest('release/nyancss-v'+pkg.version));
 });
 
 gulp.task('release', function() {

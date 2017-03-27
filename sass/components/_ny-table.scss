@@ -20,8 +20,38 @@ th:last-child {
   padding-right: 0;
 }
 
-table.ny-table--striped tbody tr:nth-child(2n) {
-  background: rgba(0,0,0,0.04);
+table.ny-table {
+  &.ny-table--striped tbody tr:nth-child(2n) {
+    background: rgba(0,0,0,0.04);
+  }
+  &.ny-table--hovered {
+    tbody tr:hover td {
+      background: rgba(0,0,0,0.04);
+    }
+  }
+  &.ny-table-cell--hovered {
+    tbody td:hover {
+      background: rgba(0,0,0,0.04);
+    }
+  }
+  &.ny-table--bordered {
+    thead tr:first-child th,
+    tbody tr td {
+      border-left: none;
+    }
+    thead tr:first-child th,
+    tbody tr td {
+      border-top: none;
+    }
+    thead tr:first-child th:last-child,
+    tbody tr td:last-child {
+      border-right: none;
+    }
+
+    th,td {
+      border: 0.1rem solid #e1e1e1;
+    }
+  }
 }
 
 .ny-table--responsive {
@@ -32,7 +62,7 @@ table.ny-table--striped tbody tr:nth-child(2n) {
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
   .ny-table-header {
     padding: 16px;
-    h1,h2,h3,h4,h5,h6 {
+    > %headings {
       margin: 0;
     }
   }
@@ -41,6 +71,11 @@ table.ny-table--striped tbody tr:nth-child(2n) {
     table {
       margin-bottom: 0;
       width: calc(100% + 0.75px);
+      &.ny-table--bordered {
+        thead th {
+          border: 0.1rem solid #eeeeee;
+        }
+      }
     }
     td:first-child, th:first-child {
       padding-left : 1.5rem;

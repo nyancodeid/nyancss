@@ -190,8 +190,8 @@ img {
   opacity: 1; }
 
 .rippleEffect {
-  -webkit-animation: rippleDrop .6s linear;
-  animation: rippleDrop .6s linear; }
+  -webkit-animation: rippleDrop .5s linear;
+  animation: rippleDrop .5s linear; }
 
 @-webkit-keyframes rippleDrop {
   100% {
@@ -203,3 +203,7 @@ img {
     -webkit-transform: scale(2);
     transform: scale(2);
     opacity: 0; } }
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %headings !optional;
+}
