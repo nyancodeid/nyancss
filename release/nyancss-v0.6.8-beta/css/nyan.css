@@ -872,7 +872,7 @@ table.ny-table.ny-table--bordered tbody tr td:last-child {
 table.ny-table.ny-table--bordered th, table.ny-table.ny-table--bordered td {
   border: 0.1rem solid #e1e1e1; }
 
-.ny-table--responsive {
+.ny-table--responsive-wrap {
   overflow: auto; }
 
 .ny-table--card {
@@ -1885,8 +1885,10 @@ img.ny-img-responsive, video.ny-video-responsive {
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.12);
     background: #FFFFFF; }
-    .ny-tabs .ny-tabs-header.ny-primary li > span, .ny-tabs .ny-tabs-header.ny-accent li > span {
-      color: #FFFFFF; }
+    .ny-tabs .ny-tabs-header.ny-primary li, .ny-tabs .ny-tabs-header.ny-accent li {
+      color: #FFFFFF !important; }
+      .ny-tabs .ny-tabs-header.ny-primary li > span, .ny-tabs .ny-tabs-header.ny-accent li > span {
+        color: #FFFFFF; }
     .ny-tabs .ny-tabs-header.ny-accent .tab-slider {
       background: #FF86AF !important; }
     .ny-tabs .ny-tabs-header.ny-tabs--fullwidth .ny-tabs-pagination {

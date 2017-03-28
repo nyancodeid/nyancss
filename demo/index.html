@@ -12,12 +12,12 @@
 	</head>
 	<body ny-app>
 		<div class="clearfix main-container ny-flex--row">
-			<div class="col-md-3 hide-xs hide-sm sidebar">
-				<div class="big-header ny-primary ny-whiteframe-7dp">
-					<h3>Nyan.CSS <small>v0.6-beta</small></h3>
+			<div class="col-md-3 hide-xs hide-sm sidebar ny-whiteframe-5dp">
+				<div class="big-header ny-primary">
+					<h3>Nyan.CSS <small>v0.6.8-beta</small></h3>
 				</div>
 				<div class="scrolled-nav ny-content">
-					<ul class="list-style-none ny-padding ny-table--responsive">
+					<ul class="list-style-none ny-padding" style="overflow: auto;">
 						<li><h5 class="ny-primary-text ny-no-margin">Getting Started</h5></li>
 						<li>
 							<ul class="list-style-none">
@@ -43,7 +43,7 @@
 								<li><a href="#forms" title="Forms">Forms</a></li>
 								<li><a href="#tables" title="Tables">Tables</a></li>
 								<li><a href="#grids" title="Grids">Grids</a></li>
-								<li><a href="#code" title="Code">Code</a></li>
+								<li><a href="#codes" title="Code">Code</a></li>
 								<li><a href="#layouting" title="Layouting">Layouting</a></li>
 								<li><a href="#tabs" title="Tabs">Tabs</a></li>
 								<li><a href="#mediaqueries" title="Media Queries">Media Queries</a></li>
@@ -64,7 +64,7 @@
 				<main>
 					<div class="ny-jumbotron">
 						<h1>Nyan.CSS</h1>
-						<p>a modern framework with smooth and light design.</p>
+						<p>a modern css framework with smooth and light design.</p>
 						<span class="version">{{nyanapp.version}}</span>
 						<span class="lastCommit">{{nyanapp.lastCommit}}</span>
 					</div>
@@ -706,7 +706,7 @@ Card with Horizontal Layout
 						<hr>
 						<p>Open menu use for menu dropdown. make element div with <span class="ny-code">class="ny-openmenu"</span> as parent. and for child element, insert button (with attribut <span class="ny-code">data-trigger="ny-openmenu"</span> as openmenu trigger button) and <span class="ny-code">.ny-openmenu--container</span> for open menu container.</p>
 						<p>for Animation add attribut <span class="ny-code">data-animation</span> on <span class="ny-code">.ny-openmenu--container</span></p>
-						<table class="ny-table--stripped">
+						<table class="ny-table--stripped ny-table--responsive">
 							<thead>
 								<th>Attribut</th>
 								<th>Value</th>
@@ -870,7 +870,7 @@ Card with Horizontal Layout
 						<div class="example">
 							<p>Make div parent element with <span class="ny-code">class="ny-accordion"</span>, and for Child Item Element add div with <span class="ny-code">class="ny-accordion-item"</span> and don't forget to add input and label element. For content add div element with <span class="ny-code">class="ny.accordion--content"</span> inside <span class="ny-code">ny-accordion-item</span> under input+label element.</p>
 							<p>There are 2 version of accordion, single open and multiple open. Use this parent class for they are :</p>
-							<table class="ny-table ny-table--striped">
+							<table class="ny-table ny-table--striped ny-table--responsive">
 								<thead>
 									<tr>
 										<th>Accordion</th>
@@ -890,7 +890,7 @@ Card with Horizontal Layout
 							</table>
 							<p>Add <span class="ny-code">checked="checked"</span> attribut at input checkbox / radio element for default opened accordion.</p>
 							<p>Accordion Content Size</p>
-							<table class="ny-table ny-table--striped">
+							<table class="ny-table ny-table--striped ny-table--responsive">
 								<thead>
 									<tr>
 										<th>Class</th>
@@ -1161,7 +1161,7 @@ Card with Horizontal Layout
 						<hr>
 						<h4><b>Bordered Table</b></h4>
 						<p>Tables are bordered bottom by default.</p>
-						<table class="ny-table ny-table--striped">
+						<table class="ny-table ny-table--striped ny-table--responsive">
 							<thead>
 								<tr>
 									<th>Class</th>
@@ -1184,7 +1184,7 @@ Card with Horizontal Layout
 							</tbody>
 						</table>
 						<div class="example">
-							<table class="ny-table ny-table--hovered ny-table--bordered">
+							<table class="ny-table ny-table--hovered ny-table--bordered ny-table--responsive">
 								<thead>
 									<tr>
 										<th>Name</th>
@@ -1216,7 +1216,7 @@ Card with Horizontal Layout
 							</table>
 						</div>
 						<!-- Code Example -->
-						<pre class="code-example"><code class="language-markup">&lt;table class="ny-table ny-table--hovered ny-table--bordered"&gt;
+						<pre class="code-example"><code class="language-markup">&lt;table class="ny-table ny-table--hovered ny-table--bordered ny-table--responsive"&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
 			&lt;th&gt;Name&lt;/th&gt;
@@ -1249,7 +1249,7 @@ Card with Horizontal Layout
 						<h4><b>Striped Table</b></h4>
 						<p>Add <span class="ny-code">class="ny-table ny-table--striped"</span> to the table tag for a striped table.</p>
 						<div class="example">
-							<table class="ny-table ny-table--striped" data-responsive>
+							<table class="ny-table ny-table--striped ny-table--responsive">
 								<thead>
 									<tr>
 										<th>Name</th>
@@ -1287,7 +1287,7 @@ Card with Horizontal Layout
 							</table>
 						</div>
 						<!-- Code Example -->
-						<pre class="code-example"><code class="language-markup">&lt;table class="ny-table ny-table--striped"&gt;
+						<pre class="code-example"><code class="language-markup">&lt;table class="ny-table ny-table--striped ny-table--responsive"&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
 			&lt;th&gt;Name&lt;/th&gt;
@@ -1325,7 +1325,7 @@ Card with Horizontal Layout
 								<h4>Table Person</h4>
 							</div>
 							<div class="ny-table-content">
-								<table class="ny-table ny-table--striped">
+								<table class="ny-table ny-table--striped ny-table--responsive">
 									<thead>
 										<tr>
 											<th>Name</th>
@@ -1369,7 +1369,7 @@ Card with Horizontal Layout
 		&lt;h4&gt;Table Person&lt;/h4&gt;
 	&lt;/div&gt;
 	&lt;div class="ny-table-content"&gt;
-		&lt;table class="ny-table ny-table--striped"&gt;
+		&lt;table class="ny-table ny-table--striped ny-table--responsive"&gt;
 			&lt;thead&gt;
 				&lt;tr&gt;
 					&lt;th&gt;Name&lt;/th&gt;
@@ -1526,7 +1526,7 @@ Card with Horizontal Layout
 						<hr>
 						<p>If tab has attribut <code class="ny-code">data-disabled</code> / class <code class="ny-code">.ny-tabs--disabled</code>, then tab not be clicked.</p>
 						<p><b>Attribut of Tabs</b></p>
-						<table class="ny-table ny-table--striped">
+						<table class="ny-table ny-table--striped ny-table--responsive">
 							<thead>
 								<tr>
 									<th>Attribut</th>
@@ -1563,7 +1563,7 @@ Card with Horizontal Layout
 							</tbody>
 						</table>
 						<p><b>Classes of Tabs</b></p>
-						<table class="ny-table ny-table--striped">
+						<table class="ny-table ny-table--striped ny-table--responsive">
 							<thead>
 								<tr>
 									<th>Class</th>
@@ -1625,7 +1625,13 @@ Card with Horizontal Layout
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 												</div>
 											</li>
-											<li></li>
+											<li>
+												<div class="ny-content">
+													<h3>Favorite</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente impedit et aperiam assumenda, animi inventore officiis hic reprehenderit. Tempora reiciendis asperiores quasi ratione nam illo minima quidem, delectus, mollitia nisi!</p>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+												</div>
+											</li>
 											<li></li>
 										</ul>
 									</div>
@@ -1817,15 +1823,48 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita
 							<div id="flex"></div>
 							<h4>Flex</h4>
 							<p>NyanCSS use flex for great layouting.</p>
+							<table class="ny-table ny-table--striped ny-table--responsive">
+								<thead>
+									<tr>
+										<td>Class</td>
+										<td>CSS Style</td>
+													
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><span class="ny-code">.ny-flex</span></td>
+										<td><span class="ny-code">flex: 1;</span></td>
+									</tr>
+									<tr>
+										<td><span class="ny-code">.ny-flex--row</span></td>
+										<td><span class="ny-code">flex-direction: row;</span></td>
+									</tr>
+									<tr>
+										<td><span class="ny-code">.ny-flex--col</span></td>
+										<td><span class="ny-code">flex-direction: column;</span></td>
+									</tr>
+									<tr>
+										<td><span class="ny-code">.ny-flex--wrap</span></td>
+										<td><span class="ny-code">flex-wrap: wrap;</span></td>
+									</tr>
+								</tbody>
+							</table>
+
+							<h5><b>Layout Align Classes (Child Alignment)</b></h5>
+							<p>The <span class="ny-code">.ny-layout-align--*-*</span> class takes two words. The first word says how the children will be aligned in the layout's direction, and the second word says how the children will be aligned perpendicular to the layout's direction.</p>
+
+							<p><span class="ny-code">ny-flex--col ny-layout-align--center-end</span> would make children align along the center vertically and along the end (right) horizontally.</p>
+							<span class="ny-subheader">Source from material.angularjs.org</span>
 							<div id="demo-flex-nav" class="ny-layout-align--start-center">
-								<code class="ny-code">class="ny-flex--row ny-layout-align--start-start"</code>
+								<span class="ny-code">class="ny-flex--row ny-layout-align--start-start"</span>
 							</div>
 							<div id="demo-monitor" class="ny-flex--row ny-layout-align--start-start" style="background: #e1e1e1;height: 128px;overflow: hidden;min-height: auto !important;">
 								<button class="ny-button ny-button--raised">AB</button>
 								<button class="ny-button ny-button--raised">AB</button>
 								<button class="ny-button ny-button--raised">AB</button>
 							</div>
-							<div id="demo-panel">
+							<div id="demo-panel" class="ny-flex-xs--col ny-flex--row">
 								<div class="col-xs-12 col-md-4">
 									<span class="ny-subheader">Layout</span>
 									<div class="ny-flex--col">
@@ -1886,40 +1925,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita
 									</div>
 								</div>
 							</div>
-							<table class="ny-table ny-table--striped">
-								<thead>
-									<tr>
-										<td>Class</td>
-										<td>CSS Style</td>
-													
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><span class="ny-code">.ny-flex</span></td>
-										<td><span class="ny-code">flex: 1;</span></td>
-									</tr>
-									<tr>
-										<td><span class="ny-code">.ny-flex--row</span></td>
-										<td><span class="ny-code">flex-direction: row;</span></td>
-									</tr>
-									<tr>
-										<td><span class="ny-code">.ny-flex--col</span></td>
-										<td><span class="ny-code">flex-direction: column;</span></td>
-									</tr>
-									<tr>
-										<td><span class="ny-code">.ny-flex--wrap</span></td>
-										<td><span class="ny-code">flex-wrap: wrap;</span></td>
-									</tr>
-								</tbody>
-							</table>
 
 							<div id="reponsiveUtil"></div>
 							<h4>Responsive Utilities</h4>
 							<h5>Show Hide</h5>
 							<p>These clasess are used to show and/or hide content by device via media queries.</p>
 							<p>Use one or combination of the available classes for toggling content across viewport breakpoints.</p>
-							<table class="ny-table ny-table--striped">
+							<table class="ny-table ny-table--striped ny-table--responsive">
 								<thead>
 									<tr>
 										<th>Classes</th>
@@ -1962,7 +1974,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita
 								</tbody>
 							</table>
 							<p><span class="ny-code">.show-*--*</span> clasess come in three variations, one for each CSS <span class="ny-code">display</span> property value: </p>
-							<table class="ny-table ny-table--striped">
+							<table class="ny-table ny-table--striped ny-table--responsive">
 								<thead>
 									<tr>
 										<th>Group of Classes</th>
@@ -1988,7 +2000,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita
 							<h5>Layouting</h5>
 							<p>These clasess are used to change layout content by device via media queries.</p>
 							<p>Use one or combination of the available classes for toggling layout across viewport breakpoints.</p>
-							<table class="ny-table ny-table--striped">
+							<table class="ny-table ny-table--striped ny-table--responsive">
 								<thead>
 									<tr>
 										<th>Classes</th>

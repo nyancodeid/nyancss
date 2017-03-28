@@ -6,9 +6,12 @@
 	    border-style: solid;
 	    border-color: rgba(0,0,0,0.12);
 	    background: #FFFFFF;
-	    &.ny-primary li > span,
-	    &.ny-accent li > span {
-			color: #FFFFFF;
+	    &.ny-primary li,
+	    &.ny-accent li {
+			color: #FFFFFF !important;
+			&>span {
+				color: #FFFFFF;
+			}
 	    }
 	    &.ny-accent .tab-slider {
 	    	background: #FF86AF !important;

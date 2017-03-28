@@ -9,19 +9,16 @@ var nyancss = {
 }
 
 $(document).ready(function() {
-	var cdnE = document.getElementById('cdnLink');
-	cdnE.innerText = cdnE.innerText.replace('-linkcss-', nyancss.cdnLink.css);
-	cdnE.innerText = cdnE.innerText.replace('-linkjs-', nyancss.cdnLink.js);
+	var cdnE = $('#cdnLink');
+	cdnE.text(cdnE.text().replace('-linkcss-', nyancss.cdnLink.css));
+	cdnE.text(cdnE.text().replace('-linkjs-', nyancss.cdnLink.js));
 
-	var downE = document.getElementById('downloadLink');
-	downE.href = nyancss.downloadLink;
-	downE.innerText = downE.innerText.replace('-VERSION-', nyancss.version);
+	var downE = $('#downloadLink');
+	downE.attr('href', nyancss.downloadLink);
+	downE.text(downE.text().replace('-version-', nyancss.version));
 
-	var versE = document.querySelector('.version');
-	versE.innerText = nyancss.version;
-
-	var lastE = document.querySelector('.lastCommit');
-	lastE.innerText = nyancss.lastCommit;
+	$('.version').text(nyancss.version);
+	$('.lastCommit').text(nyancss.lastCommit);
 
 	$.openMenu({
 		outsideClick: true

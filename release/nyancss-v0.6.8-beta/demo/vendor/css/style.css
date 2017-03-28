@@ -57,6 +57,10 @@
 	.main-content {
 		max-width: 100% !important;
 	}
+	.ny-jumbotron {
+	    margin-left: -15px;
+	    margin-right: -15px;
+	}
 
 }
 @media (min-width: 768px) {
@@ -64,6 +68,11 @@
 	    display: block;
     	margin: 0 auto;
     	height: 48px;
+	}
+	.ny-jumbotron {
+	    margin-left: -15px;
+	    margin-right: -15px;
+	    margin-top: -16px;
 	}
 }
 .demo-truncate {
@@ -86,9 +95,6 @@
 
 .main-container {
 	height: 100vh;
-}
-.main-container main {
-	margin-top: 16px;
 }
 
 .big-header {

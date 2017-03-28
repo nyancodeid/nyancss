@@ -72,8 +72,8 @@ gulp.task('move', ['demoIndex'], function() {
 
 gulp.task('demoIndex', function() {
 	return gulp.src(path.demo, { base: './'})
-		.pipe(replace('../css/nyancss.css', '../css/nyan.css?v='+pkg.version))
-		.pipe(replace('../js/nyancss.js', '../js/nyan.js?v='+pkg.version))
+		.pipe(replace('../css/nyancss.css', '../css/nyan.min.css?v='+pkg.version))
+		.pipe(replace('../js/nyancss.js', '../js/nyan.min.js?v='+pkg.version))
 		.pipe(gulp.dest('release/nyancss-v'+pkg.version));
 });
 
