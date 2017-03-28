@@ -2,8 +2,8 @@ var nyancss = {
 	version: 'v0.6.8-beta',
 	lastCommit: 'March 27, 2017',
 	cdnLink: {
-		css: 'https://cdn.rawgit.com/nyancodeid/nyancss/34a7ebc7/css/nyan.min.css',
-		js: 'https://cdn.rawgit.com/nyancodeid/nyancss/34a7ebc7/js/nyan.min.js'
+		css: 'https://cdn.rawgit.com/nyancodeid/nyancss/103cf9ca/dist/css/nyan.min.css',
+		js: 'https://cdn.rawgit.com/nyancodeid/nyancss/103cf9ca/dist/js/nyan.min.js'
 	},
 	downloadLink: 'https://github.com/nyancodeid/nyancss/releases'
 }
