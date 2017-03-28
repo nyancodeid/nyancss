@@ -43,7 +43,8 @@ gulp.task('css', function() {
 	.pipe(sourcemaps.init())
 	.pipe(rename("nyan.min.css"))
 	.pipe(sourcemaps.write('.', {addComment: false}))
-	.pipe(gulp.dest('release/nyancss-v'+pkg.version+"/css"));
+	.pipe(gulp.dest('release/nyancss-v'+pkg.version+"/css"))
+	.pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('js', function(cb) {
@@ -56,7 +57,8 @@ gulp.task('js', function(cb) {
 	gulp.dest('release/nyancss-v'+pkg.version+'/js'),
 	rename("nyan.min.js"),
 	uglifyjs(),
-	gulp.dest('release/nyancss-v'+pkg.version+"/js")
+	gulp.dest('release/nyancss-v'+pkg.version+"/js"),
+	gulp.dest('dist/js')
  ], cb)
 });
 

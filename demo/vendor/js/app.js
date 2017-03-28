@@ -70,7 +70,4 @@ $(document).ready(function() {
 			dNav.text('class="'+dMoni.attr('class')+'"');
 		}
 	});
-
-
-	$('.main-content').scrollTop(30657);
 });
