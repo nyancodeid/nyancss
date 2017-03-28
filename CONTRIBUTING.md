@@ -1,7 +1,7 @@
 ## Contributing
 - Compiling Files
   - `npm install`
-  - `gulp release`, this will compile .scss, .js files
+  - `gulp release`, this will generate release version on release folder
 - Documentation
   - If you notice an error in the documentation, please edit the corresponding .html page at /demo/.
 - Issues
@@ -14,7 +14,7 @@
 - Code Examples
   - Use this [Codepen](http://codepen.io/Dogfalo/pen/xbzPQV) to illustrate your problem.
 
-## Contribution 101
+## Contribution
 - Fork this repo to your own git
 - Make your changes
 - Submit a pull request with full remarks documenting your changes

@@ -24,7 +24,7 @@ $(document).ready(function() {
 	lastE.innerText = nyancss.lastCommit;
 
 	$.openMenu({
-		outsideClick: false
+		outsideClick: true
 	});
 	
 	var dPanel = $('#demo-panel');
