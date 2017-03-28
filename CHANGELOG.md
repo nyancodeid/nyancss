@@ -2,7 +2,7 @@
 - change syntax for table stripped 
 - change syntax for accordion
 - add table hovered effect for row and cell 
-- add flexbox - justify-content
+- add flexbox - ny-layout-align
 - add new components .ny-tabs
 - special thanks to Miligram CSS.
 
