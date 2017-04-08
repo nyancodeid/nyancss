@@ -8,4 +8,4 @@
 Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 
 ## Demo and Documentation
-[https://nyancodeid.github.io/nyancss/demo/index.html](https://nyancodeid.github.io/nyancss/demo/index.html)
+[https://getnyancss.com](https://getnyancss.com)
