@@ -1,0 +1,107 @@
+include ../_variable
+- var page = "Responsive Utilities"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#responsive_utilities
+						h3.title Responsive Utilities
+						hr
+						h5 Show Hide
+						p These clasess are used to show and/or hide content by device via media queries.
+						p
+							| Use one or combination of the available classes for toggling content across viewport breakpoints.
+						table.ny-table.ny-table--striped.ny-table--responsive
+							thead
+								tr
+									th Classes
+									th Extra small devices (Phones)
+							tbody
+								tr
+									td .show-xs-*
+									td Visible
+								tr
+									td .show-sm-*
+									td Hidden
+								tr
+									td .show-md-*
+									td Hidden
+								tr
+									td .show-lg-*
+									td Hidden
+								tr
+									td .hide-xs
+									td Hidden
+								tr
+									td .hide-sm
+									td Visible
+								tr
+									td .hide-md
+									td Visible
+								tr
+									td .hide-lg
+									td Visible
+						p
+							span.ny-code .show-*--*
+							|  clasess come in three variations, one for each CSS 
+							span.ny-code display
+							|  property value:
+						table.ny-table.ny-table--striped.ny-table--responsive
+							thead
+								tr
+									th Group of Classes
+									th CSS display
+							tbody
+								tr
+									td .show-*--block
+									td
+										span.ny-code display: block;
+								tr
+									td .show-*--inline
+									td
+										span.ny-code display: inline;
+								tr
+									td .show-*--inline-block
+									td
+										span.ny-code display: inline-block;
+						h5 Layouting
+						p These clasess are used to change layout content by device via media queries.
+						p
+							| Use one or combination of the available classes for toggling layout across viewport breakpoints.
+						table.ny-table.ny-table--striped.ny-table--responsive
+							thead
+								tr
+									th Classes
+									th Extra small devices (Phones)
+							tbody
+								tr
+									td ny-flex--col ny-flex-xs--row
+									td Row
+								tr
+									td ny-flex--col ny-flex-sm--row
+									td Column
+								tr
+									td ny-flex--col ny-flex-md--row
+									td Column
+								tr
+									td ny-flex--col ny-flex-lg--row
+									td Column
+							
+						
+					include ../_footer
+		include ../_script

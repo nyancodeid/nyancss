@@ -1,0 +1,76 @@
+include ../_variable
+- var page = "Forms"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#forms
+						h3.title Forms
+						hr
+						div.example
+							form
+								.row.clearfix
+									.col-md-6.col-xs-12
+										label(for='textField') Text field
+										input#textField(type='text', placeholder='Text field')
+										label(for='emailField') Email field
+										input#emailField(type='email', placeholder='Email field')
+										label(for='numberField') Number field
+										input#numberField(type='number', placeholder='Number field')
+										label(for='passwordField') Password field
+										input#passwordField(type='password', placeholder='Password field')
+										label(for='selectField') Select field
+										select#selectField
+											option(value='selectField1') Select field 1
+											option(value='selectField2') Select field 2
+											option(value='selectField3') Select field 3
+											option(value='selectField4') Select field 4
+										label(for='searchField') Search field
+										input#searchField(type='search', placeholder='Search field')
+									.col-md-6.col-xs-12
+										label(for='tel Field') Tel field
+										input#telField(type='tel', placeholder='Tel field')
+										label(for='urlField') URL field
+										input#urlField(type='url', placeholder='URL field')
+										label(for='radioField') Radio field
+										.row
+											.col-md-6
+												input#radioField1(type='radio', name='radioField')
+												label.label-inline(for='radioField1') Radio field 1
+											.col-md-6
+												input#radioField2(type='radio', name='radioField')
+												label.label-inline(for='radioField2') Radio field 2
+										label(for='radioField') Checkbox field
+										.row
+											.col-md-6
+												input#checkboxField1(type='checkbox')
+												label.label-inline(for='checkboxField1') Checkbox field 1
+											.col-md-6
+												input#checkboxField2(type='checkbox')
+												label.label-inline(for='checkboxField2') Checkbox field 2
+										label(for='textareaField') Textarea field
+										textarea#textareaField(placeholder='Textarea field')
+										input(type='submit')
+										input.ny-button--clear(type='reset')
+
+
+						include ../code/_forms.code.html
+							
+						
+					include ../_footer
+		include ../_script

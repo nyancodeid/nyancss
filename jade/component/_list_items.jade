@@ -1,0 +1,112 @@
+include ../_variable
+- var page = "List Items"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#listitem
+						h3.title List Item
+						hr
+						p
+							| Make div parent element with 
+							span.ny-code class=&quot;ny-lists&quot;
+							| , and for Child Item Element add div with 
+							span.ny-code class=&quot;ny-list-item&quot;
+							| . For text title or header add div element with 
+							span.ny-code class=&quot;ny-list-item-text&quot;
+							|	inside 
+							span.ny-code ny-list-item
+							| .
+						p
+							| in default List Item not present border at bottom, to show them replace 
+							span.ny-code class=&quot;ny-list-item&quot;
+							|	to 
+							span.ny-code class=&quot;ny-list-item--bordered&quot;
+						.example.row.clearfix
+							.col-md-6.col-xs-12
+								.ny-lists
+									.ny-card-title Example List Item
+									span.ny-subheader Normal List Item
+									// List Item
+									- for (var i = 0; i < 3; ++i) {
+										.ny-list-item
+											img.ny-circle(src='vendor/img/avatar.png', alt='')
+											.ny-list-item-text
+												h5 Title
+												p Secondary Text
+									- }
+									// List Item with bordered
+									span.ny-subheader Bordered List Item
+									.ny-list-item--bordered
+										img.ny-circle(src='vendor/img/avatar.png', alt='')
+										.ny-list-item-text
+											h5 Title
+											p Secondary Text
+									.ny-list-item--bordered
+										img.ny-circle(src='vendor/img/avatar.png', alt='')
+										.ny-list-item-text
+											h5 Title
+											p Secondary Text
+
+							.col-md-6.col-xs-12
+								.ny-lists.ny-lists--bordered
+									.ny-card-title Example List Item 2
+									span.ny-subheader Action List Item
+									.ny-list-item
+										.ny-list-item-text
+											h5 Title
+											p Secondary Text
+										span.ny-flex
+										button.ny-button More info
+
+									.ny-list-item
+										img.ny-circle(src='vendor/img/avatar.png', alt='')
+										.ny-list-item-text
+											h5 Title
+											p Secondary Text
+										span.ny-flex
+										a.ny-button.ny-button--raised(href='#') More info
+
+									// 3 Line Item
+									span.ny-subheader 3 Line List Item
+									.ny-list-item
+										img.ny-circle(src='vendor/img/avatar.png', alt='')
+										.ny-list-item-text
+											h5 Title
+											p Secondary Line Text
+											p
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit. At temporibus, earum unde.
+									.ny-list-item
+										img.ny-circle(src='vendor/img/avatar.png', alt='')
+										.ny-list-item-text
+											h5 Title
+											p Secondary Line Text
+											p
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit. At temporibus, earum unde.
+									.ny-list-item
+										img.ny-circle(src='vendor/img/avatar.png', alt='')
+										.ny-list-item-text
+											h5 Title
+											p Secondary Line Text
+											p
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit. At temporibus, earum unde.
+							
+						include ../code/_list_items.code.html
+						
+					include ../_footer
+		include ../_script

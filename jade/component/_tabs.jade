@@ -1,0 +1,205 @@
+include ../_variable
+- var page = "Tabs"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#tabs
+						h3.title Tabs
+						hr
+						p
+							| If tab has attribut 
+							code.ny-code data-disabled
+							|  / class 
+							code.ny-code .disabled
+							| , then tab can't be clicked.
+						p
+							b Attribut of Tabs
+						table.ny-table.ny-table--striped.ny-table--responsive
+							thead
+								tr
+									th Attribut
+									th Value
+									th Places
+									th Description
+							tbody
+								tr
+									td
+										code.ny-code data-component
+									td
+										code.ny-code ny-tabs
+									td
+										| parent 
+										code.ny-code .ny-tabs
+									td Initialize all ny-tabs component without call it on javascript
+						p
+							b Classes of Tabs
+						table.ny-table.ny-table--striped.ny-table--responsive
+							thead
+								tr
+									th Class
+									th Places
+									th Description
+							tbody
+								tr
+									td
+										code.ny-code ny-primary
+									td .ny-tabs-header
+									td Display Primary Color Theme
+								tr
+									td
+										code.ny-code ny-accent
+									td .ny-tabs-header
+									td Display Accent Color Theme
+						p
+							b jQuery call
+							| to Initialize component ny-tabs we can using data attribut or using javascript code. For more optional option visit #[a(href="https://github.com/vdw/Tabslet", title="jQuery-Tabslet - v1.7.3") jQuery-Tabslet - v1.7.3] on GitHub
+						span.ny-subheader 
+							| original code by Dimitris Krestos &lt;dkrestos@gmail.com&gt;
+						pre.code-example.ny-code
+							code.language-javascript $(document).ready(function() {
+								| 	...
+								| 	$('#foo').ny_tabs(); // default
+								| 
+								| 	$('.bar').ny_tabs({
+								| 		pagination: true, // to enable tabs pagination, default: false
+								| 		autorotate: false, // to enable auto open tabs, default: false
+								| 		active: 3 // enable tabs by default, default: 1, index from 1
+								| 		...
+								| 	}); 
+								| }); 
+						.example
+							.ny-flex--col
+								h3 Example 1
+								.col-xs-12(style='margin-bottom:16px;')
+									.ny-tabs.demo-1
+										.ny-tabs-header
+											ul
+												li
+													a(href='#tab-1') Information
+												li
+													a(href='#tab-2') Profile
+												li
+													a(href='#tab-3') How to
+												li
+													a(href='#tab-4') Setting
+												li.disabled
+													a(href='#tab-5') About
+										.ny-tabs-container.ny-padding
+											#tab-1
+												h4 Information
+												p
+													| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+													| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+													| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+											#tab-2
+												h4 Profile
+												p
+													| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+													| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+													| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+													| cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+													| proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+											#tab-3
+												h4 How to
+												p
+													| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+													| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+													| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+											#tab-4
+												h4 Setting
+												p
+													| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+													| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+													| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+											#tab-5
+												h4 About
+												p
+													| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+													| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+													| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+
+						// Code Example
+						include ../code/_tabs-1.code.html
+
+						h3 Example 2
+						p using #[span.ny-code pagination: true] and #[span.ny-code class=&quot;ny-accent&quot;] color theme
+						.col-xs-12(style='margin-bottom:16px;')
+							.ny-tabs.demo-2
+								.ny-tabs-header.ny-accent
+									ul
+										li
+											a(href='#tab-1') Information
+										li
+											a(href='#tab-2') Profile
+										li
+											a(href='#tab-3') How to
+										li
+											a(href='#tab-4') Setting
+										li(data-disabled='')
+											a(href='#tab-5') About
+								.ny-tabs-container.ny-padding
+									#tab-1
+										h4 Information
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									#tab-2
+										h4 Profile
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+											| cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+											| proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									#tab-3
+										h4 How to
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									#tab-4
+										h4 Setting
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									#tab-5
+										h4 About
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+
+						// Code Example
+						include ../code/_tabs-2.code.html
+							
+						
+					include ../_footer
+		include ../_script

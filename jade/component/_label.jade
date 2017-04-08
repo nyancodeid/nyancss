@@ -1,0 +1,43 @@
+include ../_variable
+- var page = "Label"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#label
+						h3.title Labels
+						hr
+						.example
+							h4 Labels
+							p
+								| Add 
+								span.ny-code class=&quot;ny-label&quot;
+								|	to the span / paragraf tag for a labeled text.
+							.ny-flex--row.ny-flex--wrap.demo-labels
+								span.ny-label Default
+								span.ny-label--success Success
+								span.ny-label--warning Warning
+								span.ny-label--important Important
+								span.ny-label--info Info
+								span.ny-label--inverse Inverse
+
+						include ../code/_label.code.html
+							
+						
+					include ../_footer
+		include ../_script

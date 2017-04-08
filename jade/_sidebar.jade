@@ -1,0 +1,33 @@
+div(class="col-md-3 hide-xs hide-sm sidebar ny-whiteframe-5dp")
+	div(class="big-header ny-primary")
+		h3 NyanCSS 
+			small #{appVersion}
+
+	// scrolled navigation menu
+	div(class="scrolled-nav ny-content")
+		ul(class="list-style-none ny-padding" style="overflow: auto")
+			li
+				h5(class="ny-primary-text ny-no-margin") Getting Started
+			li
+				ul(class="list-style-none")
+					li
+						a(href="index.html#getting-started" title="Getting Started") Getting Started
+					li
+						a(href="index.html#download" title="Download") Download
+					li
+						a(href="index.html#cdn-link" title="CDN") CDN
+			li
+				h5(class="ny-primary-text ny-no-margin") Components 
+			li
+				ul(class="list-style-none")
+					each component in components
+						li
+							a(href="_#{component.toLowerCase().replace(' ', '_')}.html" title="#{component}") #{component}
+			li
+				h5(class="ny-primary-text ny-no-margin") Helpers
+			li
+				ul(class="list-style-none")
+					each helper in helpers
+						li
+							a(href="_#{helper.toLowerCase().replace(' ', '_')}.html" title="#{helper}") #{helper}
+

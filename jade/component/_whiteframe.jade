@@ -1,0 +1,36 @@
+include ../_variable
+- var page = "Whiteframe"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#whiteframe
+						h3.title Whiteframe
+						hr
+						div.example.demo-whiteframe
+							.row.clearfix
+								- for (var i = 1; i <= 12; ++i) {
+									div.col-md-4.col-sm-6
+										div(class="ny-card ny-whiteframe-#{i}dp")
+											.ny-card-content .ny-whiteframe-#{i}dp
+								- }
+							// Code Example
+							include ../code/_whiteframe.code.html
+						
+					include ../_footer
+		include ../_script

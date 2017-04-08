@@ -1,79 +1,62 @@
-.ny-accordion, .ny-accordion--multiple {
+.ny-accordion-group {
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
-  .ny-accordion-item {
-    position: relative;
-    width: 100%;
-    color: #fff;
-    overflow: hidden;
-    input {
-      position: absolute;
-      z-index: -1;
-      opacity: 0;
-    }
-    .ny-accordion--head {
-      position: relative;
-      display: block;
-      padding: 0 0 0 1em;
-      background-color: $primary-color;
-      font-weight: bold;
-      line-height: 3;
-      cursor: pointer;
-      margin-bottom: 0;
-      label {
-        position: relative;
-        display: block;
-        font-weight: bold;
-        line-height: 3;
-        cursor: pointer;
-        width: 80%;
-        margin-bottom: 0;
-        @extend .ny-truncate;
-      }
-    }
-    .ny-accordion-content--small,
-    .ny-accordion-content--medium,
-    .ny-accordion-content--large,
-    .ny-accordion-content--auto {
-      background-color: #ffffff;
-      color: $black-text;
-      height: 0;
-      overflow: auto;
-      > p, > h1, > h2, > h3, > h4, > h5, > h6 {
-        margin: 8px;
-      }
-      transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+  .ny-subheader {
+    padding-left: 1em;
+  }
+}
+.ny-accordion {
+  line-height: 1;
+  border-bottom: 1px solid #cacaca;
 
-    input:checked ~ .ny-accordion-content--small {
-      height: $small-size--content;
+  [data-content] {
+    overflow: hidden;
+    max-height: 0;
+  }
+  item, a[data-item] {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    display: block;
+    &:hover {
+      background-color: #eee;
     }
-    input:checked ~ .ny-accordion-content--medium {
-      height: $medium-size--content;
-    }
-    input:checked ~ .ny-accordion-content--large {
-      height: $large-size--content;
-    }
-    .ny-accordion--head::after {
+  }
+  [data-content] .ny-accordion {
+    border: 0;
+    padding: 0;
+  }
+  > .ny-accordion--toggle {
+    position: relative;
+    display: block;
+    padding: 0 0 0 1em;
+    font-weight: bold;
+    line-height: 3;
+    cursor: pointer;
+    margin-bottom: 0;
+    width: 100%;
+    border-radius: 0;
+    color: #333333;
+    background-color: #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    &:after {
+      content: "";
       position: absolute;
-      right: 0;
-      top: 0;
-      display: block;
-      width: 3em;
-      height: 3em;
-      text-align: center;
-      transition: all .25s;
+      right: 10px;
+      top: 12px;
+      height: 24px;
+      width: 24px;
+      background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" fill="#333333" width="24" height="24" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>') center center no-repeat;
+      transition: transform .3s ease;
     }
-    input[type=checkbox] + .ny-accordion--head::after {
-      content: '+';
-    }
-    input[type=checkbox]:checked + .ny-accordion--head::after {
-      transform: rotate(315deg);
-    }
-    input[type=radio] + .ny-accordion--head::after {
-      content: '\25BC';
-    }
-    input[type=radio]:checked + .ny-accordion--head::after {
-      transform: rotate(180deg);
+  }
+  &.open {
+    > .ny-accordion--toggle {
+      background-color: #efefef;
+      border-bottom: 1px solid #efefef;
+      &:after {
+        -webkit-transform: rotate(-180deg); 
+        -ms-transform: rotate(-180deg); 
+        transform: rotate(-180deg); 
+      }
     }
   }
 }

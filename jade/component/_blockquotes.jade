@@ -1,0 +1,43 @@
+include ../_variable
+- var page = "Blockquotes"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#blockquotes
+						h3.title Blockquotes
+						hr
+						.example
+							.row.clearfix
+								.col-md-6.col-sm-12-xs-12
+									p
+										q Yeah!! Nyan.CSS is amazing.
+								.col-md-6.col-sm-12.col-xs-12
+									blockquote
+										p
+											em Yeah!! Nyan.CSS is amazing.
+							// Code Example
+							pre.code-example.ny-code
+								code.language-markup &lt;p&gt;&lt;q&gt;Yeah!! Nyan.CSS is amazing.&lt;/q&gt;&lt;/p&gt;
+									| 
+									| &lt;blockquote&gt;
+									| 	&lt;p&gt;&lt;em&gt;Yeah!! Nyan.CSS is amazing.&lt;/em&gt;&lt;/p&gt;
+									| &lt;/blockquote&gt;
+						
+					include ../_footer
+		include ../_script

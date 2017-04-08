@@ -1,0 +1,51 @@
+include ../_variable
+- var page = "Button"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#buttons
+						h3.title Button
+						hr
+						div.example
+							h6 Link
+							.col-md-12.ny-flex--row.ny-flex--wrap.demoBtnLink
+								a.ny-button(href='javascript: void(0)') Default Button
+								a.ny-button.ny-button--raised(href='javascript: void(0)') Raised Button
+								a.ny-button.ny-button--raised.ny-accent(href='javascript: void(0)') Raised + ny-accent
+								a.ny-button.ny-button--outline(href='javascript: void(0)') Outlined Button
+								a.ny-button.ny-button--clear(href='javascript: void(0)') Clear Button
+								a.ny-button(disabled='', href='javascript: void(0)') Default Button
+								a.ny-button.ny-button--outline(disabled='', href='javascript: void(0)') Outlined Button
+								a.ny-button.ny-button--clear(disabled='', href='javascript: void(0)') Clear Button
+							h6 Button
+							.col-md-12
+								button.ny-button Default Button
+								button.ny-button.ny-button--raised Raised Button
+								button.ny-button.ny-button--raised.ny-accent Raised + ny-accent
+								button.ny-button.ny-button--outline Outlined Button
+								button.ny-button.ny-button--clear Clear Button
+								button.ny-button(disabled='') Default Button
+								button.ny-button.ny-button--outline(disabled='') Outlined Button
+								button.ny-button.ny-button--clear(disabled='') Clear Button
+							// Code Example
+							include ../code/_button.code.html
+							
+						
+					include ../_footer
+		include ../_script

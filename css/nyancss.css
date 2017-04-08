@@ -24,7 +24,9 @@ body {
   font-weight: 300;
   letter-spacing: .01em;
   line-height: 1.6;
-  margin: 0; }
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
@@ -47,7 +49,7 @@ code {
   white-space: nowrap;
   font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-pre {
+pre.ny-code {
   background: #f4f5f6;
   border-left: 0.3rem solid #3F51B5;
   overflow-y: hidden; }
@@ -181,13 +183,72 @@ img {
     -webkit-transform: scale(2);
     transform: scale(2);
     opacity: 0; } }
+.ny-accordion-group.ny-primary .ny-accordion,
+.ny-accordion.ny-primary {
+  border-bottom: 1px solid #586ee4; }
+  .ny-accordion-group.ny-primary .ny-accordion > .ny-accordion--toggle,
+  .ny-accordion.ny-primary > .ny-accordion--toggle {
+    background-color: #3F51B5;
+    border-bottom: 1px solid #3F51B5;
+    color: #FFFFFF; }
+    .ny-accordion-group.ny-primary .ny-accordion > .ny-accordion--toggle:after,
+    .ny-accordion.ny-primary > .ny-accordion--toggle:after {
+      background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="24" height="24" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>') center center no-repeat; }
+  .ny-accordion-group.ny-primary .ny-accordion.open > .ny-accordion--toggle,
+  .ny-accordion.ny-primary.open > .ny-accordion--toggle {
+    background-color: #5164cb;
+    border-bottom: 1px solid #5164cb; }
+  .ny-accordion-group.ny-primary .ny-accordion [data-content] item,
+  .ny-accordion-group.ny-primary .ny-accordion [data-content] a[data-item],
+  .ny-accordion.ny-primary [data-content] item,
+  .ny-accordion.ny-primary [data-content] a[data-item] {
+    color: #FFFFFF;
+    border-bottom: 1px solid #3F51B5; }
+    .ny-accordion-group.ny-primary .ny-accordion [data-content] item:hover,
+    .ny-accordion-group.ny-primary .ny-accordion [data-content] a[data-item]:hover,
+    .ny-accordion.ny-primary [data-content] item:hover,
+    .ny-accordion.ny-primary [data-content] a[data-item]:hover {
+      background-color: rgba(81, 100, 203, 0.66); }
+
+.ny-accordion-group.ny-accent .ny-accordion,
+.ny-accordion.ny-accent {
+  border-bottom: 1px solid #f94f89; }
+  .ny-accordion-group.ny-accent .ny-accordion > .ny-accordion--toggle,
+  .ny-accordion.ny-accent > .ny-accordion--toggle {
+    background-color: #E91E63;
+    border-bottom: 1px solid #E91E63;
+    color: #FFFFFF; }
+    .ny-accordion-group.ny-accent .ny-accordion > .ny-accordion--toggle:after,
+    .ny-accordion.ny-accent > .ny-accordion--toggle:after {
+      background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="24" height="24" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>') center center no-repeat; }
+  .ny-accordion-group.ny-accent .ny-accordion.open > .ny-accordion--toggle,
+  .ny-accordion.ny-accent.open > .ny-accordion--toggle {
+    background-color: #f03272;
+    border-bottom: 1px solid #f03272; }
+  .ny-accordion-group.ny-accent .ny-accordion [data-content] item,
+  .ny-accordion-group.ny-accent .ny-accordion [data-content] a[data-item],
+  .ny-accordion.ny-accent [data-content] item,
+  .ny-accordion.ny-accent [data-content] a[data-item] {
+    color: #FFFFFF;
+    border-bottom: 1px solid #E91E63; }
+    .ny-accordion-group.ny-accent .ny-accordion [data-content] item:hover,
+    .ny-accordion-group.ny-accent .ny-accordion [data-content] a[data-item]:hover,
+    .ny-accordion.ny-accent [data-content] item:hover,
+    .ny-accordion.ny-accent [data-content] a[data-item]:hover {
+      background-color: rgba(255, 73, 135, 0.66); }
+
+.ny-primary .ny-subheader,
+.ny-accent .ny-subheader {
+  color: #f4f3f3; }
+
 b,
 strong {
   font-weight: bold;
   font-size: 400; }
 
 p {
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
@@ -540,113 +601,55 @@ input[type='submit'].ny-button--clear[disabled]:hover {
     top: -11px;
     right: -11px; }
 
-.ny-accordion, .ny-accordion--multiple {
+.ny-accordion-group {
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12); }
-  .ny-accordion .ny-accordion-item, .ny-accordion--multiple .ny-accordion-item {
+  .ny-accordion-group .ny-subheader {
+    padding-left: 1em; }
+
+.ny-accordion {
+  line-height: 1;
+  border-bottom: 1px solid #cacaca; }
+  .ny-accordion [data-content] {
+    overflow: hidden;
+    max-height: 0; }
+  .ny-accordion item, .ny-accordion a[data-item] {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    display: block; }
+    .ny-accordion item:hover, .ny-accordion a[data-item]:hover {
+      background-color: #eee; }
+  .ny-accordion [data-content] .ny-accordion {
+    border: 0;
+    padding: 0; }
+  .ny-accordion > .ny-accordion--toggle {
     position: relative;
+    display: block;
+    padding: 0 0 0 1em;
+    font-weight: bold;
+    line-height: 3;
+    cursor: pointer;
+    margin-bottom: 0;
     width: 100%;
-    color: #fff;
-    overflow: hidden; }
-    .ny-accordion .ny-accordion-item input, .ny-accordion--multiple .ny-accordion-item input {
+    border-radius: 0;
+    color: #333333;
+    background-color: #e6e6e6;
+    border-bottom: 1px solid #e6e6e6; }
+    .ny-accordion > .ny-accordion--toggle:after {
+      content: "";
       position: absolute;
-      z-index: -1;
-      opacity: 0; }
-    .ny-accordion .ny-accordion-item .ny-accordion--head, .ny-accordion--multiple .ny-accordion-item .ny-accordion--head {
-      position: relative;
-      display: block;
-      padding: 0 0 0 1em;
-      background-color: #3F51B5;
-      font-weight: bold;
-      line-height: 3;
-      cursor: pointer;
-      margin-bottom: 0; }
-      .ny-accordion .ny-accordion-item .ny-accordion--head label, .ny-accordion--multiple .ny-accordion-item .ny-accordion--head label {
-        position: relative;
-        display: block;
-        font-weight: bold;
-        line-height: 3;
-        cursor: pointer;
-        width: 80%;
-        margin-bottom: 0; }
-    .ny-accordion .ny-accordion-item .ny-accordion-content--small,
-    .ny-accordion .ny-accordion-item .ny-accordion-content--medium,
-    .ny-accordion .ny-accordion-item .ny-accordion-content--large,
-    .ny-accordion .ny-accordion-item .ny-accordion-content--auto, .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--small,
-    .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--medium,
-    .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--large,
-    .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--auto {
-      background-color: #ffffff;
-      color: #333333;
-      height: 0;
-      overflow: auto;
-      transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-      .ny-accordion .ny-accordion-item .ny-accordion-content--small > p, .ny-accordion .ny-accordion-item .ny-accordion-content--small > h1, .ny-accordion .ny-accordion-item .ny-accordion-content--small > h2, .ny-accordion .ny-accordion-item .ny-accordion-content--small > h3, .ny-accordion .ny-accordion-item .ny-accordion-content--small > h4, .ny-accordion .ny-accordion-item .ny-accordion-content--small > h5, .ny-accordion .ny-accordion-item .ny-accordion-content--small > h6,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--medium > p,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--medium > h1,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--medium > h2,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--medium > h3,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--medium > h4,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--medium > h5,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--medium > h6,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--large > p,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--large > h1,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--large > h2,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--large > h3,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--large > h4,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--large > h5,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--large > h6,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--auto > p,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--auto > h1,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--auto > h2,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--auto > h3,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--auto > h4,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--auto > h5,
-      .ny-accordion .ny-accordion-item .ny-accordion-content--auto > h6, .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--small > p, .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--small > h1, .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--small > h2, .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--small > h3, .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--small > h4, .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--small > h5, .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--small > h6,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--medium > p,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--medium > h1,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--medium > h2,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--medium > h3,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--medium > h4,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--medium > h5,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--medium > h6,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--large > p,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--large > h1,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--large > h2,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--large > h3,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--large > h4,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--large > h5,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--large > h6,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--auto > p,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--auto > h1,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--auto > h2,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--auto > h3,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--auto > h4,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--auto > h5,
-      .ny-accordion--multiple .ny-accordion-item .ny-accordion-content--auto > h6 {
-        margin: 8px; }
-    .ny-accordion .ny-accordion-item input:checked ~ .ny-accordion-content--small, .ny-accordion--multiple .ny-accordion-item input:checked ~ .ny-accordion-content--small {
-      height: 140px; }
-    .ny-accordion .ny-accordion-item input:checked ~ .ny-accordion-content--medium, .ny-accordion--multiple .ny-accordion-item input:checked ~ .ny-accordion-content--medium {
-      height: 180px; }
-    .ny-accordion .ny-accordion-item input:checked ~ .ny-accordion-content--large, .ny-accordion--multiple .ny-accordion-item input:checked ~ .ny-accordion-content--large {
-      height: 230px; }
-    .ny-accordion .ny-accordion-item .ny-accordion--head::after, .ny-accordion--multiple .ny-accordion-item .ny-accordion--head::after {
-      position: absolute;
-      right: 0;
-      top: 0;
-      display: block;
-      width: 3em;
-      height: 3em;
-      text-align: center;
-      transition: all .25s; }
-    .ny-accordion .ny-accordion-item input[type=checkbox] + .ny-accordion--head::after, .ny-accordion--multiple .ny-accordion-item input[type=checkbox] + .ny-accordion--head::after {
-      content: '+'; }
-    .ny-accordion .ny-accordion-item input[type=checkbox]:checked + .ny-accordion--head::after, .ny-accordion--multiple .ny-accordion-item input[type=checkbox]:checked + .ny-accordion--head::after {
-      transform: rotate(315deg); }
-    .ny-accordion .ny-accordion-item input[type=radio] + .ny-accordion--head::after, .ny-accordion--multiple .ny-accordion-item input[type=radio] + .ny-accordion--head::after {
-      content: '\25BC'; }
-    .ny-accordion .ny-accordion-item input[type=radio]:checked + .ny-accordion--head::after, .ny-accordion--multiple .ny-accordion-item input[type=radio]:checked + .ny-accordion--head::after {
-      transform: rotate(180deg); }
+      right: 10px;
+      top: 12px;
+      height: 24px;
+      width: 24px;
+      background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" fill="#333333" width="24" height="24" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>') center center no-repeat;
+      transition: transform .3s ease; }
+  .ny-accordion.open > .ny-accordion--toggle {
+    background-color: #efefef;
+    border-bottom: 1px solid #efefef; }
+    .ny-accordion.open > .ny-accordion--toggle:after {
+      -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      transform: rotate(-180deg); }
 
 .ny-jumbotron {
   padding: 30px;
@@ -687,6 +690,9 @@ table {
   border-spacing: 0;
   width: 100%; }
 
+thead th span {
+  color: rgba(0, 0, 0, 0.87); }
+
 td,
 th {
   border-bottom: 0.1rem solid #e1e1e1;
@@ -703,6 +709,8 @@ th:last-child {
 
 table.ny-table.ny-table--striped tbody tr:nth-child(2n) {
   background: rgba(0, 0, 0, 0.04); }
+table.ny-table.ny-table--hovered tbody tr {
+  transition: background-color .2s; }
 table.ny-table.ny-table--hovered tbody tr:hover td {
   background: rgba(0, 0, 0, 0.04); }
 table.ny-table.ny-table-cell--hovered tbody td:hover {
@@ -1406,7 +1414,7 @@ img.ny-img-responsive, video.ny-video-responsive {
 .ny-fixed {
   position: fixed; }
 
-.ny-truncate, .ny-accordion .ny-accordion-item .ny-accordion--head label, .ny-accordion--multiple .ny-accordion-item .ny-accordion--head label {
+.ny-truncate {
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -1553,7 +1561,7 @@ img.ny-img-responsive, video.ny-video-responsive {
     background: #FFFFFF; }
     .ny-tabs .ny-tabs-header.ny-primary li, .ny-tabs .ny-tabs-header.ny-accent li {
       color: #FFFFFF !important; }
-      .ny-tabs .ny-tabs-header.ny-primary li > span, .ny-tabs .ny-tabs-header.ny-accent li > span {
+      .ny-tabs .ny-tabs-header.ny-primary li > span *, .ny-tabs .ny-tabs-header.ny-accent li > span * {
         color: #FFFFFF; }
     .ny-tabs .ny-tabs-header.ny-accent .tab-slider {
       background: #FF86AF !important; }
@@ -1561,6 +1569,11 @@ img.ny-img-responsive, video.ny-video-responsive {
       width: 100%; }
       .ny-tabs .ny-tabs-header.ny-tabs--fullwidth .ny-tabs-pagination li:not(.tab-slider) {
         width: 100%; }
+    .ny-tabs .ny-tabs-header.active .ny-tabs-canvas {
+      margin: 0 32px; }
+    .ny-tabs .ny-tabs-header.active .ny-tabs-nav--back,
+    .ny-tabs .ny-tabs-header.active .ny-tabs-nav--next {
+      visibility: visible; }
     .ny-tabs .ny-tabs-header .ny-tabs-canvas {
       margin: 0;
       position: relative;
@@ -1577,8 +1590,8 @@ img.ny-img-responsive, video.ny-video-responsive {
       margin-bottom: 0;
       list-style: none; }
       .ny-tabs .ny-tabs-header .ny-tabs-pagination li:not(.tab-slider) {
-        width: 100px;
         margin-bottom: 0;
+        width: 123px;
         font-size: 14px;
         text-align: center;
         line-height: 24px;
@@ -1593,14 +1606,18 @@ img.ny-img-responsive, video.ny-video-responsive {
         transition: background-color 0.35s cubic-bezier(0.35, 0, 0.25, 1);
         overflow: hidden;
         color: rgba(0, 0, 0, 0.54); }
-        .ny-tabs .ny-tabs-header .ny-tabs-pagination li:not(.tab-slider) span {
-          user-select: none; }
-        .ny-tabs .ny-tabs-header .ny-tabs-pagination li:not(.tab-slider).ny-tabs--disabled {
+        .ny-tabs .ny-tabs-header .ny-tabs-pagination li:not(.tab-slider).active {
+          background-color: rgba(0, 0, 0, 0.04); }
+        .ny-tabs .ny-tabs-header .ny-tabs-pagination li:not(.tab-slider) > * {
+          user-select: none;
+          -moz-user-select: none; }
+        .ny-tabs .ny-tabs-header .ny-tabs-pagination li:not(.tab-slider).disabled, .ny-tabs .ny-tabs-header .ny-tabs-pagination li:not(.tab-slider)[data-disabled] {
           background: rgba(0, 0, 0, 0.06);
-          color: rgba(0, 0, 0, 0.27);
           touch-action: none;
           user-select: none;
           pointer-events: none; }
+          .ny-tabs .ny-tabs-header .ny-tabs-pagination li:not(.tab-slider).disabled > span *, .ny-tabs .ny-tabs-header .ny-tabs-pagination li:not(.tab-slider)[data-disabled] > span * {
+            color: rgba(0, 0, 0, 0.27); }
       .ny-tabs .ny-tabs-header .ny-tabs-pagination .tab-slider {
         display: block;
         position: absolute;
@@ -1609,25 +1626,45 @@ img.ny-img-responsive, video.ny-video-responsive {
         height: 2px;
         margin-bottom: 0;
         background: #E91E63;
-        transition: left 0.125s cubic-bezier(0.35, 0, 0.25, 1); }
-        .ny-tabs .ny-tabs-header .ny-tabs-pagination .tab-slider .slide--left {
-          transition: left 0.125s cubic-bezier(0.35, 0, 0.25, 1), right 0.25s cubic-bezier(0.35, 0, 0.25, 1); }
-        .ny-tabs .ny-tabs-header .ny-tabs-pagination .tab-slider .slide--right {
-          transition: left 0.25s cubic-bezier(0.35, 0, 0.25, 1), right 0.125s cubic-bezier(0.35, 0, 0.25, 1); }
-  .ny-tabs ul.ny-tabs-container {
-    display: inline-flex;
-    overflow: hidden;
-    margin-bottom: 0; }
-    .ny-tabs ul.ny-tabs-container li {
-      width: 100%;
-      min-width: 100%;
-      position: relative;
-      margin-bottom: 0;
-      list-style: none;
-      display: none; }
-      .ny-tabs ul.ny-tabs-container li:first-child {
-        left: 0;
-        display: block; }
+        transition: transform 0.125s cubic-bezier(0.35, 0, 0.25, 1);
+        transform: translate(0px, 0px); }
+    .ny-tabs .ny-tabs-header .ny-tabs-nav--back,
+    .ny-tabs .ny-tabs-header .ny-tabs-nav--next {
+      height: 100%;
+      width: 32px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 1em;
+      z-index: 2;
+      cursor: pointer;
+      font-size: 16px;
+      background: 50% center no-repeat transparent;
+      transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+      visibility: hidden; }
+      .ny-tabs .ny-tabs-header .ny-tabs-nav--back svg,
+      .ny-tabs .ny-tabs-header .ny-tabs-nav--next svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        fill: #333333; }
+      .ny-tabs .ny-tabs-header .ny-tabs-nav--back.ny-disabled,
+      .ny-tabs .ny-tabs-header .ny-tabs-nav--next.ny-disabled {
+        background: rgba(0, 0, 0, 0.06);
+        touch-action: none;
+        user-select: none;
+        pointer-events: none; }
+        .ny-tabs .ny-tabs-header .ny-tabs-nav--back.ny-disabled svg,
+        .ny-tabs .ny-tabs-header .ny-tabs-nav--next.ny-disabled svg {
+          fill: rgba(0, 0, 0, 0.17); }
+    .ny-tabs .ny-tabs-header.ny-primary svg, .ny-tabs .ny-tabs-header.ny-accent svg {
+      fill: #FFFFFF; }
+    .ny-tabs .ny-tabs-header .ny-tabs-nav--back {
+      left: 0; }
+    .ny-tabs .ny-tabs-header .ny-tabs-nav--next {
+      right: 0; }
+      .ny-tabs .ny-tabs-header .ny-tabs-nav--next svg {
+        right: 0; }
 
 @media (max-width: 767px) {
   .ny-tabs ul.ny-tabs-header {
@@ -1636,7 +1673,12 @@ img.ny-img-responsive, video.ny-video-responsive {
       width: 100px;
       min-width: 100px; }
 
+  .ny-tabs .ny-tabs-header li {
+    width: auto !important; }
+  .ny-tabs .ny-tabs-header .ny-tabs-nav--back, .ny-tabs .ny-tabs-header .ny-tabs-nav--next {
+    visibility: hidden; }
   .ny-tabs .ny-tabs-canvas {
+    margin: 0 !important;
     overflow-x: auto !important; } }
 
 /*# sourceMappingURL=nyancss.css.map */

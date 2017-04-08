@@ -1,0 +1,59 @@
+include ../_variable
+- var page = "Flexbox"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#flexbox
+						h3.title Flexbox
+						hr
+						p NyanCSS use flex for great layouting.
+						table.ny-table.ny-table--striped.ny-table--responsive
+							thead
+								tr
+									td Class
+									td(style="width:65%") Description
+							tbody
+								tr
+									td
+										span.ny-code .ny-flex
+									td
+										Spesifies the length of the item relative to the rest of the flexible items inside the the same container. this class use for child of #[span.nycode .ny-flex--row] or #[span.nycode .ny-flex--col] as parent container.
+								tr
+									td
+										span.ny-code .ny-flex--row
+									td
+										Items arranged horizontally. #[span.ny-code max-height = 100%] and #[span.ny-code max-width] is the width of the items in the container.
+								tr
+									td
+										span.ny-code .ny-flex--col
+									td
+										Items arranged vertically. #[span.ny-code max-width = 100%] and #[span.ny-code max-height] is the height of the items in the container.
+								tr
+									td
+										span.ny-code .ny-flex--wrap
+									td
+										Spesifies that the flexible items will wrap if necessary
+
+
+						// Code Example
+						include ../code/_layouting.code.html
+							
+						
+					include ../_footer
+		include ../_script

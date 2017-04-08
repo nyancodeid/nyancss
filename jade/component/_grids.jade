@@ -1,0 +1,76 @@
+include ../_variable
+- var page = "Grids"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#grids
+						h3.title Grids
+						hr
+						p
+							| We are using a standart 12 column fluid responsive grid system. The grid helps you layout your page in an ordered, easy fashion. Grid system by Bootstrap
+						span.ny-subheader Source from getbootstrap.com
+						.example
+							.row.clearfix
+								.col-xs-12
+									span.col-demo 12
+							.row.ny-flex--row.clearfix
+								.col-xs-1
+									span.col-demo 1
+								.col-xs-11
+									span.col-demo 11
+							.row.clearfix
+								.col-xs-2
+									span.col-demo 2
+								.col-xs-10
+									span.col-demo 10
+							.row.clearfix
+								.col-xs-3
+									span.col-demo 3
+								.col-xs-9
+									span.col-demo 9
+							.row.clearfix
+								.col-xs-4
+									span.col-demo 4
+								.col-xs-8
+									span.col-demo 8
+							.row.clearfix
+								.col-xs-5
+									span.col-demo 5
+								.col-xs-7
+									span.col-demo 7
+							.row.clearfix
+								.col-xs-6
+									span.col-demo 6
+								.col-xs-6
+									span.col-demo 6
+							.row.clearfix
+								.col-xs-6.col-xs-offset-4
+									span.col-demo col-xs-6 col-xs-offset-4
+							.row.clearfix
+								.col-xs-4.col-xs-offset-3
+									span.col-demo col-xs-4 col-xs-offset-3
+							.row.clearfix
+								.col-xs-4.col-xs-offset-7
+									span.col-demo col-xs-4 col-xs-offset-3
+
+						include ../code/_grids.code.html
+							
+						
+					include ../_footer
+		include ../_script

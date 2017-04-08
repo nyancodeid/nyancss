@@ -1,0 +1,123 @@
+include ../_variable
+- var page = "Card"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#card
+						h3.title Card
+						hr
+						.example
+							.row.clearfix
+								.col-md-6.col-sm-12
+									.ny-card
+										.ny-card-title Card Header
+										.ny-card-content
+											p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ducimus..
+									
+									.ny-card
+										.ny-card-title Card Header
+										.ny-card-content
+											p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ducimus..
+										.ny-card-action
+											a.ny-button(href='#') Learn More
+									
+									.ny-card
+										.ny-card-title Card Header
+										.ny-card-action
+											a.ny-button(href='#') Learn More
+										.ny-card-content
+											p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ducimus..
+									
+									.ny-card
+										.ny-card-header.ny-flex--row
+											img.ny-avatar(src='vendor/img/avatar.png', alt='')
+											.ny-flex--col
+												span.ny-card-header-title Title
+												span.ny-card-header-subtitle subtitle
+										.ny-card-content
+											p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ducimus..
+										.ny-card-image
+											img(src='vendor/img/world.png', alt='')
+										.ny-card-action
+											a.ny-button(href='#') Share
+									
+									.ny-card
+										.ny-card-image
+											img(src='vendor/img/world.png', alt='')
+										.ny-card-header.ny-flex--row
+											img.ny-avatar(src='vendor/img/avatar.png', alt='')
+											.ny-flex--col
+												span.ny-card-header-title Title
+												span.ny-card-header-subtitle subtitle
+										.ny-card-action--right
+											a.ny-button(href='#') Share
+								.col-md-6.col-sm-12
+									.ny-card
+										.ny-card-header.ny-flex--row
+											img.ny-avatar(src='vendor/img/avatar.png', alt='')
+											.ny-flex--col
+												span.ny-card-header-title Title
+												span.ny-card-header-subtitle subtitle
+										.ny-card-action
+											a.ny-button(href='#') Learn More
+										.ny-card-content
+											p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ducimus..
+								
+									.ny-card
+										.ny-card-header.ny-flex--row
+											img.ny-avatar(src='vendor/img/avatar.png', alt='')
+											.ny-flex--col
+												span.ny-card-header-title Title
+												span.ny-card-header-subtitle subtitle
+										.ny-card-image
+											img(src='vendor/img/world.png', alt='')
+										.ny-card-content
+											p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ducimus..
+										.ny-card-action
+											a.ny-button(href='#') Learn More
+								
+									.ny-card.ny-card-h
+										.ny-card-image
+											img(src='vendor/img/world.png', alt='')
+										.ny-card-h-content
+											.ny-card-title Card Header
+											.ny-card-action
+												a.ny-button(href='#') Learn More
+											.ny-card-content
+												p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ducimus..
+								
+									.ny-card.ny-accent
+										.ny-card-title Accent Card
+										.ny-card-content
+											p
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam cum expedita repudiandae suscipit ea rem pariatur rerum quibusdam quaerat debitis repellendus in nemo, dicta nobis magnam, architecto nihil non!
+								
+									.ny-card.ny-primary.demo-card--event
+										.ny-card-content
+											h3
+												| Featured Event: May 24, 2017 
+												br
+												| 7-11pm
+										.ny-card-action
+											a.ny-button.ny-primary(href='#') add to calendar
+							// Code Example
+							include ../code/_card.code.html
+
+					include ../_footer
+		include ../_script

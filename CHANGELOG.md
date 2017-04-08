@@ -1,3 +1,12 @@
+## v0.6.9-beta (April 2, 2017)
+- change syntax for tabs and accordion
+- change documentation layout and design
+- add tabs pagination
+- solve some bug and issue
+- migration to jade
+- add _theme.scss
+- tons more...
+
 ## v0.6.8-beta (March 27, 2017)
 - change syntax for table stripped 
 - change syntax for accordion

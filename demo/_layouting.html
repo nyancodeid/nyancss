@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Layouting - NyanCSS</title>
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    <link rel="stylesheet" href="../css/nyancss.css" media="screen,projection">
+    <link rel="stylesheet" href="vendor/css/style.css">
+    <link rel="stylesheet" href="vendor/css/prismjs.min.css">
+    <!-- Facebook-->
+    <meta property="og:title" content="NyanCSS: a modern css framework with smooth and light design">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="http://getnyancss.com">
+    <meta property="og:site_name" content="NyanCSS: a modern css framework with smooth and light design">
+    <meta property="og:type" content="website">
+    <!-- Meta -->
+    <meta name="author" Ryan Aunur Rassyid>
+    <meta name="keyword" content="nyancss, nyancss framework, nyan.css, css indonesia, web design">
+    <meta name="description" content="NyanCSS is a modern css framework with smooth and light design Based on Material Design and Smooth Light Design">
+    <meta name="robots" content="index,nofollow">
+  </head>
+  <body ny-app>
+    <div class="clearfix main-container ny-flex--row">
+      <div class="col-md-3 hide-xs hide-sm sidebar ny-whiteframe-5dp">
+        <div class="big-header ny-primary">
+          <h3>NyanCSS <small>v0.6.9-beta</small></h3>
+        </div>
+        <!-- scrolled navigation menu-->
+        <div class="scrolled-nav ny-content">
+          <ul style="overflow: auto" class="list-style-none ny-padding">
+            <li>
+              <h5 class="ny-primary-text ny-no-margin">Getting Started</h5>
+            </li>
+            <li>
+              <ul class="list-style-none">
+                <li><a href="index.html#getting-started" title="Getting Started">Getting Started</a></li>
+                <li><a href="index.html#download" title="Download">Download</a></li>
+                <li><a href="index.html#cdn-link" title="CDN">CDN</a></li>
+              </ul>
+            </li>
+            <li>
+              <h5 class="ny-primary-text ny-no-margin">Components </h5>
+            </li>
+            <li>
+              <ul class="list-style-none">
+                <li><a href="_typography.html" title="Typography">Typography</a></li>
+                <li><a href="_blockquotes.html" title="Blockquotes">Blockquotes</a></li>
+                <li><a href="_card.html" title="Card">Card</a></li>
+                <li><a href="_whiteframe.html" title="Whiteframe">Whiteframe</a></li>
+                <li><a href="_buttons.html" title="Buttons">Buttons</a></li>
+                <li><a href="_lists.html" title="Lists">Lists</a></li>
+                <li><a href="_list_items.html" title="List Items">List Items</a></li>
+                <li><a href="_label.html" title="Label">Label</a></li>
+                <li><a href="_badges.html" title="Badges">Badges</a></li>
+                <li><a href="_open_menu.html" title="Open Menu">Open Menu</a></li>
+                <li><a href="_accordion.html" title="Accordion">Accordion</a></li>
+                <li><a href="_forms.html" title="Forms">Forms</a></li>
+                <li><a href="_tables.html" title="Tables">Tables</a></li>
+                <li><a href="_grids.html" title="Grids">Grids</a></li>
+                <li><a href="_code.html" title="Code">Code</a></li>
+                <li><a href="_layouting.html" title="Layouting">Layouting</a></li>
+                <li><a href="_tabs.html" title="Tabs">Tabs</a></li>
+              </ul>
+            </li>
+            <li>
+              <h5 class="ny-primary-text ny-no-margin">Helpers</h5>
+            </li>
+            <li>
+              <ul class="list-style-none">
+                <li><a href="_truncate.html" title="Truncate">Truncate</a></li>
+                <li><a href="_flexbox.html" title="Flexbox">Flexbox</a></li>
+                <li><a href="_layout_align.html" title="Layout Align">Layout Align</a></li>
+                <li><a href="_responsive_utilities.html" title="Responsive Utilities">Responsive Utilities</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-9 col-sm-12 col-xs-12 main-content ny-content">
+        <main>
+          <div class="ny-jumbotron ny-whiteframe-3dp">
+            <h1>Nyan.CSS</h1>
+            <p>a modern css framework with smooth and light design.</p><span class="version">v0.6.9-beta</span><span class="lastCommit">April 2, 2017</span>
+          </div>
+          <!-- Content Here-->
+          <section id="layouting">
+            <h3 class="title">Layouting</h3>
+            <hr>
+            <p>Nyancss Layout features provide sugar to enable developers to more easily create moder, responsive layout on top of CSS3 <b>flexbox</b>. Using <b>Class</b> an easy way to set a layout (eg. <code class="ny-code">class=&quot;ny-flex--row&quot;</code>).</p>
+            <div class="example ny-flex--col">
+              <div class="col-xs-12 layout-1">
+                <div class="ny-flex--col">
+                  <div class="header">header</div>
+                  <div style="height:150px;" class="ny-flex--row">
+                    <div class="sidebar col-xs-3">sidebar</div>
+                    <div class="main col-xs-9">main</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 layout-2">
+                <div class="ny-flex--row">
+                  <div class="ny-flex--row col-xs-6">
+                    <div class="col-xs-6">First item in row</div>
+                    <div class="col-xs-6">Second item in row</div>
+                  </div>
+                  <div class="ny-flex--col col-xs-6">
+                    <div>First item in column</div>
+                    <div>Second item in column</div>
+                  </div>
+                </div>
+              </div>
+            </div><pre class="code-example ny-code"><code class="language-markup">&lt;!-- Layout 1 --&gt;
+&lt;div class="col-xs-12 layout-1"&gt;
+  &lt;div class="ny-flex--col"&gt;
+    &lt;div class="header"&gt;header&lt;/div&gt;
+    &lt;div class="ny-flex--row" style="height:150px;"&gt;
+      &lt;div class="sidebar col-xs-3"&gt;sidebar&lt;/div&gt;
+      &lt;div class="main col-xs-9"&gt;main&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Layout 2 --&gt;
+&lt;div class="col-xs-12 layout-2"&gt;
+  &lt;div class="ny-flex--row"&gt;
+    &lt;div class="ny-flex--row col-xs-6"&gt;
+      &lt;div class="col-xs-6"&gt;First item in row&lt;/div&gt;
+      &lt;div class="col-xs-6"&gt;Second item in row&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ny-flex--col col-xs-6"&gt;
+      &lt;div&gt;First item in column&lt;/div&gt;
+      &lt;div&gt;Second item in column&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </section>
+          <footer class="footer">
+            <section class="main-footer">
+              <div class="ny-flex ny-flex--row ny-flex-xs--col">
+                <div class="col-xs-12 col-md-3"></div>
+                <div class="col-xs-12 col-md-4"><span class="ny-subheader">Components</span>
+                  <div class="ny-flex--row components">
+                    <div class="col-xs-6 ny-no-padding">
+                      <ul class="list-style-none">
+                        <li><a href="_typography.html" title="Typography">Typography</a></li>
+                        <li><a href="_blockquotes.html" title="Blockquotes">Blockquotes</a></li>
+                        <li><a href="_card.html" title="Card">Card</a></li>
+                        <li><a href="_whiteframe.html" title="Whiteframe">Whiteframe</a></li>
+                        <li><a href="_buttons.html" title="Buttons">Buttons</a></li>
+                        <li><a href="_lists.html" title="Lists">Lists</a></li>
+                        <li><a href="_list_items.html" title="List Items">List Items</a></li>
+                        <li><a href="_label.html" title="Label">Label</a></li>
+                        <li><a href="_badges.html" title="Badges">Badges</a></li>
+                        <li><a href="_open_menu.html" title="Open Menu">Open Menu</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6 ny-no-padding">
+                      <ul class="list-style-none">
+                        <li><a href="_accordion.html" title="Accordion">Accordion</a></li>
+                        <li><a href="_forms.html" title="Forms">Forms</a></li>
+                        <li><a href="_tables.html" title="Tables">Tables</a></li>
+                        <li><a href="_grids.html" title="Grids">Grids</a></li>
+                        <li><a href="_code.html" title="Code">Code</a></li>
+                        <li><a href="_layouting.html" title="Layouting">Layouting</a></li>
+                        <li><a href="_tabs.html" title="Tabs">Tabs</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-2"><span class="ny-subheader">Helpers</span>
+                  <ul class="list-style-none">
+                    <li><a href="_truncate.html" title="Truncate">Truncate</a></li>
+                    <li><a href="_flexbox.html" title="Flexbox">Flexbox</a></li>
+                    <li><a href="_layout_align.html" title="Layout Align">Layout Align</a></li>
+                    <li><a href="_responsive_utilities.html" title="Responsive Utilities">Responsive Utilities</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-12 col-md-3 ny-flex--col"><span class="ny-subheader">Host Powered By </span><a href="https://dreamlinehost.com" title="Dream Line Host"><img src="vendor/img/dlh.png" height="70px" title="Dream Line Host"></a></div>
+              </div>
+            </section>
+            <section class="footer-bottom">
+              <p class="ny-no-margin">Designed with ♥ by <a target="blank" href="http://github.com/nyancodeid" title="NyanCodeID">NyanCodeID</a>. Special Thanks to <a target="blank" href="https://github.com/milligram/milligram">Miligram</a>. Licensed under the <a target="blank" href="https://github.com/nyancodeid/nyancss#license" title="MIT License">MIT License</a></p>
+            </section>
+          </footer>
+        </main>
+      </div>
+    </div>
+    <script src="vendor/js/jquery.min.js"></script>
+    <script src="../js/nyancss.js" defer></script>
+    <!-- vendor-->
+    <script src="vendor/js/app.js" async></script>
+    <script src="vendor/js/prismjs.js" async></script>
+  </body>
+</html>

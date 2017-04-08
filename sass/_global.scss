@@ -25,6 +25,8 @@ body {
   letter-spacing: .01em;
   line-height: 1.6;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
@@ -52,7 +54,7 @@ code {
   font-family: $font-family;
 }
 
-pre {
+pre.ny-code {
   background: #f4f5f6;
   border-left: 0.3rem solid $primary-color;
   overflow-y: hidden;
@@ -204,6 +206,4 @@ img {
     transform: scale(2);
     opacity: 0; } }
 
-h1, h2, h3, h4, h5, h6 {
-  @extend %headings !optional;
-}
+

@@ -9,13 +9,16 @@ var replace = require('gulp-string-replace');
 var pump = require('pump');
 var banner = require('gulp-banner');
 var pkg = require('./package.json');
+var gJade = require('gulp-jade');
+var html2jade = require('gulp-html2jade');
 
 var path = {
 	css: ['./css/nyancss.css'],
 	js: ['js/nyancss.js'],
 	fonts: ['fonts/*'],
-	files: ['LICENSE', 'package.json', 'README.md', './demo/**/**/*.*', '!./demo/index.html'],
-	demo: ['./demo/index.html']
+	files: ['LICENSE', 'package.json', 'README.md', './demo/**/**/*.*', '!./demo/index.html', '!./demo/_*.html'],
+	demo: ['./demo/*.html'],
+	jade: ['./jade/index.jade', './jade/component/*.jade', './jade/helpers/*.jade']
 };
 
 var comment = '/*\n' +
@@ -44,7 +47,6 @@ gulp.task('css', function() {
 	.pipe(rename("nyan.min.css"))
 	.pipe(sourcemaps.write('.', {addComment: false}))
 	.pipe(gulp.dest('release/nyancss-v'+pkg.version+"/css"))
-	.pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('js', function(cb) {
@@ -57,8 +59,7 @@ gulp.task('js', function(cb) {
 	gulp.dest('release/nyancss-v'+pkg.version+'/js'),
 	rename("nyan.min.js"),
 	uglifyjs(),
-	gulp.dest('release/nyancss-v'+pkg.version+"/js"),
-	gulp.dest('dist/js')
+	gulp.dest('release/nyancss-v'+pkg.version+"/js")
  ], cb)
 });
 
@@ -66,8 +67,29 @@ gulp.task('fonts', function() {
 	return gulp.src(path.fonts).pipe(gulp.dest('release/nyancss-v'+pkg.version+'/fonts'));
 });
 
-gulp.task('move', ['demoIndex'], function() {
+gulp.task('move', ['jade' ,'demoIndex'], function() {
 	return gulp.src(path.files, { base:'./'}).pipe(gulp.dest('release/nyancss-v'+pkg.version));
+});
+
+gulp.task('jade', function () {
+	var YOUR_LOCALS = {};
+
+	gulp.src(path.jade)
+		.pipe(gJade({
+			locals: YOUR_LOCALS,
+			pretty: true
+		}))
+		.pipe(gulp.dest('./demo'));
+});
+
+gulp.task('tojade', function() {
+	gulp.src('./html/index.html')
+    .pipe(html2jade({
+    	nspaces:2,
+    	noemptypipe: true,
+    	tabs:2
+    }))
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('demoIndex', function() {
@@ -78,7 +100,9 @@ gulp.task('demoIndex', function() {
 });
 
 gulp.task('release', function() {
-	gulp.start('css', 'js', 'fonts', 'move');
+	gulp.start('css', 'js', 'fonts', 'jade', 'move');
 });
+
+
 
 

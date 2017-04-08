@@ -1,0 +1,155 @@
+include ../_variable
+- var page = "Tables"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#tables
+						h3.title Tables
+						hr
+						h4
+							b Bordered Table
+						p Tables are bordered bottom by default.
+						table.ny-table.ny-table--striped.ny-table--responsive
+							thead
+								tr
+									th Class
+									th Description
+							tbody
+								tr
+									td
+										code.ny-code .ny-table--hovered
+									td Hovered effect for every table row inside tbody tag
+								tr
+									td
+										code.ny-code .ny-table-cell--hovered
+									td Hovered effect for every table cell inside tbody tag
+								tr
+									td
+										code.ny-code .ny-table--bordered
+									td Bordered effect for every table row and cell
+						div.example
+							table.ny-table.ny-table--hovered.ny-table--bordered.ny-table--responsive
+								thead
+									tr
+										th Name
+										th Age
+										th Height
+										th Location
+								tbody
+									tr
+										td Kevin Durant
+										td 27
+										td 2.06
+										td  Washington, DC
+									tr
+										td Stephen Curry
+										td 27
+										td 1,91
+										td Akron, OH
+									tr
+										td Klay Thompson
+										td 25
+										td 2,01
+										td Los Angeles, CA
+
+						// Code Example
+						include ../code/_tables-1.code.html
+
+						h4
+							b Striped Table
+						p
+							| Add 
+							span.ny-code class=&quot;ny-table ny-table--striped&quot;
+							|  to the table tag for a striped table.
+						.example
+							table.ny-table.ny-table--striped.ny-table--responsive
+								thead
+									tr
+										th Name
+										th Age
+										th Height
+										th Location
+								tbody
+									tr
+										td Kevin Durant
+										td 27
+										td 2.06
+										td  Washington, DC
+									tr
+										td Stephen Curry
+										td 27
+										td 1,91
+										td Akron, OH
+									tr
+										td Klay Thompson
+										td 25
+										td 2,01
+										td Los Angeles, CA
+									tr
+										td Klay Thompson
+										td 25
+										td 2,01
+										td Los Angeles, CA
+						
+						// Code Example
+						include ../code/_tables-2.code.html
+
+						h4
+							b Table Card
+						p Make your table style like Material Design.
+						.example
+							.ny-table--card
+								.ny-table-header.ny-primary
+									h4 Table Person
+								.ny-table-content
+									table.ny-table.ny-table--striped.ny-table--responsive
+										thead
+											tr
+												th Name
+												th Age
+												th Height
+												th Location
+										tbody
+											tr
+												td Kevin Durant
+												td 27
+												td 2.06
+												td  Washington, DC
+											tr
+												td Stephen Curry
+												td 27
+												td 1,91
+												td Akron, OH
+											tr
+												td Klay Thompson
+												td 25
+												td 2,01
+												td Los Angeles, CA
+											tr
+												td Klay Thompson
+												td 25
+												td 2,01
+												td Los Angeles, CA
+
+						// Code Example
+						include ../code/_tables-3.code.html
+
+						
+					include ../_footer
+		include ../_script

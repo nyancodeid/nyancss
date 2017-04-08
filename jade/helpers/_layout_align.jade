@@ -1,0 +1,91 @@
+include ../_variable
+- var page = "Layout Align"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#layout_align
+						h3.title Layout Align
+						hr
+						p
+							| The 
+							span.ny-code .ny-layout-align--*-*
+							|  class takes two words. The first word says how the children will be aligned in the layout&apos;s direction, and the second word says how the children will be aligned perpendicular to the layout&apos;s direction.
+						p
+							span.ny-code ny-flex--col ny-layout-align--center-end
+							|  would make children align along the center vertically and along the end (right) horizontally.
+						span.ny-subheader Source from material.angularjs.org
+						#demo-flex-nav.ny-layout-align--start-center
+							span.ny-code class=&quot;ny-flex--row ny-layout-align--start-start&quot;
+						#demo-monitor.ny-flex--row.ny-layout-align--start-start(style='background: #e1e1e1;height: 128px;overflow: hidden;min-height: auto !important;')
+							button.ny-button.ny-button--raised AB
+							button.ny-button.ny-button--raised AB
+							button.ny-button.ny-button--raised AB
+						#demo-panel.ny-flex-xs--col.ny-flex--row
+							.col-xs-12.col-md-4
+								span.ny-subheader Layout
+								.ny-flex--col
+									div
+										input#row(type='radio', name='layout', checked='', value='row')
+										label.label-inline(for='row') row
+									div
+										input#col(type='radio', name='layout', value='col')
+										label.label-inline(for='col') column
+							.col-xs-12.col-md-4
+								span.ny-subheader
+									| Alignment in Layout Direction (
+									span#alignmentCol2 horizontal
+									| )
+								.ny-flex--col
+									div
+										input#startL(type='radio', name='layoutDir', checked='')
+										label.label-inline(for='startL') start
+									div
+										input#centerL(type='radio', name='layoutDir')
+										label.label-inline(for='centerL') center
+									div
+										input#endL(type='radio', name='layoutDir')
+										label.label-inline(for='endL') end
+									div
+										input#aroundL(type='radio', name='layoutDir')
+										label.label-inline(for='aroundL') space-around
+									div
+										input#betweenL(type='radio', name='layoutDir')
+										label.label-inline(for='betweenL') space-between
+							.col-xs-12.col-md-4
+								span.ny-subheader
+									| Alignment in Perpendicular Direction (
+									span#alignmentCol3 vertical
+									| )
+								.ny-flex--col
+									div
+										input#startP(type='radio', name='layoutPer', checked='')
+										label.label-inline(for='startP') start
+									div
+										input#centerP(type='radio', name='layoutPer')
+										label.label-inline(for='centerP') center
+									div
+										input#endP(type='radio', name='layoutPer')
+										label.label-inline(for='endP') end
+									div
+										input#strethP(type='radio', name='layoutPer')
+										label.label-inline(for='strethP') stretch
+							
+						
+					include ../_footer
+		include ../_script

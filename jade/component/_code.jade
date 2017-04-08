@@ -1,0 +1,43 @@
+include ../_variable
+- var page = "Code"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#code
+						h3.title Code
+						hr
+						div.example
+							p
+								| use pre with #[span.ny-code class="ny-code"] element for Multi Line Code. use 
+								span.ny-code class=&quot;.ny-code&quot;
+								|  on span element for Single Line Code
+							pre.ny-code
+								code .ny-button {
+									|	 color: #9b4dca;
+									| }
+								
+							span.ny-code Example 1 Line Code
+
+
+						// Code Example
+						include ../code/_code.code.html
+							
+						
+					include ../_footer
+		include ../_script

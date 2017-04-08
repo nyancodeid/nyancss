@@ -1,0 +1,66 @@
+include ../_variable
+- var page = "Lists"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#lists
+						h3.title Lists
+						hr
+						div.example
+							.row.clearfix
+								.col-md-4.col-xs-12
+									ul
+										li Unordered list item 1
+										li Unordered list item 2
+										li
+											| Unordered list item 3
+											ul
+												li Unordered list item 3.1
+												li Unordered list item 3.2
+												li Unordered list item 3.3
+										li Unordered list item 4
+										li Unordered list item 5
+								.col-md-4.col-xs-12
+									ol
+										li Ordered list item 1
+										li Ordered list item 2
+										li
+											| Ordered list item 3
+											ol
+												li Ordered list item 3.1
+												li Ordered list item 3.2
+												li Ordered list item 3.3
+										li Ordered list item 4
+										li Ordered list item 5
+								.col-md-4.col-xs-12
+									dl
+										dt Description list item 1
+										dt Description list item 2
+										dt Description list item 3
+										dd Description list item 3.1
+										dd Description list item 3.2
+										dd Description list item 3.3
+										dt Description list item 4
+										dt Description list item 5
+							// Code Example
+							include ../code/_lists.code.html
+							
+						
+					include ../_footer
+		include ../_script

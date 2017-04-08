@@ -158,11 +158,6 @@
 	overflow: hidden;
 }
 
-#tooltip .example .col-xs-12 button {
-	left: 50%;
-    transform: translateX(-50%);
-}
-
 #tabs .example .ny-tabs .ny-tabs-container li {
 	padding: 8px;
 }

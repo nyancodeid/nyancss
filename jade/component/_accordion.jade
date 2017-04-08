@@ -1,0 +1,140 @@
+include ../_variable
+- var page = "Accordion"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#accordion
+						h3.title Accordion
+						hr
+						div.example
+							p
+								| There are 2 type of accordion, single open and multiple open. Use this attribute for they are :
+							table.ny-table.ny-table--striped.ny-table--responsive
+								thead
+									tr
+										th Attribute
+										th Value
+										th Place
+										th Description
+								tbody
+									tr
+										td 
+											span.ny-code data-open
+										td
+											span.ny-code single
+										td .ny-accordion
+										td Accordion Single Open
+									tr
+										td 
+											span.ny-code data-open
+										td
+											span.ny-code multi
+										td .ny-accordion
+										td Accordion Multiple Open
+									tr
+										td
+											span.ny-code data-arrow-color
+										td Hexa Color. *ex. #[span.ny-code #FFFFFF]
+										td .ny-accordion
+										td Give arrow icon color. 
+									tr
+										td
+											span.ny-code data-component
+										td .ny-accordion-group
+										td ny-accordion
+										td Initialize ny-accordion without jquery code. wrap #[span.ny-code .ny-accordion] with #[span.ny-code .ny-accordion-group]
+
+
+							p 
+								| or using jquery code.
+							
+							pre.code-example
+								code.language-javascript $(document).ready(function() {
+									| 	...
+									| 	$('#foo').ny_accordion(); // default
+									| 
+									| 	$('#bar').ny_accordion({
+									| 		singleOpen: true // true : for single open, false : for multiple open
+									| 	}); 
+									| }); 
+
+							div.ny-flex.ny-flex--row.ny-flex-xs--col.ny-content
+								.ny-flex--col.col-xs-12.col-md-6.ny-no-padding
+									.col-xs-12(style='margin-bottom:8px')
+										section.demo-1.ny-accordion-group
+											section.ny-accordion
+												.ny-accordion--toggle Accordion 2
+												div(data-content='')
+													item Item
+													section.ny-accordion
+														.ny-accordion--toggle Accordion 3
+														div(data-content='')
+															item
+																h3 List View
+																p
+																	| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+																	| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+																	| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+																	| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+																	| cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+																	| proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+															item Item
+											section.ny-accordion
+												.ny-accordion--toggle Accordion 3
+												div(data-content='')
+													item Button
+													item Accordion
+													item List Item
+													item Badge
+													item Grid System
+													a(href='#', data-item='') Helpers
+									.col-xs-12(style='margin-bottom:8px')
+										div
+											section.ny-accordion-group.ny-primary(data-component='ny-accordion')
+												span.ny-subheader Demo
+												section.ny-accordion
+													.ny-accordion--toggle NyanCSS
+													div(data-content='')
+														item v0.6
+														item v0.6.8-beta
+														item v0.6.9-beta
+								.col-xs-12.col-md-6
+									section.ny-accordion-group.ny-accent.demo-2
+										span.ny-subheader Demo Accent Theme
+										section.ny-accordion(data-open="multi")
+											.ny-accordion--toggle Components
+											div(data-content='')
+												item
+													h3 Introduction
+													p
+														| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+														| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+														| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+												a(href='#', data-item='') Button
+												a(href='#', data-item='') Accordion
+										section.ny-accordion(data-open="multi")
+											.ny-accordion--toggle Version
+											div(data-content='')
+												a(href='#', data-item='') v0.6.8
+												a(href='#', data-item='') v0.6.9
+						
+						include ../code/_accordion.code.html
+						
+				include ../_footer
+		include ../_script

@@ -1,0 +1,34 @@
+footer.footer
+	section.main-footer
+		div.ny-flex.ny-flex--row.ny-flex-xs--col
+			.col-xs-12.col-md-3
+			.col-xs-12.col-md-4
+				span.ny-subheader Components
+				.ny-flex--row.components
+					.col-xs-6.ny-no-padding
+						ul.list-style-none
+							- for (var i = 0; i <= 9; ++i) {
+								li
+									a(href="_#{components[i].toLowerCase().replace(' ', '_')}.html", title="#{components[i]}") #{components[i]}
+							- }
+					.col-xs-6.ny-no-padding
+						ul.list-style-none
+							- for (var i = 10; i <= 16; ++i) {
+								li
+									a(href="_#{components[i].toLowerCase().replace(' ', '_')}.html", title="#{components[i]}") #{components[i]}
+							- }
+			.col-xs-12.col-md-2
+				span.ny-subheader Helpers
+				ul.list-style-none
+					- for (var i = 0; i <= helpers.length - 1; ++i) {
+						li
+							a(href="_#{helpers[i].toLowerCase().replace(' ', '_')}.html", title="#{helpers[i]}") #{helpers[i]}
+					- }
+			.col-xs-12.col-md-3.ny-flex--col
+				span.ny-subheader Host Powered By 
+				a(href='https://dreamlinehost.com', title='Dream Line Host')
+					img(src="vendor/img/dlh.png", height='70px', title='Dream Line Host')
+
+	section.footer-bottom
+		p.ny-no-margin
+			| Designed with ♥ by #[a(target="blank" href="http://github.com/nyancodeid" title="NyanCodeID") NyanCodeID]. Special Thanks to #[a(target="blank" href="https://github.com/milligram/milligram") Miligram]. Licensed under the #[a(target="blank" href="https://github.com/nyancodeid/nyancss#license" title="MIT License") MIT License]

@@ -1,0 +1,52 @@
+section#setup
+  h3.title Setup 
+  hr 
+  .example
+    h4 Project Structure 
+    p
+      | After downloading, extract the files into the directory where your website is located. Your directory will look samething like this. 
+    p
+      | You&apos;ll notice that there are two sets of the files. The 
+      code.ny-code min
+      |  means that the file is &quot;compressed&quot; to reduce load times. These minified files are useally used in production while it is better to use the unminified files during development. 
+      pre.code-example.ny-code
+        code.language-markup MyWebsite/
+          |  |--css/
+          |  | |--nyan.css
+          |  | |--nyan.min.css
+          |  |
+          |  |--fonts/
+          |  | |--avenir/
+          |  |
+          |  |--js/
+          |  | |--nyan.js
+          |  | |--nyan.min.js
+          |  |
+          |  |--index.html
+      br
+      br
+    h4 HTML Setup 
+    p
+      | Next you just have to make sure your link files properly in your webpage. Generally it is wise to import javascript files (ex. jQuery) at the end of the body to reduce page load time. And don&apos;t forget to add 
+      code.ny-code ny-app
+      |  at body tag. Follow the example below on how to import Nyan.css into your webpage. 
+    pre.code-example.ny-code
+      code.language-markup &lt;!DOCTYPE html&gt;
+        | &lt;html lang="en"&gt;
+        | &lt;head&gt;
+        |   &lt;meta charset="UTF-8"&gt;
+        |   &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        |   &lt;!-- Lets browser know website is optimized for mobile --&gt;
+        |   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        | 
+        |   &lt;!-- Import Nyan.css --&gt;
+        |   &lt;link rel="stylesheet" type="text/css" href="css/nyan.min.css" media="screen,projection"&gt;
+        | &lt;/head&gt;
+        | &lt;body ny-app&gt;
+        |   
+        |   &lt;!-- Import javascript file here --&gt;
+        |   &lt;script src="vendor/js/jquery.min.js"&gt;&lt;/script&gt;
+        |   &lt;script src="js/nyancss.min.js" defer &gt;&lt;/script&gt;
+        | &lt;/body&gt;
+        | &lt;/html&gt;
+    h4 And here we go!

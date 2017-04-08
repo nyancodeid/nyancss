@@ -1,6 +1,6 @@
 var nyancss = {
-	version: 'v0.6.8-beta',
-	lastCommit: 'March 27, 2017',
+	version: 'v0.6.9-beta',
+	lastCommit: 'April 2, 2017',
 	cdnLink: {
 		css: 'https://cdn.rawgit.com/nyancodeid/nyancss/103cf9ca/dist/css/nyan.min.css',
 		js: 'https://cdn.rawgit.com/nyancodeid/nyancss/103cf9ca/dist/js/nyan.min.js'
@@ -67,4 +67,16 @@ $(document).ready(function() {
 			dNav.text('class="'+dMoni.attr('class')+'"');
 		}
 	});
+
+	$('.demo-1').ny_tabs({
+		active: 3
+	});
+	$('.demo-2').ny_tabs({
+		pagination: true
+	});
+	$('.demo-1 .ny-accordion').ny_accordion();
+	$('.demo-2 .ny-accordion').ny_accordion({
+		singleOpen: false
+	})
+
 });

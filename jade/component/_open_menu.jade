@@ -1,0 +1,122 @@
+include ../_variable
+- var page = "Open Menu"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#openmenu
+						h3.title Open Menu
+						hr
+						p
+							| Open menu use for menu dropdown. make element div with 
+							span.ny-code class=&quot;ny-openmenu&quot;
+							|	as parent. and for child element, insert button (with attribut 
+							span.ny-code data-trigger=&quot;ny-openmenu&quot;
+							|	as openmenu trigger button) and 
+							span.ny-code .ny-openmenu--container
+							|	for open menu container.
+						p
+							| for Animation add attribut 
+							span.ny-code data-animation
+							|	on 
+							span.ny-code .ny-openmenu--container
+						table.ny-table--stripped.ny-table--responsive
+							thead
+								th Attribut
+								th Value
+							tbody
+								tr
+									td
+										span.ny-code data-animation
+									td
+										span.ny-code left
+										|	or 
+										span.ny-code right
+								tr
+									td
+										span.ny-code data-position
+									td
+										span.ny-code above
+										|	or 
+										span.ny-code under
+						p
+							| Openmenu using javascript code for run click event. Add this code when document ready. add 
+							code.ny-code outsideClick
+							|	to close openmenu when clicked outside element. default 
+							code.ny-code outsideClick
+							|	is 
+							code.ny-code false
+						pre.code-example.ny-code
+							code.language-javascript $(document).ready(function() {
+								| 	...
+								| 	$.openMenu(); // default
+								| 
+								| 	$.openMenu({
+								| 		outsideClick: true // close openmenu when click outside
+								| 	}); 
+								| }); 
+
+
+						div.example.ny-flex--row
+							.col-xs-12.ny-flex--row.ny-flex-xs--col(style='margin-bottom: 200px;padding: 0')
+								.ny-openmenu.col-xs-12.col-sm-6.col-md-6
+									button.ny-button.ny-button--raised(data-trigger='openmenu') Open Menu
+									.ny-openmenu--container(data-animation='left', data-position='under')
+										.ny-lists
+											.ny-list-item--bordered
+												.ny-list-item-text
+													h5 Title
+													p Secondary Text
+											.ny-list-item
+												.ny-list-item-text
+													h5 Title
+													p Secondary Text
+												span.ny-flex
+												span.ny-badge--inline 12
+									// it's only for subtitle
+									p openmenu with data-animation=&quot;left&quot;, data-position=&quot;under&quot;
+
+								.ny-openmenu.col-xs-12.col-sm-6.col-md-6(style='margin-left: auto;text-align:right;')
+									button.ny-button.ny-button--raised(data-trigger='openmenu') Open Menu
+									.ny-openmenu--container(data-animation='right', data-position='above')
+										.ny-lists
+											.ny-list-item(style='margin-bottom:8px;')
+												img.ny-circle(src='vendor/img/avatar.png', alt='')
+												.ny-list-item-text
+													h5 Ryan Aunur Rassyid
+													p Developer of nyancss
+											span.ny-subheader Account
+											.ny-list-item
+												.ny-list-item-text.oneChild
+													h5 Dashboard
+											.ny-list-item
+												.ny-list-item-text.oneChild
+													h5 Profile
+											.ny-list-item
+												.ny-list-item-text.oneChild
+													h5 Setting
+											span.ny-subheader Other
+											.ny-list-item
+												.ny-list-item-text.oneChild
+													h5 Logout
+									// it's only for subtitle
+									p(style='text-align:right;') openmenu with data-animation=&quot;right&quot;, data-position=&quot;above&quot;
+						include ../code/_openmenu.code.html
+						
+					include ../_footer
+		include ../_script

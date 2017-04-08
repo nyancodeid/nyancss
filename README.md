@@ -1,4 +1,4 @@
-# NyanCSS v0.6.8-beta
+# NyanCSS v0.6.9-beta
 ### Light and Smooth Modern CSS Framwork
 
 ## Sass Requirements:

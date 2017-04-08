@@ -1,0 +1,42 @@
+include ../_variable
+- var page = "Truncate"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#truncate
+						h3.title Truncate
+						hr
+						.example
+							#truncate
+							h4 Truncate
+							p
+								| To truncate long lines of text in an ellipsis, Add the class 
+								span.ny-code .ny-truncate
+								|  to the tag which contains the text. See an examaple below of header being truncated inside a card.
+							.ny-card
+								.ny-card-content
+									p.ny-truncate.demo-truncate
+										| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at expedita neque, vero numquam dicta quam excepturi, harum quidem pariatur. Modi odit quisquam facilis rem molestiae nobis excepturi illum totam!
+
+						// Code Example
+						include ../code/_truncate.code.html
+							
+						
+					include ../_footer
+		include ../_script

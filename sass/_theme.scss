@@ -1,0 +1,56 @@
+.ny-accordion-group.ny-primary .ny-accordion,
+.ny-accordion.ny-primary {
+	border-bottom: 1px solid #586ee4;
+	> .ny-accordion--toggle {
+		background-color: $primary-color;
+		border-bottom: 1px solid $primary-color;
+		color: #FFFFFF;
+		&:after {
+			@include arrow-up("#FFFFFF");
+		}
+	}
+	&.open {
+		> .ny-accordion--toggle {
+      background-color: #5164cb;
+      border-bottom: 1px solid #5164cb;
+		}
+	}
+	[data-content] item,
+	[data-content] a[data-item] {
+		color: #FFFFFF;
+		border-bottom: 1px solid $primary-color;
+		&:hover {
+			background-color: rgba(81, 100, 203, 0.66);
+		}
+	}
+}
+.ny-accordion-group.ny-accent .ny-accordion,
+.ny-accordion.ny-accent {
+	border-bottom: 1px solid #f94f89;
+	> .ny-accordion--toggle {
+		background-color: $accent-color;
+		border-bottom: 1px solid $accent-color;
+		color: #FFFFFF;
+		&:after {
+			@include arrow-up("#FFFFFF");
+		}
+	}
+	&.open {
+		> .ny-accordion--toggle {
+			background-color: #f03272;
+			border-bottom: 1px solid #f03272;
+		}
+	}
+	[data-content] item,
+	[data-content] a[data-item] {
+		color: #FFFFFF;
+		border-bottom: 1px solid $accent-color;
+		&:hover {
+			background-color: rgba(255, 73, 135, 0.66);
+		}
+	}
+}
+.ny-primary .ny-subheader,
+.ny-accent .ny-subheader {
+	color: #f4f3f3;
+}

@@ -1,0 +1,53 @@
+include ../_variable
+- var page = "Layouting"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#layouting
+						h3.title Layouting
+						hr
+						p
+							| Nyancss Layout features provide sugar to enable developers to more easily create moder, responsive layout on top of CSS3 
+							b flexbox
+							| . Using 
+							b Class
+							|  an easy way to set a layout (eg. 
+							code.ny-code class=&quot;ny-flex--row&quot;
+							| ).
+						.example.ny-flex--col
+							.col-xs-12.layout-1
+								.ny-flex--col
+									.header header
+									.ny-flex--row(style='height:150px;')
+										.sidebar.col-xs-3 sidebar
+										.main.col-xs-9 main
+							.col-xs-12.layout-2
+								.ny-flex--row
+									.ny-flex--row.col-xs-6
+										.col-xs-6 First item in row
+										.col-xs-6 Second item in row
+									.ny-flex--col.col-xs-6
+										div First item in column
+										div Second item in column
+
+						include ../code/_layouting.code.html
+							
+						
+					include ../_footer
+		include ../_script

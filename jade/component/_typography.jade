@@ -1,0 +1,86 @@
+include ../_variable
+- var page = "Typography"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#typography
+						h3.title Typography
+						hr
+						div.example
+							div.row.clearfix
+								div.col-md-12
+									h1
+										| Heading
+										span.heading-font-size
+											code &lt;h1&gt;
+											|  4.6rem (46px)
+									h2
+										| Heading
+										span.heading-font-size
+											code &lt;h2&gt;
+											|  3.6rem (36px)
+									h3
+										| Heading
+										span.heading-font-size
+											code &lt;h3&gt;
+											|  2.8rem (28px)
+									h4
+										| Heading
+										span.heading-font-size
+											code &lt;h4&gt;
+											|  2.2rem (22px)
+									h5
+										| Heading
+										span.heading-font-size
+											code &lt;h5&gt;
+											|  1.8rem (18px)
+									h6
+										| Heading
+										span.heading-font-size
+											code &lt;h6&gt;
+											|  1.6rem (16px)
+									p
+										| Paragraf <code>&lt;p&gt;</code> 1.5rem (15px)
+									span.ny-subheader
+										| Subheader
+										span.heading-font-size
+											code .ny-subeader
+											|  1.4rem (14px)
+									
+									p
+										b Bolder
+										i Italic
+										u Underline
+
+									// Code Example
+									pre.code-example.ny-code
+										code.language-markup &lt;h1&gt;Heading 1&lt;/h1&gt;
+											| &lt;h2&gt;Heading 2&lt;/h2&gt;
+											| &lt;h3&gt;Heading 3&lt;/h3&gt;
+											| &lt;h4&gt;Heading 4&lt;/h4&gt;
+											| &lt;h5&gt;Heading 5&lt;/h5&gt;
+											| &lt;h6&gt;Heading 6&lt;/h6&gt;
+											| &lt;p&gt;Paragraf&lt;/p&gt;
+											| &lt;span class="ny-subheader"&gt;this subheader&lt;/span&gt;
+											| &lt;b&gt;Bolder&lt;/b&gt;
+											| &lt;i&gt;Italic&lt;/i&gt;
+											| &lt;u&gt;Underline&lt;/u&gt;
+						
+					include ../_footer
+		include ../_script
