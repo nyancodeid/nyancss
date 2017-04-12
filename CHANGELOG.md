@@ -1,3 +1,6 @@
+## v0.6.9.2-beta (April 12, 2017)
+- just little update
+
 ## v0.6.9-beta (April 2, 2017)
 - change syntax for tabs and accordion
 - change documentation layout and design
