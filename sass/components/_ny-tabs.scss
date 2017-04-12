@@ -152,11 +152,11 @@
 	}
 	.ny-tabs {
 		.ny-tabs-header {
-			li {
+			li:not(.tab-slider) {
 				width: auto !important;
 			}
 			.ny-tabs-nav--back, .ny-tabs-nav--next {
-				visibility: hidden;
+				visibility: hidden !important;
 			}
 		}
 		.ny-tabs-canvas {

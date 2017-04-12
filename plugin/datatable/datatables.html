@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dataTable</title>
+	<link rel="stylesheet" type="text/css" href="../../css/nyancss.css">
+	<link rel="stylesheet" type="text/css" href="dataTables.bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="dataTables.nyancss.css">
+</head>
+<body>
+	<div class="ny-card col-md-6">
+		<table class="ny-data-tables">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Class</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Class</th>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Ryan</td>
+					<td>Aunur</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Wildan</td>
+					<td>Aunur</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Ryan</td>
+					<td>Aunur</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Ryan</td>
+					<td>Aunur</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Ryan</td>
+					<td>Aunur</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Ryan</td>
+					<td>Aunur</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Ryan</td>
+					<td>Aunur</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>Ryan</td>
+					<td>Aunur</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript" src="../../demo/vendor/js/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.dataTables.js"></script>
+	<script type="text/javascript" src="dataTables.nyancss.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.ny-data-tables').DataTable();
+		});
+	</script>
+</body>
+</html>

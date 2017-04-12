@@ -1673,10 +1673,10 @@ img.ny-img-responsive, video.ny-video-responsive {
       width: 100px;
       min-width: 100px; }
 
-  .ny-tabs .ny-tabs-header li {
+  .ny-tabs .ny-tabs-header li:not(.tab-slider) {
     width: auto !important; }
   .ny-tabs .ny-tabs-header .ny-tabs-nav--back, .ny-tabs .ny-tabs-header .ny-tabs-nav--next {
-    visibility: hidden; }
+    visibility: hidden !important; }
   .ny-tabs .ny-tabs-canvas {
     margin: 0 !important;
     overflow-x: auto !important; } }

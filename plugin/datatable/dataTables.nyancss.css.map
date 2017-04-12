@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACC,0CAAqB;EACpB,WAAW,EAAE,CAAC",
+"sources": ["ny-data-table.scss"],
+"names": [],
+"file": "dataTables.nyancss.css"
+}

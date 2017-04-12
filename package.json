@@ -1,6 +1,6 @@
 {
   "name": "nyancss",
-  "version": "0.6.9-beta",
+  "version": "0.6.9.2-beta",
   "description": "Modern Light and Smooth CSS Framework",
   "main": "gulpfile.js",
   "dependencies": {

@@ -167,6 +167,26 @@
 }
 #demo-flex-nav {
 	padding: 8px;
-	height: 48px;
 	background-color: #f7f7f7;
+}
+footer.footer {
+	margin: 0 -15px;
+}
+footer.footer .main-footer {
+	padding: 8px 0;
+	margin-top: 16px;
+}
+footer.footer .main-footer ul li {
+	margin-bottom: 4px;
+}
+footer.footer .main-footer ul li a {
+	font-size: 0.9em;
+}
+footer.footer .footer-bottom {
+	padding: 16px 15px;
+}
+@media (min-width: 992px) {
+	footer.footer .main-footer {
+		padding: 16px 0;
+	}
 }

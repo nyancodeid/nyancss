@@ -103,6 +103,12 @@ gulp.task('release', function() {
 	gulp.start('css', 'js', 'fonts', 'jade', 'move');
 });
 
+// Watch jade -> html
+
+gulp.task('watch', function() {
+	gulp.watch(['./jade/*.jade', './jade/**/*.jade'], ['jade']);
+});
+
 
 
 
