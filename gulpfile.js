@@ -42,11 +42,13 @@ gulp.task('css', function() {
 		.pipe(rename("nyan.css"))
 	.pipe(sourcemaps.write('.', {addComment: false}))
 	.pipe(gulp.dest('release/nyancss-v'+pkg.version+"/css"))
+	.pipe(gulp.dest("dist/css"))
 	.pipe(uglifycss())
 	.pipe(sourcemaps.init())
 	.pipe(rename("nyan.min.css"))
 	.pipe(sourcemaps.write('.', {addComment: false}))
 	.pipe(gulp.dest('release/nyancss-v'+pkg.version+"/css"))
+	.pipe(gulp.dest("dist/css"))
 });
 
 gulp.task('js', function(cb) {
@@ -57,9 +59,11 @@ gulp.task('js', function(cb) {
     }),
 	rename("nyan.js"),
 	gulp.dest('release/nyancss-v'+pkg.version+'/js'),
+	gulp.dest('dist/js'),
 	rename("nyan.min.js"),
 	uglifyjs(),
-	gulp.dest('release/nyancss-v'+pkg.version+"/js")
+	gulp.dest('release/nyancss-v'+pkg.version+'/js'),
+	gulp.dest('dist/js'),
  ], cb)
 });
 
