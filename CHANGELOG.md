@@ -3,6 +3,7 @@
 - solve bug on js
 - add examples page (blog, nyancoud, and navbar-fixed)
 - experimental with dataTable plugin
+- add new attribut "data-ny-color" for component ny-card
 
 ## v0.6.9.2-beta (April 12, 2017)
 - just little update
