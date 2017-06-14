@@ -6,4 +6,6 @@ release/
 npm-debug.log
 gitguide.md
 getnyancss/
+demoTheme/
+plugin/
 dist/

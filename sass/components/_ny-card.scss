@@ -1,93 +1,121 @@
 .ny-card {
-  border-radius: $card-border-radius;
-  padding: $card-padding;
-  box-shadow: $card-box-shadow;
-  > div:first-child.ny-card-image img {
-    border-radius: 3px 3px 0 0;
-  }
-  > div:last-child.ny-card-image img {
-    border-radius: 0 0 3px 3px;
-  }
-  &.ny-accent .ny-card-title {
-    color: #ffffff !important;
-  }
-  .ny-card-title {
-    margin: -8px -8px 0 -8px;
-    padding: 16px;
-    color: $black-text;
-    font-weight: 600;
-  }
-  .ny-card-header {
-    margin: -8px -16px 8px -16px;
-    padding: 8px 16px 8px 16px;
-    border-bottom: 1px solid rgba(0,0,0,0.12);
-    .ny-card-header-title {font-weight: 600;}
-    .ny-card-header-subtitle {font-size: 1.4rem;}
-  }
-  .ny-card-content {
-    padding: 8px 0;
-  }
-  .ny-card-action,.ny-card-action--right {
-    -webkit-box-flex: 1;
-        -webkit-flex: 1;
-    flex: 1;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    .ny-button {
-      margin-bottom: 0;
-      padding: 0 6px;
-      background-color: transparent;
-    }
-    .ny-button:hover {
-      color: $black-text;
-    }
-  }
-  .ny-card-action--right {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
-  }
-  .ny-card-image {
-    margin: -8px -16px 0 -16px;
-    img {
-      min-width: 100%;
-      height: auto;
-    }
-  }
-  &.ny-card-h {
-    display: flex;
-    flex-direction: row;
-    > div:first-child.ny-card-image img {
-      border-radius: 3px 0 0 3px;
-    }
-    > div:last-child.ny-card-image img {
-      border-radius: 0 3px 3px 0;
-    }
-    .ny-card-image {
-      width: 40%;
-      margin: -8px -16px;
-      img {
-        min-height: 100%;
-        object-fit: cover;
-      }
-    }
-    .ny-card-h-content {
-      width: 60%;
-      margin-left: calc(16px + 16px);
-    }
-  }
+	border-radius: $card-border-radius;
+	padding: $card-padding;
+	box-shadow: $card-box-shadow;
+	> div:first-child.ny-card-image img {
+		border-radius: 3px 3px 0 0;
+	}
+	> div:last-child.ny-card-image img {
+		border-radius: 0 0 3px 3px;
+	}
+	&.ny-accent .ny-card-title {
+		color: #ffffff !important;
+	}
+	.ny-card-title {
+		margin: -8px -8px 0 -8px;
+		padding: 16px;
+		color: $black-text;
+		font-weight: 600;
+	}
+	.ny-card-header {
+		margin: -8px -16px 8px -16px;
+		padding: 8px 16px 8px 16px;
+		border-bottom: 1px solid rgba(0,0,0,0.12);
+
+		.ny-card-header-title {font-weight: 600;}
+		.ny-card-header-subtitle {font-size: 1.4rem;}
+	}
+	.ny-card-content {
+		padding: 8px 0;
+	}
+	.ny-card-action,.ny-card-action--right {
+		flex: 1;
+		-webkit-box-pack: start;
+		-webkit-justify-content: flex-start;
+		justify-content: flex-start;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+
+		.ny-button {
+			margin-bottom: 0;
+			padding: 0 6px;
+			background-color: transparent;
+		}
+		.ny-button:hover {
+			color: $black-text;
+		}
+	}
+	.ny-card-action--right {
+		-webkit-box-pack: end;
+		-webkit-justify-content: flex-end;
+		justify-content: flex-end;
+	}
+	.ny-card-image {
+		margin: -8px -16px 0 -16px;
+
+		img {
+			min-width: 100%;
+			height: auto;
+		}
+	}
+
+	&.ny-card-h {
+		display: flex;
+		flex-direction: row;
+
+		> div:first-child.ny-card-image img {
+			border-radius: 3px 0 0 3px;
+		}
+		> div:last-child.ny-card-image img {
+			border-radius: 0 3px 3px 0;
+		}
+		.ny-card-image {
+			width: 40%;
+			margin: -8px -16px;
+			
+			img {
+				min-height: 100%;
+				object-fit: cover;
+			}
+		}
+		.ny-card-h-content {
+			width: 60%;
+			margin-left: calc(16px + 16px);
+		}
+	}
+
+	&[data-ny-color] * {
+	    color: #FFF;
+	}
+	&[data-ny-color="green"] {
+		background: linear-gradient(60deg, #66bb6a, #43a047);
+		box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);
+	}	
+	&[data-ny-color="orange"] {
+		background: linear-gradient(60deg, #ffa726, #fb8c00);
+		box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2);
+	}
+	&[data-ny-color="blue"] {
+		background: linear-gradient(60deg, #26c6da, #00acc1);
+		box-shadow: 0 12px 20px -10px rgba(0, 188, 212, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
+	}
+	&[data-ny-color="red"] {
+		background: linear-gradient(60deg, #ef5350, #e53935);
+		box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
+	}
+	&[data-ny-color="purple"] {
+		background: linear-gradient(60deg, #ab47bc, #8e24aa);
+		box-shadow: 0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
+	}
 }
 
 @media screen and (max-width: 768px) {
-  .ny-card, .ny-lists {
-    margin-bottom: 8px;
-  }
+	.ny-card, .ny-lists {
+		margin-bottom: 8px;
+	}
 }

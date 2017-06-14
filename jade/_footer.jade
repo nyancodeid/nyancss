@@ -2,6 +2,7 @@ footer.footer
 	section.main-footer
 		div.ny-flex.ny-flex--row.ny-flex-xs--col
 			.col-xs-12.col-md-3
+				img.img-logo(src="vendor/img/nyancss.png")
 			.col-xs-12.col-md-4
 				span.ny-subheader Components
 				.ny-flex--row.components
@@ -13,7 +14,7 @@ footer.footer
 							- }
 					.col-xs-6.ny-no-padding
 						ul.list-style-none
-							- for (var i = 10; i <= 16; ++i) {
+							- for (var i = 10; i <= 18; ++i) {
 								li
 									a(href="_#{components[i].toLowerCase().replace(' ', '_')}.html", title="#{components[i]}") #{components[i]}
 							- }

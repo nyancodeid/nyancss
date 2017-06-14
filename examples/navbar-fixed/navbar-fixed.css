@@ -1,0 +1,123 @@
+@font-face {
+	font-family: 'Icon';
+	src:url('assets/icons.ttf');
+}
+body {
+	/* important to add to give more space at top of web */
+	padding-top: 48px;
+}
+
+.icon {
+	font-family: 'Icon';
+	vertical-align: middle;
+}
+.icon-2x {
+	font-size: 48px;
+}
+.icon-4x {
+	font-size: 68px;
+}
+.icon-5x {
+    font-size: 84px;
+}
+
+.ny-navbar--collapse {
+	display: none;
+	text-align: right;
+}
+.ny-navbar--collapse i {
+	position: relative;
+    display: block;
+    padding: 14px 15px 12px;
+    line-height: 20px;
+    font-size: 24px;
+}
+
+@media (max-width: 767px) {
+	.ny-navbar--collapse {
+		display: block;
+	}
+	.ny-navbar--menu,
+	.ny-navbar--menu-right,
+	.ny-navbar--menu-left {
+		display: none;
+	}
+	
+	.ny-navbar.collapsed [class*='ny-navbar--menu'] {
+		display: block;
+		clear: both;
+		margin-left: 0;
+		margin-bottom: 8px;
+		float: none;
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	.ny-navbar.collapsed [class*='ny-navbar--menu']:first-child {
+		margin-top: 
+	}
+	.ny-navbar.collapsed [class*='ny-navbar--menu'] > li {
+		clear: both;
+		float: none;
+	}
+	.ny-navbar.collapsed [class*='ny-navbar--menu'] > li > a:hover {
+		border-bottom: 2px solid transparent;
+	}
+}
+
+
+.small-text {
+	font-size: 14px;
+}
+.post-item > .post-header {
+	margin-bottom: 16px;
+}
+.post-item > .post-header > h2 {
+	margin-bottom: 4px;
+}
+.post-item > .post-header > span {
+    color: #b7b5b5;
+}
+.post-item > .post-content > p{
+	line-height: 1.7;
+}
+#posts .post-item:not(:first-child) {
+	margin-top: 64px;
+}
+
+.about-box {
+	padding: 8px;
+	margin-bottom: 16px;
+}
+.about-box .col-xs-9,
+.about-box .col-xs-3 {
+	padding-top: 16px;
+}
+.about-box .ny-circle {
+	height: 64px;
+	width: 64px;
+	display: block;
+	margin: 0 auto;
+}
+
+footer {
+	margin-top: 128px;
+}
+#logo {
+	background-color: #00bcd4;
+    color: #4b5056;
+    padding: 32px 0;
+}
+
+#main-footer {
+	padding: 32px 0;
+	background: #4e5051;
+    color: #FFF;
+}
+#bottom-footer {
+    background: #3d4041;
+    padding: 16px 0;
+    color: #c5c3c3;
+}
+footer .col-md-3.col-sm-6.ny-txt-center span.icon {
+	color: #00BCD4;
+}

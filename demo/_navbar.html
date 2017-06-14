@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Navbar - NyanCSS</title>
+    <!-- Color -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="theme-color" content="#3F51B5">
+    <!-- CSS-->
+    <link rel="stylesheet" href="../css/nyancss.css" media="screen,projection">
+    <link rel="stylesheet" href="vendor/css/style.css">
+    <link rel="stylesheet" href="vendor/css/prismjs.min.css">
+    <!-- Icon-->
+    <link rel="stylesheet" type="text/css" href="vendor/css/material-icons.css">
+    <!-- Facebook-->
+    <meta property="og:title" content="NyanCSS: a modern css framework with smooth and light design">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="http://getnyancss.com">
+    <meta property="og:site_name" content="NyanCSS: a modern css framework with smooth and light design">
+    <meta property="og:type" content="website">
+    <!-- Meta -->
+    <meta name="author" content="Ryan Aunur Rassyid">
+    <meta name="keyword" content="nyancss, nyancss framework, nyan.css, css indonesia, web design">
+    <meta name="description" content="NyanCSS is a modern css framework with smooth and light design Based on Material Design and Smooth Light Design">
+    <meta name="robots" content="index,nofollow">
+  </head>
+  <body ny-app>
+    <div class="clearfix main-container ny-flex--row">
+      <div class="col-md-3 hide-xs hide-sm sidebar ny-whiteframe-5dp">
+        <div class="big-header ny-primary">
+          <h3>NyanCSS <small>v0.7.0-beta</small></h3>
+        </div>
+        <!-- scrolled navigation menu-->
+        <div class="scrolled-nav ny-content">
+          <ul style="overflow: auto" class="list-style-none ny-padding">
+            <li>
+              <h5 class="ny-primary-text ny-no-margin">Getting Started</h5>
+            </li>
+            <li>
+              <ul class="list-style-none">
+                <li><a href="index.html#getting-started" title="Getting Started">Getting Started</a></li>
+                <li><a href="index.html#download" title="Download">Download</a></li>
+                <li><a href="index.html#cdn-link" title="CDN">CDN</a></li>
+              </ul>
+            </li>
+            <li>
+              <h5 class="ny-primary-text ny-no-margin">Components </h5>
+            </li>
+            <li>
+              <ul class="list-style-none">
+                <li><a href="_typography.html" title="Typography">Typography</a></li>
+                <li><a href="_blockquotes.html" title="Blockquotes">Blockquotes</a></li>
+                <li><a href="_navbar.html" title="Navbar">Navbar</a></li>
+                <li><a href="_card.html" title="Card">Card</a></li>
+                <li><a href="_whiteframe.html" title="Whiteframe">Whiteframe</a></li>
+                <li><a href="_buttons.html" title="Buttons">Buttons</a></li>
+                <li><a href="_lists.html" title="Lists">Lists</a></li>
+                <li><a href="_list_items.html" title="List Items">List Items</a></li>
+                <li><a href="_label.html" title="Label">Label</a></li>
+                <li><a href="_badges.html" title="Badges">Badges</a></li>
+                <li><a href="_open_menu.html" title="Open Menu">Open Menu</a></li>
+                <li><a href="_accordion.html" title="Accordion">Accordion</a></li>
+                <li><a href="_forms.html" title="Forms">Forms</a></li>
+                <li><a href="_tables.html" title="Tables">Tables</a></li>
+                <li><a href="_grids.html" title="Grids">Grids</a></li>
+                <li><a href="_code.html" title="Code">Code</a></li>
+                <li><a href="_layouting.html" title="Layouting">Layouting</a></li>
+                <li><a href="_tabs.html" title="Tabs">Tabs</a></li>
+                <li><a href="_breadcrumb.html" title="Breadcrumb">Breadcrumb</a></li>
+              </ul>
+            </li>
+            <li>
+              <h5 class="ny-primary-text ny-no-margin">Helpers</h5>
+            </li>
+            <li>
+              <ul class="list-style-none">
+                <li><a href="_truncate.html" title="Truncate">Truncate</a></li>
+                <li><a href="_flexbox.html" title="Flexbox">Flexbox</a></li>
+                <li><a href="_layout_align.html" title="Layout Align">Layout Align</a></li>
+                <li><a href="_responsive_utilities.html" title="Responsive Utilities">Responsive Utilities</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-9 col-sm-12 col-xs-12 main-content ny-content">
+        <main>
+          <div class="ny-jumbotron ny-whiteframe-3dp">
+            <h1>Nyan.CSS</h1>
+            <p>a modern css framework with smooth and light design.</p><span class="version">v0.7.0-beta</span><span class="lastCommit">Jun 14, 2017</span>
+          </div>
+          <!-- Content Here-->
+          <section id="navbar">
+            <h3>Navbar</h3>
+            <p>Recomendation <span class="ny-code">.ny-navbar</span> using <span class="ny-code">nav</span> element for parent component.</p>
+            <div class="example">
+              <!-- Navbar Default-->
+              <nav class="ny-navbar demo">
+                <div class="container"><a class="ny-navbar--brand">Logo</a><a class="ny-navbar--collapse"><i class="material-icons">menu</i></a>
+                  <div class="ny-navbar--collapse-content">
+                    <ul class="ny-navbar--menu">
+                      <li class="active"><a href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li class="disabled"><a href="#">Disabled</a></li>
+                    </ul>
+                    <ul class="ny-navbar--menu-right">
+                      <li><a href="#">Login</a></li>
+                      <li class="active"><a href="#">Register Now</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              <!-- Navbar Default with-child-->
+              <nav class="ny-navbar with-child demo">
+                <div class="container"><a class="ny-navbar--brand">Logo</a><a class="ny-navbar--collapse"><i class="material-icons">menu</i></a>
+                  <div class="ny-navbar--collapse-content">
+                    <ul class="ny-navbar--menu">
+                      <li class="active"><a href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Profile</a></li>
+                    </ul>
+                    <ul class="ny-navbar--menu-right">
+                      <li class="active"><a href="#">Login</a></li>
+                      <li><a href="#">Register</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="ny-navbar--child">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Registrasi</a></li>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Home</a></li>
+                </ul>
+              </nav>
+              <!-- Navbar Theme Accent-->
+              <nav class="ny-navbar ny-accent demo">
+                <div class="container"><a class="ny-navbar--brand">Logo</a><a class="ny-navbar--collapse"><i class="material-icons">menu</i></a>
+                  <div class="ny-navbar--collapse-content">
+                    <ul class="ny-navbar--menu">
+                      <li class="active"><a href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#" data-toggle="dropdown">Product</a>
+                        <ul data-role="dropdown" data-animation="left">
+                          <li><a href="#">NyanCode</a></li>
+                          <li><a href="#" data-toggle="dropdown">NyanCSS</a>
+                            <ul data-role="dropdown">
+                              <li><a href="#">v0.6.9-beta</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              <!-- Navbar Theme Primary with menuRight-->
+              <nav class="ny-navbar ny-primary demo">
+                <div class="container"><a class="ny-navbar--brand-img"><img src="vendor/img/logo.png"></a><a class="ny-navbar--collapse"><i class="material-icons">menu</i></a>
+                  <div class="ny-navbar--collapse-content">
+                    <ul class="ny-navbar--menu">
+                      <li class="active"><a href="#">Home</a></li>
+                      <li><a href="#" data-toggle="dropdown">Product</a>
+                        <ul data-role="dropdown" data-animation="left">
+                          <li><a href="#">NyanCode</a></li>
+                          <li><a href="#" data-toggle="dropdown">NyanCSS</a>
+                            <ul data-role="dropdown">
+                              <li><a href="#">v0.6.9-beta</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#">About</a></li>
+                      <li class="disabled"><a href="#">Disabled</a></li>
+                    </ul>
+                    <ul class="ny-navbar--menu-right">
+                      <li><a href="#" data-toggle="dropdown">Ryan Aunur</a>
+                        <ul data-role="dropdown" data-animation="right">
+                          <li><a href="#">Detail</a></li>
+                          <li><a href="#">Logout</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div><pre class="code-example ny-code"><code class="language-markup">&lt;!-- Navbar in default --&gt;
+&lt;nav class="ny-navbar"&gt;
+  &lt;div class="container"&gt;
+    &lt;a class="ny-navbar--brand"&gt;Logo&lt;/a&gt;
+    &lt;a class="ny-navbar--collapse"&gt;
+      &lt;!-- import material-icons font for icons --&gt;
+      &lt;i class="material-icons"&gt;menu&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;div class="ny-navbar--collapse-content"&gt;
+      &lt;ul class="ny-navbar--menu"&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="ny-navbar--menu-right"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Login&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Register Now&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- ./container --&gt;
+&lt;/nav&gt;
+
+&lt;!-- Navbar with a child, add .with-child class on parent component. --&gt;
+&lt;nav class="ny-navbar with-child"&gt;
+  &lt;div class="container"&gt;
+    &lt;a class="ny-navbar--brand"&gt;Logo&lt;/a&gt;
+    &lt;a class="ny-navbar--collapse"&gt;
+      &lt;!-- import material-icons font for icons --&gt;
+      &lt;i class="material-icons"&gt;menu&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;div class="ny-navbar--collapse-content"&gt;
+      &lt;ul class="ny-navbar--menu"&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="ny-navbar--menu-right"&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Login&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Register&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- ./container --&gt;
+
+  &lt;!-- child start here --&gt;
+  &lt;ul class="ny-navbar--child"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Registrasi&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Navbar with theme color add one of theme color, primary or accent theme --&gt;
+&lt;nav class="ny-navbar ny-accent"&gt;
+  &lt;div class="container"&gt;
+    &lt;!-- for brand img, using .ny-navbar--brand-img --&gt;
+    &lt;a class="ny-navbar--brand-img"&gt;
+      &lt;img src="path/to/img.png"&gt;
+    &lt;/a&gt;
+    &lt;a class="ny-navbar--collapse"&gt;
+      &lt;!-- import material-icons font for icons --&gt;
+      &lt;i class="material-icons"&gt;menu&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;div class="ny-navbar--collapse-content"&gt;
+      &lt;ul class="ny-navbar--menu"&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" data-toggle="dropdown"&gt;Product&lt;/a&gt;
+          &lt;ul data-role="dropdown" data-animation="left"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;NyanCode&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#" data-toggle="dropdown"&gt;NyanCSS&lt;/a&gt;
+              &lt;ul data-role="dropdown"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;v0.6.9-beta&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- ./container --&gt;
+&lt;/nav&gt;</code></pre>
+          </section>
+          <footer class="footer">
+            <section class="main-footer">
+              <div class="ny-flex ny-flex--row ny-flex-xs--col">
+                <div class="col-xs-12 col-md-3"><img src="vendor/img/nyancss.png" class="img-logo"></div>
+                <div class="col-xs-12 col-md-4"><span class="ny-subheader">Components</span>
+                  <div class="ny-flex--row components">
+                    <div class="col-xs-6 ny-no-padding">
+                      <ul class="list-style-none">
+                        <li><a href="_typography.html" title="Typography">Typography</a></li>
+                        <li><a href="_blockquotes.html" title="Blockquotes">Blockquotes</a></li>
+                        <li><a href="_navbar.html" title="Navbar">Navbar</a></li>
+                        <li><a href="_card.html" title="Card">Card</a></li>
+                        <li><a href="_whiteframe.html" title="Whiteframe">Whiteframe</a></li>
+                        <li><a href="_buttons.html" title="Buttons">Buttons</a></li>
+                        <li><a href="_lists.html" title="Lists">Lists</a></li>
+                        <li><a href="_list_items.html" title="List Items">List Items</a></li>
+                        <li><a href="_label.html" title="Label">Label</a></li>
+                        <li><a href="_badges.html" title="Badges">Badges</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6 ny-no-padding">
+                      <ul class="list-style-none">
+                        <li><a href="_open_menu.html" title="Open Menu">Open Menu</a></li>
+                        <li><a href="_accordion.html" title="Accordion">Accordion</a></li>
+                        <li><a href="_forms.html" title="Forms">Forms</a></li>
+                        <li><a href="_tables.html" title="Tables">Tables</a></li>
+                        <li><a href="_grids.html" title="Grids">Grids</a></li>
+                        <li><a href="_code.html" title="Code">Code</a></li>
+                        <li><a href="_layouting.html" title="Layouting">Layouting</a></li>
+                        <li><a href="_tabs.html" title="Tabs">Tabs</a></li>
+                        <li><a href="_breadcrumb.html" title="Breadcrumb">Breadcrumb</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-2"><span class="ny-subheader">Helpers</span>
+                  <ul class="list-style-none">
+                    <li><a href="_truncate.html" title="Truncate">Truncate</a></li>
+                    <li><a href="_flexbox.html" title="Flexbox">Flexbox</a></li>
+                    <li><a href="_layout_align.html" title="Layout Align">Layout Align</a></li>
+                    <li><a href="_responsive_utilities.html" title="Responsive Utilities">Responsive Utilities</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-12 col-md-3 ny-flex--col"><span class="ny-subheader">Host Powered By </span><a href="https://dreamlinehost.com" title="Dream Line Host"><img src="vendor/img/dlh.png" height="70px" title="Dream Line Host"></a></div>
+              </div>
+            </section>
+            <section class="footer-bottom">
+              <p class="ny-no-margin">Designed with ♥ by <a target="blank" href="http://github.com/nyancodeid" title="NyanCodeID">NyanCodeID</a>. Special Thanks to <a target="blank" href="https://github.com/milligram/milligram">Miligram</a>. Licensed under the <a target="blank" href="https://github.com/nyancodeid/nyancss#license" title="MIT License">MIT License</a></p>
+            </section>
+          </footer>
+        </main>
+      </div>
+    </div>
+    <script src="vendor/js/jquery.min.js"></script>
+    <script src="../js/nyancss.js" defer></script>
+    <!-- vendor-->
+    <script src="vendor/js/app.js" async></script>
+    <script src="vendor/js/prismjs.js" async></script>
+  </body>
+</html>

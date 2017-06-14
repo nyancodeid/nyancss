@@ -1,0 +1,121 @@
+.ny-breadcrumb {
+	padding: $breadcrumb-parent-padding;
+    background-color: $breadcrumb-parent-bg-color;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    list-style: none;
+	
+	> a {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	> a:not(:first-child):before {
+	    content: "/\00a0";
+	    padding: 0 5px;
+	    color: $breadcrumb-slice-color;
+	}
+	> a:last-child {
+		color: $breadcrumb-active-color;
+	}
+}
+
+.ny-breadcrumb--material {
+	text-align: center;
+	display: inline-block;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+	overflow: hidden;
+	border-radius: 5px;
+	counter-reset: flag;
+
+	> a {
+		text-decoration: none;
+		outline: none;
+		display: block;
+		float: left;
+		font-size: 12px;
+		line-height: 36px;
+		color: #FFFFFF;
+		padding: 0 10px 0 60px;
+		position: relative;
+		&:first-child {
+			padding-left: 46px;
+			border-radius: 5px 0 0 5px;
+			&:before {
+				left: 14px;
+			}
+		}
+		&:last-child {
+			border-radius: 0 5px 5px 0;
+			padding-right: 20px;
+			color: #FFFFFF !important;
+			&:before {
+				color: $accent-color;
+			}
+			&:after {
+				content: none;
+			}
+		}
+		&:before {
+			content: counter(flag);
+			counter-increment: flag;
+			border-radius: 100%;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			margin: 8px 0;
+			position: absolute;
+			top: 0;
+			left: 30px;
+			font-weight: bold;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -18px;
+			width: 36px;
+			height: 36px;
+			transform: scale(0.707) rotate(45deg);
+			z-index: 1;
+			box-shadow: 2px -2px 0 2px $accent-color - #222;
+			border-radius: 0 5px 0 50px;
+		}
+	}
+
+	> a {
+		&, &:after {
+			background: #fff;
+			color: $accent-color;
+			transition: all 0.5s;
+		}
+		&:before {
+			background: #FFFFFF;
+			box-shadow: 0 0 0 1px $accent-color;
+		}
+		&:hover, &.active, &:hover:after, &.active:after {
+			background: $accent-color;
+			color: #FFFFFF;
+			&.active:hover {
+				background: #D81B60;
+			}
+			&:hover, &.active {
+				color: #FFFFFF;
+				&:before {
+					color: $accent-color;
+				}
+			}
+		}
+		&:hover:before {
+			color: $accent-color;
+		}
+	}
+
+	&.no-counter {
+		> a {
+			padding-left: 32px;
+		}
+		> a:before {
+			content: none;
+		}
+	}
+}

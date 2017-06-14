@@ -1,5 +1,6 @@
 include ../_variable
 - var page = "Card"
+- var colors = ["red", "purple", "blue", "green", "orange"]
 
 
 doctype html
@@ -116,6 +117,15 @@ html(lang="en")
 												| 7-11pm
 										.ny-card-action
 											a.ny-button.ny-primary(href='#') add to calendar
+
+							.row.clearfix
+								each color in colors
+									div.col-md-2(style="margin-bottom: 8px;")
+										.ny-card.demo-card--event(data-ny-color="#{color}")
+											.ny-card-content
+												span.ny-subheader data-ny-color="#{color}"
+											.ny-card-action
+												a.ny-button.ny-button--clear(href='#') button
 							// Code Example
 							include ../code/_card.code.html
 

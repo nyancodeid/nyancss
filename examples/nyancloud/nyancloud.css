@@ -1,0 +1,130 @@
+@font-face {
+	font-family: 'Icon';
+	src:url('assets/icons.ttf');
+}
+
+/* Reset */
+ul > li {
+	margin: 0;
+}
+* {
+	font-size: 15px;
+}
+.icon {
+	font-family: 'Icon';
+	vertical-align: middle;
+}
+.icon-2x {
+	font-size: 48px;
+}
+.icon-4x {
+	font-size: 68px;
+}
+.icon-5x {
+    font-size: 84px;
+}
+.ny-navbar--brand .icon {
+	font-size: 24px;
+}
+.bold {
+	font-weight: bold;
+}
+
+div.ny-jumbotron {
+	background: url(assets/sea.png) no-repeat;
+    padding-bottom: 80px;
+    background-position: bottom;
+    background-color: #e4f4fd;
+}
+.hero h2 {
+	font-weight: bold;
+}
+
+/* Future */
+.future-item {
+	padding: 18px 0;
+}
+
+/* Price */
+.price-item--big {
+	margin: -18px 0;
+    padding-top: 18px;
+    padding-bottom: 36px;
+}
+.priceHeader {
+	color: #FFFFFF;
+	background: #5368de;
+}
+.priceHeader > div.col-xs-10 {
+	padding: 8px;
+}
+.priceHeader > div.col-xs-10 > p {
+	font-size: 14px;
+}
+.priceHeader > div.col-xs-2 {
+    padding: 1.2rem 1.5rem;
+}
+.priceHeader > div.col-xs-2 > span {
+    font-size: 54px;
+}
+.priceSubHeader {
+	background: #3f51b5;
+	color: #FFFFFF;
+	padding: 8px;
+}
+.priceValue {
+	font-size: 32px;
+	font-weight: bold;
+	color: #4CAF50;
+}
+.pricesubValue {
+	font-size: 13px;
+    color: #5c5c5c;
+}
+
+.domainPrice {
+	padding: 24px 0;
+}
+.domainPrice .best-seller {
+	margin: 0 -8px;
+    color: #ffffff;
+    background: #ff784d;
+    font-size: 18px;
+    padding: 4px 0;
+    border-radius: 3px;
+}
+.domainPrice .content-item {
+	padding-left: 16px;
+	text-align: center;
+}
+.domainPrice .content-item:not(.bs) {
+	padding-top: 32px;
+}
+
+#faq {
+	padding: 32px 0;
+}
+
+.microserver-order {
+	margin-top: 16px;
+}
+
+#logo {
+	background-color: #00bcd4;
+    color: #4b5056;
+    padding: 32px 0;
+}
+
+#main-footer {
+	padding: 32px 0;
+	background: #4e5051;
+    color: #FFF;
+}
+#bottom-footer {
+    background: #3d4041;
+    padding: 16px 0;
+    color: #c5c3c3;
+}
+footer .col-md-3.col-sm-6.ny-txt-center span.icon {
+	color: #00BCD4;
+}

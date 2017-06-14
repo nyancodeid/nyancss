@@ -1,3 +1,18 @@
+/*Custom*/
+.row:after,
+.row .col-sm-6:after,
+#DataTables_Table_0_filter:after {clear: both;content: ' ';display: table;}
+#DataTables_Table_0_filter label,
+#DataTables_Table_0_filter input {width: 100%;}
+
+#DataTables_Table_0_filter label {font-size: 14px;margin: 1rem 0;}
+
+.pagination {list-style: none;padding-top: 8px;}
+.pagination li {display: inline-block;margin-right: 4px;margin-bottom: 0}
+.pagination li:first-child {font-weight: bold;margin-right: 8px;}
+.pagination li:last-child {font-weight: bold;margin-left: 4px;}
+.pagination li.active a {border-bottom: 2px solid #f06292;padding: 0 2px;}
+
 div.dataTables_length label {
 	font-weight: normal;
 	float: left;

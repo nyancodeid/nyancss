@@ -54,3 +54,154 @@
 .ny-accent .ny-subheader {
 	color: #f4f3f3;
 }
+
+/* ny-breadcrumb */
+.ny-breadcrumb.ny-primary {
+	> a {
+		color: #FFFFFF;
+	}
+	> a:last-child {
+		color: #FFFFFF;
+	}
+}
+.ny-breadcrumb--material.ny-primary {
+	> a {
+		&, &.active {
+			color: $primary-color
+		}
+		&:before {
+			box-shadow: 0 0 0 1px $primary-color;
+		}
+		&:hover, &.active, &:hover:after, &.active:after {
+			background: $primary-color;
+			&.active:hover {
+				background: #4f63cf;
+			}
+			&:hover, &.active {
+				&:before {
+					color: $primary-color;
+				}
+			}
+		}
+		&:hover:before {
+			color: $primary-color;
+		}
+		&:last-child:before {
+			color: $primary-color;
+		}
+		&:after {
+			box-shadow: 2px -2px 0 2px $primary-color - #222;
+		}
+	}
+}
+
+
+/* ny-navbar */
+.ny-navbar.ny-primary {
+	.ny-navbar--brand {
+		color: #FFFFFF;
+	}
+	.ny-navbar--collapse {
+		color: #FFFFFF;
+	}
+	.ny-navbar--menu,
+	.ny-navbar--menu-right,
+	.ny-navbar--menu-left {
+		> li.active {
+			background-color: $primary-color - #111;
+			a:hover {
+				background-color: $primary-color - #111 !important;
+			}
+		}
+		> li:not(.disabled) > a {
+			color: #FFFFFF;
+			&:hover {
+				border-bottom: 2px solid $accent-color;
+				background-color: $primary-color - #0a0a0a;
+			}
+		}
+		> li.disabled > a {
+			color: rgba(255, 255, 255, 0.56);
+		}
+	}
+}
+.ny-navbar.ny-accent {
+	.ny-navbar--brand {
+		color: #FFFFFF;
+	}
+	.ny-navbar--collapse {
+		color: #FFFFFF;
+	}
+	.ny-navbar--menu,
+	.ny-navbar--menu-right,
+	.ny-navbar--menu-left,
+	&.collapsed ul[data-role="dropdown"] {
+		> li.active {
+			background-color: $accent-color - #111;
+			a:hover {
+				background-color: $accent-color - #111 !important;
+			}
+		}
+		> li:not(.disabled) > a {
+			color: #FFFFFF;
+			&:hover {
+				border-bottom: 2px solid #ffbed4;
+				background-color: $accent-color - #0a0a0a;
+			}
+		}
+		> li.disabled > a {
+			color: rgba(255, 255, 255, 0.56);
+		}
+	}
+}
+/* ny-navbar-theme on mobile */
+@media (max-width: 767px) {
+	.ny-navbar.ny-primary {
+		&.collapsed {
+			ul[data-role="dropdown"] {
+				background-color: transparent;
+				> li > a:hover {
+					color: #FFFFFF !important;
+					background-color: transparent !important;
+					border-bottom: 2px solid transparent;
+				}
+				> li > a:not([data-toggle="dropdown"]) {
+					color: #d2d2d2;
+				}
+			}
+			li > a:hover {
+				border-bottom: 2px solid transparent !important;
+			}
+			li > a[data-toggle="dropdown"] {
+				color: #FFFFFF;
+			}
+			li > a[data-toggle="dropdown"].active {
+				background-color: $primary-color - #111;
+			}
+		}
+	}
+	.ny-navbar.ny-accent {
+		&.collapsed {
+			ul[data-role="dropdown"] {
+				background-color: transparent;
+				> li > a:hover {
+					color: #FFFFFF !important;
+					background-color: transparent;
+					border-bottom: 2px solid transparent;
+				}
+				> li > a:not([data-toggle="dropdown"]) {
+					color: #d2d2d2;
+				}
+			}
+			li > a:hover {
+				border-bottom: 2px solid transparent !important;
+			}
+			li > a[data-toggle="dropdown"] {
+				color: #FFFFFF;
+			}
+			li > a[data-toggle="dropdown"].active {
+				background-color: $accent-color - #111;
+			}
+		}
+	}
+}

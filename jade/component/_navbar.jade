@@ -1,0 +1,135 @@
+include ../_variable
+- var page = "Navbar"
+
+
+doctype html
+html(lang="en")
+	head
+		include ../_head
+		include ../_seo
+	body(ny-app)
+		div.clearfix.main-container.ny-flex--row
+			include ../_sidebar
+			div(class="col-md-9 col-sm-12 col-xs-12 main-content ny-content")
+				main
+					div.ny-jumbotron.ny-whiteframe-3dp
+						h1 Nyan.CSS
+						p a modern css framework with smooth and light design.
+						span.version #{appVersion}
+						span.lastCommit #{appLastCommit}
+
+					// Content Here
+					section#navbar
+						h3 Navbar
+						p Recomendation #[span.ny-code .ny-navbar] using #[span.ny-code nav] element for parent component.
+						div.example
+							// Navbar Default
+							nav.ny-navbar.demo
+								.container
+									a.ny-navbar--brand Logo
+									a.ny-navbar--collapse
+										i.material-icons menu
+									.ny-navbar--collapse-content
+										ul.ny-navbar--menu
+											li.active
+												a(href="#") Home
+											li
+												a(href="#") About
+											li.disabled
+												a(href="#") Disabled
+										ul.ny-navbar--menu-right
+											li
+												a(href="#") Login
+											li.active
+												a(href="#") Register Now
+
+							// Navbar Default with-child
+							nav.ny-navbar.with-child.demo
+								.container
+									a.ny-navbar--brand Logo
+									a.ny-navbar--collapse
+										i.material-icons menu
+									.ny-navbar--collapse-content
+										ul.ny-navbar--menu
+											li.active
+												a(href="#") Home
+											li
+												a(href="#") About
+											li
+												a(href="#") Profile
+										ul.ny-navbar--menu-right
+											li.active
+												a(href="#") Login
+											li
+												a(href="#") Register
+								ul.ny-navbar--child
+									li
+										a(href="#") Home
+									li
+										a(href="#") Registrasi
+									li
+										a(href="#") Home
+									li
+										a(href="#") Home
+							
+							// Navbar Theme Accent
+							nav.ny-navbar.ny-accent.demo
+								.container
+									a.ny-navbar--brand Logo
+									a.ny-navbar--collapse
+										i.material-icons menu
+									.ny-navbar--collapse-content
+										ul.ny-navbar--menu
+											li.active
+												a(href="#") Home
+											li
+												a(href="#") About
+											li
+												a(href="#") Profile
+											li
+												a(href="#", data-toggle="dropdown") Product
+												ul(data-role="dropdown", data-animation="left")
+													li
+														a(href="#") NyanCode
+													li
+														a(href="#", data-toggle="dropdown") NyanCSS
+														ul(data-role="dropdown")
+															li
+																a(href="#") v0.6.9-beta
+
+							// Navbar Theme Primary with menuRight
+							nav.ny-navbar.ny-primary.demo
+								.container
+									a.ny-navbar--brand-img
+										img(src="vendor/img/logo.png")
+									a.ny-navbar--collapse
+										i.material-icons menu
+									.ny-navbar--collapse-content
+										ul.ny-navbar--menu
+											li.active
+												a(href="#") Home
+											li
+												a(href="#", data-toggle="dropdown") Product
+												ul(data-role="dropdown", data-animation="left")
+													li
+														a(href="#") NyanCode
+													li
+														a(href="#", data-toggle="dropdown") NyanCSS
+														ul(data-role="dropdown")
+															li
+																a(href="#") v0.6.9-beta
+											li
+												a(href="#") About
+											li.disabled
+												a(href="#") Disabled
+										ul.ny-navbar--menu-right
+											li
+												a(href="#", data-toggle="dropdown") Ryan Aunur
+												ul(data-role="dropdown", data-animation="right")
+													li
+														a(href="#") Detail
+													li
+														a(href="#") Logout
+						include ../code/_navbar.code.html
+					include ../_footer
+		include ../_script

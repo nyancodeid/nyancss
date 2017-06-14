@@ -5,7 +5,8 @@
 	<title>dataTable</title>
 	<link rel="stylesheet" type="text/css" href="../../css/nyancss.css">
 	<link rel="stylesheet" type="text/css" href="dataTables.bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="dataTables.nyancss.css">
+	<style>
+	</style>
 </head>
 <body>
 	<div class="ny-card col-md-6">
@@ -28,7 +29,9 @@
 				<tr>
 					<td>1</td>
 					<td>Ryan</td>
-					<td>Aunur</td>
+					<td>
+						<button class="ny-button ny-button--raised" nm>Delete</button>
+					</td>
 				</tr>
 				<tr>
 					<td>2</td>
@@ -65,12 +68,32 @@
 					<td>Ryan</td>
 					<td>Aunur</td>
 				</tr>
+				<tr>
+					<td>9</td>
+					<td>Ryan</td>
+					<td>Aunur</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>Ryan</td>
+					<td>Aunur</td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>Ryan</td>
+					<td>Aunur</td>
+				</tr>
+				<tr>
+					<td>12</td>
+					<td>Ryan</td>
+					<td>Aunur</td>
+				</tr>
 			</tbody>
 		</table>
 	</div>
 	<script type="text/javascript" src="../../demo/vendor/js/jquery.min.js"></script>
 	<script type="text/javascript" src="jquery.dataTables.js"></script>
-	<script type="text/javascript" src="dataTables.nyancss.js"></script>
+	<script type="text/javascript" src="dataTables.bootstrap.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('.ny-data-tables').DataTable();

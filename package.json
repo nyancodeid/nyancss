@@ -1,6 +1,6 @@
 {
   "name": "nyancss",
-  "version": "0.6.9.2-beta",
+  "version": "0.7.0-beta",
   "description": "Modern Light and Smooth CSS Framework",
   "main": "gulpfile.js",
   "dependencies": {
@@ -17,7 +17,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch sass/nyancss.scss:css/nyancss.css"
+    "sass": "sass --watch sass/nyancss.scss:css/nyancss.css",
+    "build": "gulp release"
   },
   "repository": {
     "type": "git",

@@ -28,6 +28,7 @@ var root;
 				e.stopPropagation();
 			});
     };
+
 }(jQuery));
 // Plugin NyanCSS
 
@@ -609,13 +610,44 @@ $(function() {
 				$('table.ny-table--responsive').each(function() {
 					$(this).removeClass('.ny-table--responsive').wrapAll('<div class="ny-table--responsive-wrap"></div>');
 				});
-			}
+			},
+      navbarHandler: function() {
+        $('.ny-navbar').find(".ny-navbar--menu > li > a[data-toggle='dropdown']").addClass("toggle-parent");
+        $('.ny-navbar').find("li > a[data-toggle='dropdown']").click(function(event) {
+          var parent = $(this).parents(".ny-navbar");
+          event.preventDefault();
+
+          if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+
+            if ($(this).hasClass("toggle-parent")) {
+              parent.find('[data-toggle="dropdown"].active').removeClass('active');
+            }
+          } else {
+            $(this).addClass("active");
+          }
+
+          $('html').on('click', function(event) {
+            if (!($(event.target).parents('.ny-navbar').length == 1)) {
+              parent.find('[data-toggle="dropdown"].active').removeClass('active');
+            }
+          });
+        });
+
+        $('.ny-navbar--collapse').click(function(event) {
+          event.preventDefault();
+
+          $(this).parents(".ny-navbar").toggleClass("collapsed");
+        });
+      }
 		}
 	};
 	
 
-	$(document).ready(function() {	
-		// table Responsive
-		root.module.tableResponsive();
-	});
+  $(document).ready(function() {  
+    // table Responsive
+    root.module.tableResponsive();
+    root.module.navbarHandler();
+    
+  });
 });
