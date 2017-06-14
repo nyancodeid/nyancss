@@ -8,7 +8,7 @@
 Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 
 ## CDN
-```markup
+```html
 <!-- Compiled and Minified CSS -->
 <link rel="stylesheet" href="https://cdn.rawgit.com/nyancodeid/nyancss/v0.7.0-beta/dist/css/nyan.min.css" >
  
