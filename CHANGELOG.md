@@ -1,3 +1,9 @@
+## v0.7.0-beta (Jun 14, 2017)
+- add commponents ny-navbar and ny-breadcrumb
+- solve bug on js
+- add examples page (blog, nyancoud, and navbar-fixed)
+- experimental with dataTable plugin
+
 ## v0.6.9.2-beta (April 12, 2017)
 - just little update
 
